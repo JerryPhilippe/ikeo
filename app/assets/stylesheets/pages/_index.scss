@@ -1,2 +1,41 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "doodle";
+
+.wrapper-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  gap: 10px;
+  width: 100%;
+ /*  grid-auto-rows: minmax(100px, auto); */
+}
+
+.container-index {
+
+  margin: 100px;
+}
+
+.card-index {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  border: solid 1px black
+}
+
+.card-index a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.card-index-text {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.some-class {
+  color: red;
+}
