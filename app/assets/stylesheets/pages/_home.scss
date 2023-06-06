@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+.fa-solid {
+  font-family: 'Work Sans'!important;
+}
+
+.home-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  gap: 10px;
+  width: 100%;
+ /*  grid-auto-rows: minmax(100px, auto); */
+}
+.container-home {
+  margin: 100px;
+}
+.card-home {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: solid 1px black
+}
