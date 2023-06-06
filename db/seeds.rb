@@ -814,3 +814,415 @@ bathroom_cabinets.each_with_index do |(_key, value), index|
   file = URI.open("app/assets/images/items/6-3-#{index+1}-armoire_de_salle_de_bain-salle_de_bain.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
+
+childrens_beds = {
+  "childrens_bed_1" => {
+    name: "KURA",
+    room_type: "Chambre enfants",
+    category: "Lit enfant",
+    description: "Le lit réversible KURA offre flexibilité et amusement. Sa construction robuste et sa fonctionnalité double comme lit surélevé ou standard en font un choix parfait pour l'espace de sommeil de votre enfant.",
+    price: 150
+  },
+  "childrens_bed_2" => {
+    name: "BUSUNGE",
+    room_type: "Chambre enfants",
+    category: "Lit enfant",
+    description: "Le lit extensible BUSUNGE grandit avec votre enfant, assurant un espace de sommeil confortable à toutes les étapes. Sa conception élégante et ses coins arrondis le rendent à la fois attrayant et sûr.",
+    price: 200
+  },
+  "childrens_bed_3" => {
+    name: "SLÄKT",
+    room_type: "Chambre enfants",
+    category: "Lit enfant",
+    description: "Le lit SLÄKT est parfait pour les enfants plus âgés, offrant un espace de sommeil confortable et un design moderne. Avec ses options de rangement supplémentaires, il contribue à garder la chambre de votre enfant organisée.",
+    price: 250
+  },
+  "childrens_bed_4" => {
+    name: "MINNEN",
+    room_type: "Chambre enfants",
+    category: "Lit enfant",
+    description: "Le lit extensible MINNEN est parfait pour votre enfant en croissance. Sa longueur ajustable et sa construction solide offrent un espace de sommeil sûr et confortable pendant des années.",
+    price: 220
+  },
+  "childrens_bed_5" => {
+    name: "VITVAL",
+    room_type: "Chambre enfants",
+    category: "Lit enfant",
+    description: "Le lit mezzanine VITVAL offre une solution de sommeil innovante et amusante. Son design élégant et son échelle intégrée maximisent l'espace dans la chambre de votre enfant.",
+    price: 300
+  }
+}
+
+
+childrens_beds.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/7-1-#{index+1}-lit_enfant-chambres_enfants.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+
+childrens_desks = {
+  "childrens_desk_1" => {
+    name: "MICKE",
+    room_type: "Chambre enfants",
+    category: "Bureau enfant",
+    description: "Le bureau MICKE est parfait pour les travaux scolaires ou les projets artistiques. Son design compact et ses options de rangement le rendent idéal pour les espaces plus petits, tout en offrant un espace de travail fonctionnel.",
+    price: 70
+  },
+  "childrens_desk_2" => {
+    name: "PÅHL",
+    room_type: "Chambre enfants",
+    category: "Bureau enfant",
+    description: "Le bureau ajustable PÅHL grandit avec votre enfant, offrant un espace de travail confortable à toutes les étapes. Sa conception modulable et ses options de rangement aident à maintenir l'espace de travail organisé.",
+    price: 100
+  },
+  "childrens_desk_3" => {
+    name: "FLISAT",
+    room_type: "Chambre enfants",
+    category: "Bureau enfant",
+    description: "Le bureau pour enfants FLISAT inspire la créativité avec sa table réglable. Sa construction en bois massif et ses options de rangement garantissent un espace de travail durable et organisé pour votre enfant.",
+    price: 120
+  },
+  "childrens_desk_4" => {
+    name: "SUNDVIK",
+    room_type: "Chambre enfants",
+    category: "Bureau enfant",
+    description: "Le bureau SUNDVIK offre un espace de travail classique pour votre enfant. Sa construction robuste et ses tiroirs spacieux permettent un rangement fonctionnel et une durabilité à long terme.",
+    price: 150
+  },
+  "childrens_desk_5" => {
+    name: "HUSET",
+    room_type: "Chambre enfants",
+    category: "Bureau enfant",
+    description: "Le bureau pour enfants HUSET est un espace de travail inspirant pour votre enfant. Avec sa construction durable et ses tiroirs de rangement, il encourage l'organisation et la créativité.",
+    price: 90
+  }
+}
+
+
+childrens_desks.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/7-2-#{index+1}-bureau_enfant-chambres_enfants.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+childrens_wardrobes = {
+  "childrens_wardrobe_1" => {
+    name: "STUVA / FRITIDS",
+    room_type: "Chambre enfants",
+    category: "Armoire enfant",
+    description: "L'armoire STUVA / FRITIDS offre une solution de rangement flexible et colorée. Sa conception modulaire et ses étagères ajustables s'adaptent aux besoins changeants de votre enfant tout au long de sa croissance.",
+    price: 180
+  },
+  "childrens_wardrobe_2" => {
+    name: "BUSUNGE",
+    room_type: "Chambre enfants",
+    category: "Armoire enfant",
+    description: "L'armoire BUSUNGE est élégante et fonctionnelle. Sa construction robuste et son design attrayant avec des coins arrondis offrent un espace de rangement sûr et organisé pour les vêtements de votre enfant.",
+    price: 220
+  },
+  "childrens_wardrobe_3" => {
+    name: "SMÅSTAD",
+    room_type: "Chambre enfants",
+    category: "Armoire enfant",
+    description: "L'armoire SMÅSTAD offre une combinaison de rangement flexible et de design ludique. Avec ses options d'organisation internes, elle aide à garder la chambre de votre enfant organisée et agréable.",
+    price: 250
+  },
+  "childrens_wardrobe_4" => {
+    name: "TROGEN",
+    room_type: "Chambre enfants",
+    category: "Armoire enfant",
+    description: "L'armoire TROGEN offre un espace de rangement robuste et spacieux. Sa construction durable et son design intemporel assurent qu'elle reste utile et élégante à mesure que votre enfant grandit.",
+    price: 280
+  },
+  "childrens_wardrobe_5" => {
+    name: "SUNDVIK",
+    room_type: "Chambre enfants",
+    category: "Armoire enfant",
+    description: "L'armoire SUNDVIK offre une solution de rangement classique pour la chambre de votre enfant. Sa construction robuste et son design traditionnel apportent une touche d'élégance à l'espace de votre enfant.",
+    price: 300
+  }
+}
+
+
+
+childrens_wardrobes.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/7-3-#{index+1}-armoire_enfant-chambres_enfants.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+adult_desks = {
+  "adult_desk_1" => {
+    name: "BEKANT",
+    room_type: "Bureau",
+    category: "Bureau adulte",
+    description: "Le bureau BEKANT combine fonctionnalité et design moderne. Il offre un grand espace de travail tout en conservant une allure élégante et minimaliste, idéal pour votre bureau à la maison ou au travail.",
+    price: 200
+  },
+  "adult_desk_2" => {
+    name: "MICKE",
+    room_type: "Bureau",
+    category: "Bureau adulte",
+    description: "Le bureau MICKE est compact mais fonctionnel. Son design épuré et ses options de rangement intégrées en font un choix parfait pour les petits espaces de travail ou les bureaux à domicile.",
+    price: 120
+  },
+  "adult_desk_3" => {
+    name: "MALM",
+    room_type: "Bureau",
+    category: "Bureau adulte",
+    description: "Le bureau MALM offre une solution de travail sobre et élégante. Avec son tiroir intégré pour le rangement, ce bureau combine commodité et style pour créer un espace de travail confortable.",
+    price: 180
+  },
+  "adult_desk_4" => {
+    name: "HEMNES",
+    room_type: "Bureau",
+    category: "Bureau adulte",
+    description: "Le bureau HEMNES combine un style traditionnel avec des fonctionnalités modernes. Il offre un espace de travail spacieux et des solutions de rangement pratiques pour un environnement de travail bien organisé.",
+    price: 240
+  },
+  "adult_desk_5" => {
+    name: "KULLABERG",
+    room_type: "Bureau",
+    category: "Bureau adulte",
+    description: "Le bureau KULLABERG offre un design industriel robuste. Avec son large plateau en pin massif et son cadre en acier, ce bureau est à la fois durable et élégant.",
+    price: 220
+  }
+}
+
+
+adult_desks.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/8-1-#{index+1}-bureau_adulte-bureau.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+office_chairs = {
+  "office_chair_1" => {
+    name: "MARKUS",
+    room_type: "Bureau",
+    category: "Chaise de bureau",
+    description: "La chaise de bureau MARKUS offre un confort suprême avec son dossier haut et son assise rembourrée. Avec ses fonctionnalités ergonomiques, elle est idéale pour les longues journées de travail.",
+    price: 160
+  },
+  "office_chair_2" => {
+    name: "RENBERGET",
+    room_type: "Bureau",
+    category: "Chaise de bureau",
+    description: "La chaise de bureau RENBERGET est confortable et abordable. Son design ergonomique et son assise rembourrée fournissent un soutien adéquat pour travailler efficacement tout au long de la journée.",
+    price: 80
+  },
+  "office_chair_3" => {
+    name: "FLINTAN",
+    room_type: "Bureau",
+    category: "Chaise de bureau",
+    description: "La chaise de bureau FLINTAN allie confort et fonctionnalité. Avec son soutien lombaire intégré et son assise rembourrée, cette chaise offre un confort optimal pour votre journée de travail.",
+    price: 90
+  },
+  "office_chair_4" => {
+    name: "LÅNGFJÄLL",
+    room_type: "Bureau",
+    category: "Chaise de bureau",
+    description: "La chaise de bureau LÅNGFJÄLL est conçue pour le confort et le style. Avec ses lignes épurées et son design ergonomique, elle complète parfaitement tout espace de travail moderne.",
+    price: 140
+  },
+  "office_chair_5" => {
+    name: "JÄRVFJÄLLET",
+    room_type: "Bureau",
+    category: "Chaise de bureau",
+    description: "La chaise de bureau JÄRVFJÄLLET offre un soutien supérieur avec son design ergonomique. Son assise ajustable et son dossier haut garantissent un confort optimal pour les longues journées de travail.",
+    price: 200
+  }
+}
+
+
+
+office_chairs.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/8-2-#{index+1}-chaise_de_bureau-bureau.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+shelves = {
+  "shelf_1" => {
+    name: "KALLAX",
+    room_type: "Bureau",
+    category: "Ètagère",
+    description: "L'étagère KALLAX est versatile et adaptable à vos besoins. Avec ses compartiments carrés, elle est idéale pour ranger des livres, des fournitures de bureau ou pour afficher des objets décoratifs.",
+    price: 70
+  },
+  "shelf_2" => {
+    name: "BILLY",
+    room_type: "Bureau",
+    category: "Ètagère",
+    description: "L'étagère BILLY est un classique de IKEA. Sa simplicité et sa fonctionnalité en font un choix parfait pour organiser vos livres et autres objets dans votre espace de travail.",
+    price: 60
+  },
+  "shelf_3" => {
+    name: "EKET",
+    room_type: "Bureau",
+    category: "Ètagère",
+    description: "L'étagère EKET offre une solution de rangement modulaire. Avec ses multiples configurations, vous pouvez créer une solution de rangement qui convient parfaitement à votre espace de travail.",
+    price: 80
+  },
+  "shelf_4" => {
+    name: "BRUSALI",
+    room_type: "Bureau",
+    category: "Ètagère",
+    description: "L'étagère BRUSALI est compacte et pratique. Son design épuré et ses étagères ajustables permettent un rangement efficace dans votre bureau, quel que soit l'espace disponible.",
+    price: 100
+  },
+  "shelf_5" => {
+    name: "HEMNES",
+    room_type: "Bureau",
+    category: "Ètagère",
+    description: "L'étagère HEMNES offre une élégance traditionnelle à votre espace de travail. Avec sa construction en bois massif, elle offre une solution de rangement durable et attrayante pour votre bureau.",
+    price: 150
+  }
+}
+
+
+shelves.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/8-3-#{index+1}-étagère-bureau.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+
+shoe_cabinets = {
+  "shoe_cabinet_1" => {
+    name: "HEMNES",
+    room_type: "Entrée",
+    category: "Meuble-chaussures",
+    description: "Le meuble à chaussures HEMNES ajoute une touche d'élégance à votre entrée. Avec sa capacité de rangement impressionnante, il aide à garder vos chaussures organisées et facilement accessibles.",
+    price: 100
+  },
+  "shoe_cabinet_2" => {
+    name: "BISSA",
+    room_type: "Entrée",
+    category: "Meuble-chaussures",
+    description: "BISSA est un meuble à chaussures compact et fonctionnel. Il maximise l'utilisation de l'espace tout en gardant vos chaussures à l'abri de la poussière.",
+    price: 50
+  },
+  "shoe_cabinet_3" => {
+    name: "STÄLL",
+    room_type: "Entrée",
+    category: "Meuble-chaussures",
+    description: "Le meuble à chaussures STÄLL offre une solution de rangement élégante. Son design moderne et sa capacité de rangement vous aident à garder votre entrée soignée et organisée.",
+    price: 140
+  },
+  "shoe_cabinet_4" => {
+    name: "TRONES",
+    room_type: "Entrée",
+    category: "Meuble-chaussures",
+    description: "TRONES est un meuble à chaussures versatile qui peut aussi servir de rangement supplémentaire. Son design minimaliste se marie parfaitement avec tous les décors d'entrée.",
+    price: 40
+  },
+  "shoe_cabinet_5" => {
+    name: "BRUSALI",
+    room_type: "Entrée",
+    category: "Meuble-chaussures",
+    description: "Le meuble à chaussures BRUSALI offre une grande capacité de rangement pour vos chaussures. Son design simple et classique en fait un ajout parfait à toute entrée.",
+    price: 80
+  }
+}
+
+
+
+shoe_cabinets.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/9-1-#{index+1}-meuble_chaussures-entrée.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+
+consoles = {
+  "console_1" => {
+    name: "LIATORP",
+    room_type: "Entrée",
+    category: "Console",
+    description: "La console LIATORP offre une surface spacieuse pour afficher vos objets décoratifs. Son design romantique avec des détails délicats ajoute une touche d'élégance à votre entrée.",
+    price: 180
+  },
+  "console_2" => {
+    name: "HEMNES",
+    room_type: "Entrée",
+    category: "Console",
+    description: "La console HEMNES ajoute une fonctionnalité et un style traditionnel à votre entrée. Avec ses tiroirs et sa surface d'exposition, elle offre un espace de rangement pratique tout en améliorant l'attrait visuel de votre espace.",
+    price: 150
+  },
+  "console_3" => {
+    name: "LACK",
+    room_type: "Entrée",
+    category: "Console",
+    description: "La console LACK est un ajout simple et élégant à votre entrée. Sa conception épurée et minimaliste offre un espace de rangement supplémentaire sans encombrer l'espace.",
+    price: 55
+  },
+  "console_4" => {
+    name: "MALM",
+    room_type: "Entrée",
+    category: "Console",
+    description: "La console MALM offre une solution de rangement élégante et moderne pour votre entrée. Avec ses tiroirs glissants et sa surface lisse, elle sert à la fois d'espace d'exposition et de rangement.",
+    price: 120
+  },
+  "console_5" => {
+    name: "BRUSALI",
+    room_type: "Entrée",
+    category: "Console",
+    description: "La console BRUSALI est une addition pratique et attrayante à votre entrée. Son design épuré et sa finition neutre en font une pièce versatile pour tous les styles d'intérieur.",
+    price: 100
+  }
+}
+
+
+
+consoles.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/9-2-#{index+1}-console-entrée.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+
+mirrors = {
+  "mirror_1" => {
+    name: "NISSEDAL",
+    room_type: "Entrée",
+    category: "Miroir",
+    description: "Le miroir NISSEDAL offre une présence élégante dans votre entrée. Son cadre noir chic ajoute une touche d'élégance, tandis que le miroir reflète la lumière, rendant l'espace plus lumineux.",
+    price: 50
+  },
+  "mirror_2" => {
+    name: "HEMNES",
+    room_type: "Entrée",
+    category: "Miroir",
+    description: "Le miroir HEMNES avec son cadre en bois blanc ajoute une sensation de légèreté et d'espace à votre entrée. Parfait pour une dernière vérification avant de quitter la maison.",
+    price: 80
+  },
+  "mirror_3" => {
+    name: "KARMSUND",
+    room_type: "Entrée",
+    category: "Miroir",
+    description: "Le miroir KARMSUND offre une fonctionnalité supérieure avec son design inclinable. Son cadre noir ajoute une touche de sophistication à votre entrée.",
+    price: 40
+  },
+  "mirror_4" => {
+    name: "STAVE",
+    room_type: "Entrée",
+    category: "Miroir",
+    description: "Le miroir STAVE offre un design simple et épuré. Il s'intègre parfaitement à tout style de décoration d'entrée et ajoute une sensation d'espace.",
+    price: 30
+  },
+  "mirror_5" => {
+    name: "IKORNNES",
+    room_type: "Entrée",
+    category: "Miroir",
+    description: "Le miroir IKORNNES, avec son cadre en bois de frêne, ajoute une touche naturelle à votre entrée. Sa conception permet de le suspendre à une porte ou sur un mur, offrant une flexibilité d'installation.",
+    price: 70
+  }
+}
+
+mirrors.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("app/assets/images/items/9-3-#{index+1}-miroir-entrée.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
