@@ -1,7 +1,16 @@
 .flex {
   display: flex;
-
   img {
-    width: 50%;
+    width: 55%;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
   }
+}
+
+.item-infos {
+  margin-left: 20px;
+  margin-top: 25px;
 }

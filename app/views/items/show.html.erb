@@ -1,8 +1,9 @@
 <div class="flex">
-<%= image_tag "photo-drole.jpg", crop: :fill %>
-<div class="item-infos">
-  <%= @item.name %>
-  <%= @item.description %>
-  <%= @item.price %>
-</div>
+  <%= image_tag "items/1-1-4-table_de_jardin-jardin.jpg", crop: :fill %>
+    <div class="item-infos">
+      <h1 style="font-weight: bold"><%= @item.name %></h1>
+      <p><%= @item.description %></p>
+      <h3 style="font-weight: bold"><%= @item.price %>€</h3>
+      <button>Ajouter au panier</button>
+    </div>
 </div>
