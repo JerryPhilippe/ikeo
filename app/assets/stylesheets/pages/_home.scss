@@ -1,7 +1,4 @@
 // Specific CSS for your home-page
-.fa-solid {
-  font-family: 'Work Sans'!important;
-}
 
 .home-wrapper {
   display: grid;
@@ -18,5 +15,6 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  border: solid 1px black
+  border: solid 1px black;
+  vertical-align: text-bottom;
 }
