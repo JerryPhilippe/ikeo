@@ -1,0 +1,22 @@
+<div data-search-items-target="list">
+  <div class="container">
+    <%if @items.exists? %>
+      <%  room = @items.last  %>
+      <h1><%=room.room_type%></h1>
+    <% end %>
+
+
+    <div class="wrapper-index">
+      <% @items.each do |item| %>
+        <div class="card-index">
+          <%= cl_image_tag item.photo.key, class:"item-img"%>
+          <div class="card-index-text">
+            <h1 class=""><%= item.name %></h1>
+            <%= item.price %>0€</p>
+            <%= link_to "Voir cet item", items_path(item), class:"" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
