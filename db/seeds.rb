@@ -40,7 +40,7 @@ garden_tables = {
 
 garden_tables.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/1-1-#{index+1}-table_de_jardin-jardin.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/1-1-#{index+1}-table_de_jardin-jardin.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -85,7 +85,7 @@ garden_chairs = {
 
 garden_chairs.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/1-2-#{index+1}-chaise_de_jardin-jardin.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/1-2-#{index+1}-chaise_de_jardin-jardin.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -130,7 +130,7 @@ garden_armchairs = {
 
 garden_armchairs.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/1-3-#{index+1}-fauteuil_de_jardin-jardin.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/1-3-#{index+1}-fauteuil_de_jardin-jardin.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -176,7 +176,7 @@ coffee_tables = {
 
 coffee_tables.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/2-1-#{index+1}-table-basse-salon.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/2-1-#{index+1}-table_basse-salon.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -223,7 +223,7 @@ sofas = {
 
 sofas.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/2-2-#{index+1}-canapé-salon.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/2-2-#{index+1}-canape-salon.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -268,7 +268,7 @@ armchairs = {
 
 armchairs.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/2-3-#{index+1}-fauteuil-salon.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/2-3-#{index+1}-fauteuil-salon.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -313,7 +313,7 @@ dining_tables = {
 
 dining_tables.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/3-1-#{index+1}-table-salle_à_manger.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/3-1-#{index+1}-table-salle_a_manger.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -358,7 +358,7 @@ dining_chairs = {
 
 dining_chairs.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/3-2-#{index+1}-chaise-salle_à_manger.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/3-2-#{index+1}-chaise-salle_a_manger.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -402,144 +402,144 @@ buffets = {
 
 buffets.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/3-3-#{index+1}-buffet-salle_à_manger.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/3-3-#{index+1}-buffet-salle_a_manger.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
 
-upper_cabinets = {
-  "upper_cabinet_1" => {
-    name: "SEKTION",
-    room_type: "Cuisine",
-    category: "Meuble haut",
-    description: "Le meuble haut SEKTION est parfait pour optimiser l'espace vertical de votre cuisine. Son design fonctionnel permet de ranger facilement la vaisselle et les ustensiles.",
-    price: 80
-  },
-  "upper_cabinet_2" => {
-    name: "METOD",
-    room_type: "Cuisine",
-    category: "Meuble haut",
-    description: "METOD est un meuble haut qui offre une grande capacité de rangement. Sa structure durable garantit une utilisation de longue durée.",
-    price: 90
-  },
-  "upper_cabinet_3" => {
-    name: "KUNGSBACKA",
-    room_type: "Cuisine",
-    category: "Meuble haut",
-    description: "Le meuble haut KUNGSBACKA, avec son design moderne et épuré, donne une allure contemporaine à votre cuisine tout en offrant un espace de rangement pratique.",
-    price: 120
-  },
-  "upper_cabinet_4" => {
-    name: "VEDDINGE",
-    room_type: "Cuisine",
-    category: "Meuble haut",
-    description: "Le meuble haut VEDDINGE offre une solution de rangement élégante pour votre cuisine. Son design minimaliste s'intègre parfaitement dans les cuisines modernes.",
-    price: 100
-  },
-  "upper_cabinet_5" => {
-    name: "TORHAMN",
-    room_type: "Cuisine",
-    category: "Meuble haut",
-    description: "TORHAMN est un meuble haut offrant un espace de rangement ample. Son design naturel ajoute une touche de chaleur à votre cuisine.",
-    price: 110
-  }
-}
+# upper_cabinets = {
+#   "upper_cabinet_1" => {
+#     name: "SEKTION",
+#     room_type: "Cuisine",
+#     category: "Meuble haut",
+#     description: "Le meuble haut SEKTION est parfait pour optimiser l'espace vertical de votre cuisine. Son design fonctionnel permet de ranger facilement la vaisselle et les ustensiles.",
+#     price: 80
+#   },
+#   "upper_cabinet_2" => {
+#     name: "METOD",
+#     room_type: "Cuisine",
+#     category: "Meuble haut",
+#     description: "METOD est un meuble haut qui offre une grande capacité de rangement. Sa structure durable garantit une utilisation de longue durée.",
+#     price: 90
+#   },
+#   "upper_cabinet_3" => {
+#     name: "KUNGSBACKA",
+#     room_type: "Cuisine",
+#     category: "Meuble haut",
+#     description: "Le meuble haut KUNGSBACKA, avec son design moderne et épuré, donne une allure contemporaine à votre cuisine tout en offrant un espace de rangement pratique.",
+#     price: 120
+#   },
+#   "upper_cabinet_4" => {
+#     name: "VEDDINGE",
+#     room_type: "Cuisine",
+#     category: "Meuble haut",
+#     description: "Le meuble haut VEDDINGE offre une solution de rangement élégante pour votre cuisine. Son design minimaliste s'intègre parfaitement dans les cuisines modernes.",
+#     price: 100
+#   },
+#   "upper_cabinet_5" => {
+#     name: "TORHAMN",
+#     room_type: "Cuisine",
+#     category: "Meuble haut",
+#     description: "TORHAMN est un meuble haut offrant un espace de rangement ample. Son design naturel ajoute une touche de chaleur à votre cuisine.",
+#     price: 110
+#   }
+# }
 
-upper_cabinets.each_with_index do |(_key, value), index|
-  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/4-1-#{index+1}-meubles_haut-cuisine.jpg")
-  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
-end
+# upper_cabinets.each_with_index do |(_key, value), index|
+#   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+#   file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/4-1-#{index+1}-meubles_haut-cuisine.jpg")
+#   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+# end
 
-lower_cabinets = {
-  "lower_cabinet_1" => {
-    name: "SEKTION",
-    room_type: "Cuisine",
-    category: "Meuble bas",
-    description: "SEKTION est un meuble bas qui offre un espace de rangement ample pour votre cuisine. Son design fonctionnel permet de garder vos ustensiles de cuisine organisés.",
-    price: 100
-  },
-  "lower_cabinet_2" => {
-    name: "METOD",
-    room_type: "Cuisine",
-    category: "Meuble bas",
-    description: "Le meuble bas METOD offre un grand espace de rangement pour votre vaisselle et vos ustensiles. Sa durabilité et son design pratique en font un choix idéal pour toute cuisine.",
-    price: 120
-  },
-  "lower_cabinet_3" => {
-    name: "KUNGSBACKA",
-    room_type: "Cuisine",
-    category: "Meuble bas",
-    description: "KUNGSBACKA est un meuble bas au design épuré et contemporain. Sa structure solide et son espace de rangement pratique en font un ajout parfait à votre cuisine.",
-    price: 150
-  },
-  "lower_cabinet_4" => {
-    name: "VEDDINGE",
-    room_type: "Cuisine",
-    category: "Meuble bas",
-    description: "Le meuble bas VEDDINGE est à la fois fonctionnel et esthétiquement plaisant. Son design minimaliste ajoutera une touche de modernité à votre cuisine.",
-    price: 140
-  },
-  "lower_cabinet_5" => {
-    name: "TORHAMN",
-    room_type: "Cuisine",
-    category: "Meuble bas",
-    description: "TORHAMN est un meuble bas avec un design chaleureux et naturel. Il offre un espace de rangement généreux pour garder votre cuisine organisée.",
-    price: 130
-  }
-}
-
-
-lower_cabinets.each_with_index do |(_key, value), index|
-  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/4-2-#{index+1}-meubles_bas-cuisine.jpg")
-  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
-end
+# lower_cabinets = {
+#   "lower_cabinet_1" => {
+#     name: "SEKTION",
+#     room_type: "Cuisine",
+#     category: "Meuble bas",
+#     description: "SEKTION est un meuble bas qui offre un espace de rangement ample pour votre cuisine. Son design fonctionnel permet de garder vos ustensiles de cuisine organisés.",
+#     price: 100
+#   },
+#   "lower_cabinet_2" => {
+#     name: "METOD",
+#     room_type: "Cuisine",
+#     category: "Meuble bas",
+#     description: "Le meuble bas METOD offre un grand espace de rangement pour votre vaisselle et vos ustensiles. Sa durabilité et son design pratique en font un choix idéal pour toute cuisine.",
+#     price: 120
+#   },
+#   "lower_cabinet_3" => {
+#     name: "KUNGSBACKA",
+#     room_type: "Cuisine",
+#     category: "Meuble bas",
+#     description: "KUNGSBACKA est un meuble bas au design épuré et contemporain. Sa structure solide et son espace de rangement pratique en font un ajout parfait à votre cuisine.",
+#     price: 150
+#   },
+#   "lower_cabinet_4" => {
+#     name: "VEDDINGE",
+#     room_type: "Cuisine",
+#     category: "Meuble bas",
+#     description: "Le meuble bas VEDDINGE est à la fois fonctionnel et esthétiquement plaisant. Son design minimaliste ajoutera une touche de modernité à votre cuisine.",
+#     price: 140
+#   },
+#   "lower_cabinet_5" => {
+#     name: "TORHAMN",
+#     room_type: "Cuisine",
+#     category: "Meuble bas",
+#     description: "TORHAMN est un meuble bas avec un design chaleureux et naturel. Il offre un espace de rangement généreux pour garder votre cuisine organisée.",
+#     price: 130
+#   }
+# }
 
 
-kitchen_wardrobes = {
-  "kitchen_wardrobe_1" => {
-    name: "PAX",
-    room_type: "Cuisine",
-    category: "Armoire de cuisine",
-    description: "PAX est une armoire de cuisine polyvalente offrant une grande capacité de rangement. Son design modulable vous permet de personnaliser l'espace selon vos besoins.",
-    price: 250
-  },
-  "kitchen_wardrobe_2" => {
-    name: "GODMORGON",
-    room_type: "Cuisine",
-    category: "Armoire de cuisine",
-    description: "L'armoire de cuisine GODMORGON offre un espace de rangement généreux pour tous vos ustensiles de cuisine. Son design élégant et sa construction durable en font un excellent choix.",
-    price: 300
-  },
-  "kitchen_wardrobe_3" => {
-    name: "IVAR",
-    room_type: "Cuisine",
-    category: "Armoire de cuisine",
-    description: "IVAR est une armoire de cuisine robuste et polyvalente, parfaite pour garder vos ustensiles de cuisine et autres essentiels bien organisés et à portée de main.",
-    price: 200
-  },
-  "kitchen_wardrobe_4" => {
-    name: "BRIMNES",
-    room_type: "Cuisine",
-    category: "Armoire de cuisine",
-    description: "L'armoire de cuisine BRIMNES offre un espace de rangement spacieux pour vos ustensiles de cuisine. Son design simple s'adapte à tous les styles de cuisine.",
-    price: 220
-  },
-  "kitchen_wardrobe_5" => {
-    name: "BESTÅ",
-    room_type: "Cuisine",
-    category: "Armoire de cuisine",
-    description: "L'armoire de cuisine BESTÅ offre une solution de rangement modulable pour votre cuisine. Son design épuré et contemporain s'intègre parfaitement dans n'importe quel espace.",
-    price: 260
-  }
-}
+# lower_cabinets.each_with_index do |(_key, value), index|
+#   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+#   file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/4-2-#{index+1}-meubles_bas-cuisine.jpg")
+#   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+# end
 
-kitchen_wardrobes.each_with_index do |(_key, value), index|
-  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/4-3-#{index+1}-armoire_de_cuisine-cuisine.jpg")
-  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
-end
+
+# kitchen_wardrobes = {
+#   "kitchen_wardrobe_1" => {
+#     name: "PAX",
+#     room_type: "Cuisine",
+#     category: "Armoire de cuisine",
+#     description: "PAX est une armoire de cuisine polyvalente offrant une grande capacité de rangement. Son design modulable vous permet de personnaliser l'espace selon vos besoins.",
+#     price: 250
+#   },
+#   "kitchen_wardrobe_2" => {
+#     name: "GODMORGON",
+#     room_type: "Cuisine",
+#     category: "Armoire de cuisine",
+#     description: "L'armoire de cuisine GODMORGON offre un espace de rangement généreux pour tous vos ustensiles de cuisine. Son design élégant et sa construction durable en font un excellent choix.",
+#     price: 300
+#   },
+#   "kitchen_wardrobe_3" => {
+#     name: "IVAR",
+#     room_type: "Cuisine",
+#     category: "Armoire de cuisine",
+#     description: "IVAR est une armoire de cuisine robuste et polyvalente, parfaite pour garder vos ustensiles de cuisine et autres essentiels bien organisés et à portée de main.",
+#     price: 200
+#   },
+#   "kitchen_wardrobe_4" => {
+#     name: "BRIMNES",
+#     room_type: "Cuisine",
+#     category: "Armoire de cuisine",
+#     description: "L'armoire de cuisine BRIMNES offre un espace de rangement spacieux pour vos ustensiles de cuisine. Son design simple s'adapte à tous les styles de cuisine.",
+#     price: 220
+#   },
+#   "kitchen_wardrobe_5" => {
+#     name: "BESTÅ",
+#     room_type: "Cuisine",
+#     category: "Armoire de cuisine",
+#     description: "L'armoire de cuisine BESTÅ offre une solution de rangement modulable pour votre cuisine. Son design épuré et contemporain s'intègre parfaitement dans n'importe quel espace.",
+#     price: 260
+#   }
+# }
+
+# kitchen_wardrobes.each_with_index do |(_key, value), index|
+#   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+#   file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/4-3-#{index+1}-armoire_de_cuisine-cuisine.jpg")
+#   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+# end
 
 
 beds = {
@@ -583,7 +583,7 @@ beds = {
 
 beds.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/5-1-#{index+1}-lit-chambre.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/5-1-#{index+1}-lit-chambres.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -629,7 +629,7 @@ wardrobes = {
 
 wardrobes.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/5-2-#{index+1}-armoire-chambre.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/5-2-#{index+1}-armoire-chambres.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -675,7 +675,7 @@ nightstands = {
 
 nightstands.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/5-3-#{index+1}-chevet-chambre.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/5-3-#{index+1}-chevet-chambres.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -720,7 +720,7 @@ vanities = {
 
 vanities.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/6-1-#{index+1}-meuble_vasque-salle_de_bain.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/6-1-#{index+1}-meuble_vasque-salle_de_bain.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -765,7 +765,7 @@ mirror_cabinets = {
 
 mirror_cabinets.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/6-2-#{index+1}-meuble_miroir-salle_de_bain.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/6-2-#{index+1}-meuble_miroir-salle_de_bain.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -811,7 +811,7 @@ bathroom_cabinets = {
 
 bathroom_cabinets.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/6-3-#{index+1}-armoire_de_salle_de_bain-salle_de_bain.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/6-3-#{index+1}-armoire_de_salle_de_bain-salle_de_bain.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -856,7 +856,7 @@ childrens_beds = {
 
 childrens_beds.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/7-1-#{index+1}-lit_enfant-chambres_enfants.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/7-1-#{index+1}-lit_enfant-chambres_enfant.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -902,7 +902,7 @@ childrens_desks = {
 
 childrens_desks.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/7-2-#{index+1}-bureau_enfant-chambres_enfants.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/7-2-#{index+1}-bureau_enfant-chambres_enfant.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -948,7 +948,7 @@ childrens_wardrobes = {
 
 childrens_wardrobes.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/7-3-#{index+1}-armoire_enfant-chambres_enfants.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/7-3-#{index+1}-armoire_enfant-chambres_enfant.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -993,7 +993,7 @@ adult_desks = {
 
 adult_desks.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/8-1-#{index+1}-bureau_adulte-bureau.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/8-1-#{index+1}-bureau_adulte-bureau.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -1039,7 +1039,7 @@ office_chairs = {
 
 office_chairs.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/8-2-#{index+1}-chaise_de_bureau-bureau.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/8-2-#{index+1}-chaise_de_bureau-bureau.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -1084,7 +1084,7 @@ shelves = {
 
 shelves.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/8-3-#{index+1}-étagère-bureau.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/8-3-#{index+1}-etagere-bureau.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -1131,7 +1131,7 @@ shoe_cabinets = {
 
 shoe_cabinets.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/9-1-#{index+1}-meuble_chaussures-entrée.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/9-1-#{index+1}-meuble_chaussure-entree.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -1178,7 +1178,7 @@ consoles = {
 
 consoles.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/9-2-#{index+1}-console-entrée.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/9-2-#{index+1}-console-entree.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
 
@@ -1223,6 +1223,6 @@ mirrors = {
 
 mirrors.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
-  file = URI.open("app/assets/images/items/9-3-#{index+1}-miroir-entrée.jpg")
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/9-3-#{index+1}-miroir-entree.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
