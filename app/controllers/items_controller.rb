@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_item, only: [:show]
+
   def index
     if params[:query].present?
       sql_query = "name @@ :query OR description @@ :query OR category @@ :query OR room_type @@ :query"

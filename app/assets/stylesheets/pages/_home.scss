@@ -1,13 +1,10 @@
 // Specific CSS for your home-page
-.fa-solid {
-  font-family: 'Work Sans'!important;
-}
 
 .home-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  gap: 10px;
+  grid-gap: 30px;
+  gap: 40px;
   width: 100%;
  /*  grid-auto-rows: minmax(100px, auto); */
 }
@@ -18,5 +15,15 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  border: solid 1px black
+  border: solid 1px black;
+}
+
+.text-card-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 120px;
+    h1 {
+      font-size: 35px!important;
+    }
 }
