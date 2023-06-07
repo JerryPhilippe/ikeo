@@ -1,27 +1,23 @@
 <div data-search-items-target="list">
-  <%if @items.exists? %>
-    <%  room = @items.last  %>
-    <h1><%=room.room_type%></h1>
-  <% end %>
-
-  <div class="container doodle">
-
+  <% @items.each do |key, item| %>
+    <h1><%= key %></h1>
+    <hr class="doodle">
     <div class="wrapper-index ">
-      <% @items.each do |item| %>
+      <% item.each do |product| %>
         <div class="card-index doodle-border ">
           <div class="item-img">
-            <%= cl_image_tag item.photo.key%>
+            <%= cl_image_tag product.photo.key%>
           </div>
           <div class="card-index-text ">
-            <h1 class=""><%= item.name %></h1>
+            <h1 class=""><%= product.name %></h1>
 
             <div class="flex-price-link">
 
-              <p><%= item.price%>0€</p>
+              <p><%= product.price%>0€</p>
 
               <div class="flex-card" >
                 <div class="doodle-button button-index">
-                  <%= link_to "Voir cet item", items_path(item), class:"doodle-link" %>
+                  <%= link_to "Voir cet item", items_path(product), class:"doodle-link" %>
                 </div>
               </div>
             </div>
@@ -29,5 +25,5 @@
         </div>
       <% end %>
     </div>
-  </div>
+  <% end %>
 </div>
