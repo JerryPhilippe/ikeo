@@ -1,5 +1,6 @@
 .flex {
   display: flex;
+  background-color: white;
   img {
     width: 55%;
     height: auto;
@@ -8,9 +9,14 @@
     border-radius: 5px;
     margin-bottom: 15px;
   }
-}
 
-.item-infos {
-  margin-left: 20px;
-  margin-top: 25px;
+  .item-infos {
+    margin-left: 20px;
+    margin-top: 25px;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 15px;
+  }
 }
