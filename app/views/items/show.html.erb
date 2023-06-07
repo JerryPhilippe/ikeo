@@ -7,7 +7,7 @@
         <p><%= @item.description %></p>
         <h3 style="font-weight: bold"><%= @item.price %>0€</h3>
         <div class="doodle-button button-show">
-        <%= link_to "ajouter au panier", class:"doodle-link" %>
+        <%= link_to "ajouter au panier", create_cart_item_path(@item), class:"doodle-link"  %>
         </div>
       </div>
     </div>
