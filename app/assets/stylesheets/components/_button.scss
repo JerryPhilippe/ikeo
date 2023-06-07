@@ -1,7 +1,18 @@
 .doodle-link {
-  text-decoration: none;
+  text-decoration: none!important;
   color: black;
   background-color: unset;
   margin: -4px;
   line-height: 40px;
+}
+
+.doodle-red {
+  text-decoration: none!important;
+  background-color: unset;
+  margin: -4px;
+  line-height: 40px;
+  color: red;
+  a {
+    color: red;
+  }
 }
