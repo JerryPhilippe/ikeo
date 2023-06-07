@@ -1,13 +1,13 @@
 .flex {
   display: flex;
-  background-color: white;
+ /*  background-color: white; */
   img {
-    width: 55%;
+    width: 50%;
     height: auto;
     margin-left: 25px;
-    margin-top: 15px;
+    margin-top: 25px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   .item-infos {
@@ -19,4 +19,16 @@
     position: sticky;
     top: 15px;
   }
+}
+
+.button-show a {
+  text-decoration: none;
+  width: 140px;
+  background-color: $purple;
+  margin: -4px;
+  display: block;
+}
+
+.button-show {
+  width: 150px;
 }
