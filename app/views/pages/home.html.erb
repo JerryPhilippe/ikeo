@@ -3,95 +3,137 @@
   <div class= "doodle home-wrapper">
 
 
-    <div class= "doodle-border card-home" id="jardin">
-      <%= image_tag("Jardin.avif")%>
-      <div class= "text-card-home">
-        <h1>Jardin, terrasse et balcon</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
-      </div>
-    </div>
 
-    <div class= "doodle-border card-home" id="salon">
-      <%= image_tag("Salon.avif")%>
-      <div class= "text-card-home">
-        <h1>Salon</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Jardin"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="jardin">
+        <%= image_tag("Jardin.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Jardin</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 93 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.441528 57.1661C2.74403 49.2945 5.80364 42.3799 10.6899 35.806C13.4217 32.1307 16.6328 28.0531 20.8114 25.9005C27.3346 22.5401 24.3263 31.45 23.3651 34.5262C21.1688 41.5559 19.1946 48.627 17.1407 55.6984C16.7376 57.0861 15.5582 61.2538 15.8656 59.8418C16.5865 56.5301 18.1765 53.1466 19.6704 50.1315C23.8163 41.7643 29.6943 32.3539 36.9179 26.2513C39.3361 24.2084 41.1917 23.9172 40.5228 27.8639C38.7095 38.5636 34.0796 48.6849 31.5722 59.2372C31.0117 61.5964 30.6634 62.8382 32.3445 60.1926C36.5442 53.583 41.0762 47.2348 46.1918 41.2999C54.0891 32.1376 62.5831 23.3559 71.6703 15.3677C78.0002 9.80325 84.6755 4.28555 92.2461 0.513092" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M90.1126 0.685474C85.3914 2.4363 80.67 4.17214 75.9325 5.87885" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M74.7472 6.91321C78.7247 7.08814 81.4453 7.12379 84.7777 9.15913C85.7829 9.77312 87.5776 11.2244 88.8196 11.2015C89.7424 11.1845 89.4334 8.33619 89.4708 7.75364C89.6306 5.26606 90.7651 3.55425 92.1383 1.569" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
         </div>
-    </div>
-
-    <div class= "doodle-border card-home" id="salle-manger">
-      <%= image_tag("SalleManger.avif")%>
-      <div class= "text-card-home">
-        <h1>Salle à manger</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
       </div>
-    </div>
+     <% end %>
 
-    <div class= "doodle-border card-home" id="cuisine">
-      <%= image_tag("Cuisine.avif")%>
-      <div class= "text-card-home">
-        <h1>Cuisine</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Salon"), class: 'home-card-btn' do %>
+      <div class="doodle-border card-home" id="salon">
+        <%= image_tag("Salon.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Salon</h1>
+          <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 110 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.734436 32.0433C28.1185 20.8631 58.321 14.4162 87.6991 11.2271C93.6909 10.5767 99.7856 10.1329 105.681 8.82643C106.565 8.6305 107.666 8.45126 108.257 7.71167" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M105.295 7.55369C103.251 6.41332 98.0697 4.73081 97.3989 2.01718C97.3762 1.92544 97.3095 1.31771 97.3374 1.37859C98.1737 3.20315 97.6004 7.32036 97.4208 9.32238C97.3735 9.84973 96.396 15.3811 96.8612 15.1485C101.235 12.9619 105.361 8.83254 109.442 6.05271" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class= "doodle-border card-home" id="chambre">
-     <%= image_tag("Chambre.avif")%>
-     <div class= "text-card-home">
-        <h1>Chambre</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Salle à manger"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="salle-manger">
+        <%= image_tag("SalleManger.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Salle à manger</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 107 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.447937 18.1614C9.81014 31.5352 18.4347 42.3598 31.519 52.0087C40.0175 58.2759 54.5547 65.2946 64.1291 57.0482C74.8617 47.8042 84.2643 34.1413 91.7659 22.1683C95.8416 15.6632 100.326 9.79988 103.994 3.06629C104.777 1.62775 106.117 0.590713 103.454 1.84721C99.6476 3.64332 95.7206 5.00081 91.7126 6.32044C84.0852 8.83174 82.4146 9.9082 92.4987 7.40962C94.8989 6.81489 101.851 3.59526 104.567 4.38527C107.097 5.12145 106.361 12.9525 106.422 14.9305C106.9 30.442 95.1386 15.7417 88.7647 11.1467" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class= "doodle-border card-home" id="salle-bain">
-      <%= image_tag("SalleBain.avif")%>
-      <div class= "text-card-home">
-        <h1>Salle de bain</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Cuisine"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="cuisine">
+        <%= image_tag("Cuisine.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Cuisine</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 152 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.82548 90.5701C0.262846 80.2936 -0.448058 72.3483 4.38757 63.1414C7.62646 56.9746 11.3067 50.9698 15.3251 45.2775C18.1293 41.305 29.0288 26.8409 35.3148 33.357C39.295 37.483 54.3739 81.3071 66.6943 60.4306C73.2132 49.3848 79.2451 29.0606 92.3183 23.5463C100.068 20.2775 105.912 50.4764 109.585 55.1914C114.865 61.9698 118.714 49.115 120.568 45.2744C125.32 35.4329 130.422 25.8479 136.496 16.7529C139.458 12.3177 142.096 8.13541 146.341 4.84157C148.493 3.17191 146.712 3.691 144.92 3.83379C142.189 4.05146 129.653 5.87573 138.7 4.38625C144.055 3.50451 146.192 6.86109 147.701 11.8111C148.394 14.0842 148.786 16.417 148.918 18.7836C148.949 19.3337 148.638 20.6183 149.152 20.4197C150.07 20.0649 150.424 3.60434 151.435 1.01685" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M137.392 6.91785C140.08 10.2427 142.806 13.5134 145.588 16.7529" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class= "doodle-border card-home" id="chambre-enfant">
-      <%= image_tag("Enfant.avif")%>
-      <div class= "text-card-home">
-        <h1>Chambre enfant</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Chambre"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="chambre">
+      <%= image_tag("Chambre.avif")%>
+      <div class= "text-card-home d-flex justify-content-between">
+          <h1>Chambre</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 69 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.563538 86.4441C9.62047 89.2172 16.6734 91.0373 25.3582 87.062C32.131 83.9619 38.9967 80.1472 44.485 75.0561C50.4537 69.5194 57.9022 61.3399 53.1364 53.1378C49.3227 46.5744 43.2597 40.2549 43.2597 32.3089C43.2597 23.5235 48.7541 18.3068 54.9775 12.9941C58.6952 9.82034 63.0893 5.84965 65.693 1.65486C66.8291 -0.175672 57.9801 2.37935 56.7613 2.69535C56.4809 2.76805 57.7534 3.40302 58.0609 3.80379C59.7892 6.05612 60.7498 8.83608 62.4864 11.1169C66.0039 15.7368 66.9283 3.54324 68.4493 1.40005" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class= "doodle-border card-home" id="bureau">
-      <%= image_tag("Bureau.avif")%>
-      <div class= "text-card-home">
-        <h1>Bureau</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Salle de bain"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="salle-bain">
+        <%= image_tag("SalleBain.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Salle de bain</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 106 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.746735 34.5184C12.2021 40.1368 19.6014 41.495 29.6823 33.0404C36.0718 27.6817 42.1501 19.6964 45.0862 11.851C46.7881 7.30351 40.6898 12.0318 39.6346 13.0432C27.4261 24.7444 22.6035 43.8023 31.4757 58.851C37.2579 68.6586 47.5163 67.3307 56.3712 62.5164C69.8751 55.1746 77.5257 39.8696 80.2223 25.2514C81.1193 20.3886 84.6829 5.82289 78.8378 2.65785C73.9949 0.0354855 72.0976 9.61317 71.6643 12.5431C71.0465 16.7204 70.0313 25.7894 73.1645 29.1607C77.6582 33.9957 86.6118 27.5772 89.8445 24.3227C95.9834 18.1424 100.46 9.32842 104.943 1.91147C105.273 1.36535 101.764 3.3297 101.147 3.66784C99.3793 4.63577 97.2951 4.84168 95.6089 5.96364C94.3579 6.79605 88.7443 12.6083 93.6037 10.5208C95.3164 9.785 103.323 1.07071 103.701 1.3055C105.246 2.26341 104.699 13.9403 104.581 16.0977C104.296 21.2928 97.1835 12.0461 96.4366 10.6636" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class= "doodle-border card-home" id="entrée">
-      <%= image_tag("Entree.avif")%>
-      <div class= "text-card-home">
-        <h1>Entrée</h1>
-        <%#= link_to ..., class: 'btn' do %>
-            <i class="fa-solid fa-arrow-right"></i>
-          <%# end %>
+    <%= link_to items_path(room: "Chambre enfants"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="chambre-enfant">
+        <%= image_tag("Enfant.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Chambre enfant</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 77 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.33755 84.3973C0.297616 62.7119 2.93494 39.8181 19.4192 23.8736C28.2211 15.3599 42.4944 12.5723 47.6281 26.2359C51.1245 35.5419 51.542 51.9945 41.0605 57.0865C29.486 62.7095 40.2945 35.2221 41.9942 32.4952C49.9497 19.7313 59.7772 11.6122 72.2699 3.78281C76.9496 0.849879 73.7108 0.477284 70.0947 1.13476C66.9572 1.7052 63.4035 2.43717 60.5291 3.81975C59.6524 4.24143 65.7349 2.73236 66.6827 2.44768C70.7471 1.22705 75.4874 -0.0219285 75.9527 5.60812C76.0274 6.5127 75.9956 14.9844 74.7481 15.2963C74.099 15.4586 71.0438 10.27 70.4642 9.65288C66.6996 5.64506 63.5835 4.42393 58.2726 5.11792" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
       </div>
-    </div>
+    <% end %>
+
+    <%= link_to items_path(room: "Bureau"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="bureau">
+        <%= image_tag("Bureau.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Bureau</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 162 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.913757 114.53C13.9807 116.216 32.3056 122.378 43.7012 113.083C51.0025 107.128 57.0714 99.6064 62.6869 92.0921C73.647 77.4257 81.4769 57.0014 83.9262 38.9656C86.7749 17.9886 65.2558 22.4197 58.3958 36.6239C48.6178 56.8698 53.4826 94.2165 79.0133 100.444C108.309 107.591 123.562 71.7844 130.096 49.9154C134.773 34.2631 153.849 -9.9389 143.644 2.81731C137.309 10.736 128.12 15.6577 122.008 23.6058C118.81 27.7641 121.911 27.9558 125.382 25.0963C131.067 20.4118 136.477 14.6482 140.667 8.60318C141.379 7.57589 145.275 0.763508 146.837 3.12604C151.902 10.7886 153.525 20.5514 158.568 28.4832" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M132.848 24.4348C141.945 26.8851 150.961 28.4036 160.05 30.4235C162.841 31.0437 159.046 30.7305 158.171 30.7851" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to items_path(room: "Entrée"), class: 'home-card-btn' do %>
+      <div class= "doodle-border card-home" id="entrée">
+        <%= image_tag("Entree.avif")%>
+        <div class= "text-card-home d-flex justify-content-between">
+          <h1>Entrée</h1>
+            <div class= "arrow">
+            <svg class="w-10 h-10" viewBox="0 0 155 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.23425 11.4706C2.95888 22.4268 8.74485 52.6144 13.2726 42.4896C16.2053 35.9319 19.7278 29.4742 22.5201 22.9103C26.2267 14.1975 25.6547 22.1938 28.052 27.9103C28.7813 29.6493 34.7482 43.5469 37.0669 36.421C39.6151 28.5898 41.3825 20.9744 47.1616 14.804C51.8581 9.78936 55.4994 19.0694 57.6274 22.4452C63.7019 32.0819 63.3756 29.3529 66.3876 19.3887C67.2051 16.684 74.08 -0.121181 74.4445 0.739637C76.1767 4.83043 77.0939 10.2234 77.8279 14.5769C78.448 18.254 82.5655 42.7245 84.6722 28.9126C85.8721 21.0458 93.565 -1.08979 93.8255 6.86372C93.998 12.1324 91.156 28.7049 97.8623 30.906C101.409 32.07 106.387 27.7962 109.358 26.4984C116.981 23.1681 125.175 20.0126 133.313 18.2148C136.06 17.6079 154.712 17.6977 154.167 12.3122C153.729 7.98598 145.55 -2.07876 143.978 6.12724C142.839 12.072 141.897 17.9113 139.891 23.6523C139.732 24.1086 136.304 33.8258 136.37 33.8296C140.247 34.051 151.87 17.6529 153.037 13.464" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            </div>
+        </div>
+      </div>
+    <% end %>
 
   </div>
 

@@ -1,0 +1,29 @@
+<div data-search-items-target="list">
+  <% @items.each do |key, item| %>
+    <h1 class="room-title"><%= key %></h1>
+    <hr class="doodle">
+    <div class="wrapper-index ">
+      <% item.each do |product| %>
+        <div class="card-index doodle-border ">
+          <div class="item-img">
+            <%= cl_image_tag product.photo.key%>
+          </div>
+          <div class="card-index-text ">
+            <h1 class=""><%= product.name %></h1>
+
+            <div class="flex-price-link">
+
+              <p><%= product.price%>0€</p>
+
+              <div class="flex-card" >
+                <div class="doodle-button button-index">
+                  <%= link_to "Voir cet item", item_path(product), class:"doodle-link" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

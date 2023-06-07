@@ -3,6 +3,15 @@
 @import "show";
 @import "doodle";
 
+.room-title {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+hr {
+  opacity: 0.7!important;
+}
+
 .wrapper-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -18,12 +27,11 @@
  /*  border-style: none!important;
   border-width: 0!important; */
  /*  padding: 5px; */
-  height: 565px;
-  object-fit: contain;
+
+  object-fit: cover;
  }
 
 .container-index {
-
   margin: 100px;
 }
 
@@ -33,14 +41,17 @@
   min-width: 0;
   text-decoration: none;
   background-color: white;
-  height: 750px;
+  height: 690px;
   position: relative;
   padding: 10px;
+
+  h1{
+    font-size: 30px;
+  }
 }
 
 .card-index a {
   text-decoration: none;
-  color: black;
   float: right;
   right: 10px;
   width: 150px;
@@ -59,7 +70,7 @@
 .flex-price-link {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 35px;
   vertical-align: bottom;
 }
 

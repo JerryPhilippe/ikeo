@@ -6,6 +6,7 @@
   height: 100px;
   padding: 0px 50px;
   width: 100%;
+  background-color: white;
 }
 
 .icon-footer {
@@ -17,7 +18,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
+  color: $gray;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
