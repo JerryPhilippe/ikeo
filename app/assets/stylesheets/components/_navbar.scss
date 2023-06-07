@@ -1,27 +1,30 @@
 .navi-container {
-  height: 60px;
+  height: 120px;
   background-color: white;
-}
-
-.navi-content {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 5px;
   padding-left: 10px;
-  height: 50px;
+  width: 100vw;
+}
+.navi-container img {
+  height: 100px;
+  width: auto;
+  object-fit: cover;
 }
 
-.navi-content img {
-  max-height: 100%;
-}
+
 
 .navi-menu-bars {
   font-size: 20px;
 }
 
 .navi-menu {
-  display: block;
   text-align: center;
   margin-right: 20px;
+  position: absolute;
+  height: 100%;
 }
 
 .navi-search {
@@ -30,4 +33,13 @@
   border: 0;
   width: 500px;
   height: 30px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
 }

@@ -1,35 +1,43 @@
 <div class="navi-container">
-  <div class="navi-content">
-    <div class="navi-menu">
-
-      <div class="dropdown">
-        <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa-solid fa-bars navi-menu-bars"></i>
-          Menu
-        </a>
-        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <%= link_to "Acceuil", root_path, class: "dropdown-item" %>
-          <%= link_to "Jardin", root_path, class: "dropdown-item" %>
-          <%= link_to "Salle à manger", root_path, class: "dropdown-item" %>
-          <%= link_to "Cuisine", root_path, class: "dropdown-item" %>
-          <%= link_to "Chambres", root_path, class: "dropdown-item" %>
-          <%= link_to "Salle de bain", root_path, class: "dropdown-item" %>
-          <%= link_to "Chambres d'enfants", root_path, class: "dropdown-item" %>
-          <%= link_to " Bureau", root_path, class: "dropdown-item" %>
-          <%= link_to "Entrée", root_path, class: "dropdown-item" %>
-        </div>
+  <div class="nav-left">
+    <div class="dropdown">
+      <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-bars navi-menu-bars"></i>
+        Menu
+      </a>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <%= link_to "Accueil", root_path, class: "dropdown-item" %>
+        <%= link_to "Jardin", root_path, class: "dropdown-item" %>
+        <%= link_to "Salle à manger", root_path, class: "dropdown-item" %>
+        <%= link_to "Cuisine", root_path, class: "dropdown-item" %>
+        <%= link_to "Chambres", root_path, class: "dropdown-item" %>
+        <%= link_to "Salle de bain", root_path, class: "dropdown-item" %>
+        <%= link_to "Chambres d'enfants", root_path, class: "dropdown-item" %>
+        <%= link_to " Bureau", root_path, class: "dropdown-item" %>
+        <%= link_to "Entrée", root_path, class: "dropdown-item" %>
       </div>
     </div>
+
     <%= link_to root_path do %>
       <%= image_tag "logo.png"%>
     <% end %>
-    <% item = "here" %>
-    <%= simple_form_for item do |f| %>
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <%= f.text_field :query,
-                      class: "navi-search",
-                      placeholder: "Que cherchez vous?"%>
-    <% end %>
+
+    <div id="logo-koko">
+      <%= image_tag("Koko neutre.png")%>
+    </div>
+  </div>
+
+  <div class="nav-center">
+      <% item = "here" %>
+      <%= simple_form_for item do |f| %>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <%= f.text_field :query,
+                        class: "navi-search",
+                        placeholder: "Que cherchez vous?"%>
+      <% end %>
+  </div>
+
+  <div class="nav-right">
     <i class="fa-regular fa-user px-3"></i>
     <% if user_signed_in? %>
       <div class="dropdown">
@@ -48,5 +56,4 @@
     <i class="fa-regular fa-heart px-3"></i>
     <i class="fa-solid fa-cart-shopping px-3"></i>
   </div>
-
 </div>
