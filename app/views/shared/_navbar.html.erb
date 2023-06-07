@@ -22,6 +22,7 @@
       <%= image_tag "logo.png"%>
     <% end %>
 
+
     <div id="logo-koko">
       <%= image_tag("Koko neutre.png")%>
     </div>
@@ -31,10 +32,17 @@
       <% item = "here" %>
       <%= simple_form_for item do |f| %>
       <i class="fa-solid fa-magnifying-glass"></i>
+      <%= form_with url: items_path, method: :get, html: { class: 'mb-5', data: { search_items_target: 'form' } } do |f| %>
       <%= f.text_field :query,
                         class: "navi-search",
-                        placeholder: "Que cherchez vous?"%>
-      <% end %>
+                        placeholder: 'Que cherchez-vous ?',
+                        value: params[:query],
+                        data: {
+                        search_items_target: 'searchInput',
+                        action: "keyup->search-items#update"
+                        } %>
+      <%= submit_tag "" , class: "d-none" %>
+    <% end %>
   </div>
 
   <div class="nav-right">
@@ -54,6 +62,8 @@
       <%= link_to "Hej ! Connectez-vous", new_user_session_path, class: "nav-link" %>
     <% end %>
     <i class="fa-regular fa-heart px-3"></i>
-    <i class="fa-solid fa-cart-shopping px-3"></i>
+    <%= link_to cart_path do %>
+      <i class="fa-solid fa-cart-shopping px-3" style="color: black"></i>
+    <% end %>
   </div>
 </div>
