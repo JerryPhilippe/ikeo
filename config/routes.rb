@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :items
+  get "/cart", to: "cart_items#index"
+  get "/item/:id/create", to: "cart_items#create", as: :create_cart_item
 end

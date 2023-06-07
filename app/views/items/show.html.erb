@@ -6,7 +6,7 @@
         <h1 style="font-weight: bold"><%= @item.name %></h1>
         <p><%= @item.description %></p>
         <h3 style="font-weight: bold"><%= @item.price %>€</h3>
-        <button>Ajouter au panier</button>
+        <%= link_to "ajouter au panier", create_cart_item_path(@item) %>
       </div>
     </div>
   </div>
