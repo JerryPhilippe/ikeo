@@ -1,4 +1,4 @@
-.doodle * {
+.doodle *:not(.fa-solid, .fa-regular) {
   box-sizing: border-box;
   font-family: 'Short Stack', cursive;
 }
@@ -63,7 +63,7 @@
 .doodle hr {
   border-style: solid;
   border-width: 0px 3px 6px 3px;
-  border-image: url(hr.svg) 0 3 6 3 stretch stretch;
+  border-image: asset-url('hr.svg') 0 3 6 3 stretch stretch;
 }
 
 .doodle blockquote {
