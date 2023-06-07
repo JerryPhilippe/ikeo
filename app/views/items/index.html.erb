@@ -1,19 +1,32 @@
 <% room = @items.last %>
 
 
-<div class="container">
+<div class="container doodle">
 <h1><%=room.room_type%></h1>
 
-<div class="wrapper-index">
+<div class="wrapper-index ">
   <% @items.each do |item| %>
-    <div class="card-index">
-      <%= cl_image_tag item.photo.key, class:"item-img"%>
-      <div class="card-index-text">
+    <div class="card-index doodle-border ">
+    <div class="item-img">
+      <%= cl_image_tag item.photo.key%>
+    </div>
+      <div class="card-index-text ">
         <h1 class=""><%= item.name %></h1>
-            <%= item.price %>0€</p>
-              <%= link_to "Voir cet item", items_path(item), class:"" %>
+
+        <div class="flex-price-link">
+
+             <p><%= item.price%>0€</p>
+
+          <div class="flex-card" >
+            <div class="doodle-button button-index">
+              <%= link_to "Voir cet item", items_path(item), class:"doodle-link" %>
+            </div>
+          </div>
+
+
+        </div>
       </div>
-                </div>
+    </div>
   <% end %>
 </div>
 

@@ -5,11 +5,21 @@
 .wrapper-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  gap: 10px;
+  grid-gap: 25px;
+  gap: 20px;
   width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
  /*  grid-auto-rows: minmax(100px, auto); */
 }
+
+.wrapper-index img {
+ /*  border-style: none!important;
+  border-width: 0!important; */
+ /*  padding: 5px; */
+  height: 565px;
+  object-fit: contain;
+ }
 
 .container-index {
 
@@ -17,25 +27,48 @@
 }
 
 .card-index {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   min-width: 0;
   text-decoration: none;
-  border: solid 1px black
+  background-color: white;
+  height: 750px;
+  position: relative;
+  padding: 10px;
 }
 
 .card-index a {
   text-decoration: none;
   color: black;
-  display: inline-block;
+  float: right;
+  right: 10px;
+  width: 150px;
+  background-color: $purple;
+  margin: -4px;
+  line-height: 40px;
 }
 
 .card-index-text {
   display: flex;
   flex-direction: column;
   margin: 5px;
+  height: 150px;
 }
 
-.some-class {
-  color: red;
+.flex-price-link {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  vertical-align: bottom;
+}
+
+.button-index {
+  vertical-align: bottom;
+}
+
+.flex-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
 }

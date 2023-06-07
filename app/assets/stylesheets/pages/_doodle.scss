@@ -4,7 +4,7 @@
 }
 
 .doodle {
-  background-color: #FDF7F1;
+ /*  background-color: #FDF7F1; */
   color: #3c3c3c;
 }
 
@@ -63,13 +63,13 @@
 .doodle hr {
   border-style: solid;
   border-width: 0px 3px 6px 3px;
-  border-image: asset-url('hr.svg') 0 3 6 3 stretch stretch;
+  border-image: asset-url("hr.svg") 0 3 6 3 stretch stretch;
 }
 
 .doodle blockquote {
   border-left-style: solid;
   border-width: 0px 6px 3px 6px;
-  border-image: url(bq.svg) 0 6 3 6 stretch stretch;
+  border-image: asset-url("bq.svg") 0 6 3 6 stretch stretch;
   padding-left: 0.5em;
   border-right-width: 0px;
 }
@@ -91,7 +91,7 @@
 .doodle table caption {
   border-bottom-style: solid;
   border-width: 0px 3px 6px 3px;
-  border-image: url(hr.svg) 0 3 6 3 stretch stretch;
+  border-image: asset-url("hr.svg") 0 3 6 3 stretch stretch;
 }
 
 .doodle table td {
@@ -127,12 +127,12 @@
 
 .doodle input[type="checkbox"] {
   border-width: 6px 6px 6px 6px;
-  border-image: url(checkbox.svg) 6 6 6 6 stretch stretch;
+  border-image: asset-url("checkbox.svg") 6 6 6 6 stretch stretch;
 }
 
 .doodle input[type="radio"] {
   border-width: 16px 16px 16px 16px;
-  border-image: url(radio.svg) 16 16 16 16 stretch stretch;
+  border-image: asset-url("radio.svg") 16 16 16 16 stretch stretch;
 }
 
 .doodle input[type="checkbox"], .doodle input[type="radio"] {
@@ -168,4 +168,20 @@
   font-size: 1em;
   background-color: unset;
   color: #3c3c3c;
+}
+
+.doodle-button {
+  font-family: inherit;
+  font-size: 0.8em;
+  font-size: 1em;
+  background-color: unset;
+  color: #3c3c3c;
+  background-color: unset;
+  font-family: 'Short Stack', cursive;
+  font-size: 1em;
+  color: #3c3c3c;
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: asset-url('button.svg') 10 10 10 10 stretch stretch;
+  text-align: center;
 }
