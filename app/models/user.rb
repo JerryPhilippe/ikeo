@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # validates :username, presence: true
+  has_many :games
 
   after_create :create_cart
 
