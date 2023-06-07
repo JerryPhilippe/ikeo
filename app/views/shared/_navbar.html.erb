@@ -23,13 +23,19 @@
     <%= link_to root_path do %>
       <%= image_tag "logo.png"%>
     <% end %>
-    <% item = "here" %>
-    <%= simple_form_for item do |f| %>
     <i class="fa-solid fa-magnifying-glass"></i>
-    <%= f.text_field :query,
-                      class: "navi-search",
-                      placeholder: "Que cherchez vous?"%>
+    <%= form_with url: items_path, method: :get, html: { class: 'mb-5', data: { search_items_target: 'form' } } do |f| %>
+      <%= f.text_field :query,
+                        class: "navi-search",
+                        placeholder: 'Que cherchez-vous ?',
+                        value: params[:query],
+                        data: {
+                        search_items_target: 'searchInput',
+                        action: "keyup->search-items#update"
+                        } %>
+      <%= submit_tag "" , class: "d-none" %>
     <% end %>
+
     <i class="fa-regular fa-user px-3"></i>
     <% if user_signed_in? %>
       <div class="dropdown">
