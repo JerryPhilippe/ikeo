@@ -9,8 +9,15 @@
  /*  grid-auto-rows: minmax(100px, auto); */
 }
 .container-home {
-  margin: 100px;
+  margin-inline: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
+.home-card-btn {
+  text-decoration: none!important;
+}
+
 .card-home {
   display: flex;
   flex-direction: column;
@@ -20,10 +27,18 @@
 
 .text-card-home {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 120px;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
     h1 {
-      font-size: 35px!important;
+      font-size: 33px!important;
     }
+}
+
+.arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 30px;
+  width: 45px;
 }
