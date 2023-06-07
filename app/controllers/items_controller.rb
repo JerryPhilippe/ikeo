@@ -6,6 +6,9 @@ class ItemsController < ApplicationController
     if params[:query].present?
       sql_query = "name @@ :query OR description @@ :query OR category @@ :query OR room_type @@ :query"
       @items = Item.where(sql_query, query: "%#{params[:query]}%").limit(30)
+    elsif params[:room].present?
+      sql_query = "room_type @@ :room"
+      @items = Item.where(sql_query, room: "%#{params[:room]}%").limit(30)
     else
       @items = Item.all
     end
