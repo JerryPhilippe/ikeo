@@ -1,4 +1,4 @@
-.doodle * {
+.doodle *:not(.fa-solid, .fa-regular) {
   box-sizing: border-box;
   font-family: 'Short Stack', cursive;
 }
