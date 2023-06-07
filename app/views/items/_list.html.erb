@@ -1,6 +1,6 @@
 <div data-search-items-target="list">
   <% @items.each do |key, item| %>
-    <h1><%= key %></h1>
+    <h1 class="room-title"><%= key %></h1>
     <hr class="doodle">
     <div class="wrapper-index ">
       <% item.each do |product| %>
@@ -17,7 +17,7 @@
 
               <div class="flex-card" >
                 <div class="doodle-button button-index">
-                  <%= link_to "Voir cet item", items_path(product), class:"doodle-link" %>
+                  <%= link_to "Voir cet item", item_path(product), class:"doodle-link" %>
                 </div>
               </div>
             </div>

@@ -21,8 +21,8 @@
 }
 
 .doodle a {
+  color: #1c1c1c;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .doodle ul li {
@@ -46,14 +46,6 @@
   border-image: asset-url('button.svg') 10 10 10 10 stretch stretch;
 }
 
-.doodle-border-red {
-  border-style: solid;
-  border-width: 10px 10px 10px 10px;
-  border-image: asset-url('button.svg') 10 10 10 10 stretch stretch;
-  border-color: red;
-  color: $red;
-}
-
 .doodle button, .doodle input, .doodle select, .doodle input[type="file"]::file-selector-button {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
@@ -72,6 +64,7 @@
   border-style: solid;
   border-width: 0px 3px 6px 3px;
   border-image: asset-url("hr.svg") 0 3 6 3 stretch stretch;
+
 }
 
 .doodle blockquote {
@@ -126,7 +119,7 @@
   padding: 0px;
 }
 
-.doodle, .doodle textarea, .doodle input, .doodle select {
+.doodle button, .doodle textarea, .doodle input, .doodle select {
   background-color: unset;
   font-family: 'Short Stack', cursive;
   font-size: 1em;
@@ -182,9 +175,12 @@
   font-family: inherit;
   font-size: 0.8em;
   font-size: 1em;
-  color: unset;
+  background-color: unset;
+  color: #3c3c3c;
   background-color: unset;
   font-family: 'Short Stack', cursive;
+  font-size: 1em;
+  color: #3c3c3c;
   border-style: solid;
   border-width: 10px 10px 10px 10px;
   border-image: asset-url('button.svg') 10 10 10 10 stretch stretch;
