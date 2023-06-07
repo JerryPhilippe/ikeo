@@ -23,16 +23,17 @@
     <%= link_to root_path do %>
       <%= image_tag "logo.png"%>
     <% end %>
-      <%= form_with url: items_path, method: :get, html: { class: 'mb-5', data: { search_items_target: 'form' } } do |f| %>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <%= form_with url: items_path, method: :get, html: { class: 'mb-5', data: { search_items_target: 'form' } } do |f| %>
       <%= f.text_field :query,
-                      class: "navi-search",
-                      placeholder: 'Que cherchez-vous ?',
-                      value: params[:query],
-                      data: {
+                        class: "navi-search",
+                        placeholder: 'Que cherchez-vous ?',
+                        value: params[:query],
+                        data: {
                         search_items_target: 'searchInput',
-                         action: "keyup->search-items#update"
-                      } %>
-      <% end %>
+                        action: "keyup->search-items#update"
+                        } %>
+    <% end %>
 
     <i class="fa-regular fa-user px-3"></i>
     <% if user_signed_in? %>
