@@ -1,3 +1,17 @@
-<% @cart.each do |article| %>
-  <p><%= article.name %></p>
-<% end %>
+<div class="container">
+  <div class="cart">
+    <% if @cart.exists? %>
+      <% @cart.each do |article| %>
+        <div class="articles">
+          <%= cl_image_tag article.photo.key, class:"cart-img"%>
+          <div class="article-infos">
+            <p><%= article.name %></p>
+            <p><%= article.price %></p>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <h1>Les articles que ajouterez à votre panier s'afficheront ici</h1>
+    <% end %>
+  </div>
+</div>
