@@ -18,8 +18,8 @@
  /*  border-style: none!important;
   border-width: 0!important; */
  /*  padding: 5px; */
-  height: 565px;
-  object-fit: contain;
+  
+  object-fit: cover;
  }
 
 .container-index {
@@ -33,9 +33,13 @@
   min-width: 0;
   text-decoration: none;
   background-color: white;
-  height: 750px;
+  height: 700px;
   position: relative;
   padding: 10px;
+
+  h1{
+    font-size: 30px;
+  }
 }
 
 .card-index a {
