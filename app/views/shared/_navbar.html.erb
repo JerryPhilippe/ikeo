@@ -10,9 +10,9 @@
         <%= link_to "Jardin", root_path, class: "dropdown-item" %>
         <%= link_to "Salle à manger", root_path, class: "dropdown-item" %>
         <%= link_to "Cuisine", root_path, class: "dropdown-item" %>
-        <%= link_to "Chambres", root_path, class: "dropdown-item" %>
+        <%= link_to "Chambre", root_path, class: "dropdown-item" %>
         <%= link_to "Salle de bain", root_path, class: "dropdown-item" %>
-        <%= link_to "Chambres d'enfants", root_path, class: "dropdown-item" %>
+        <%= link_to "Chambre enfant", root_path, class: "dropdown-item" %>
         <%= link_to " Bureau", root_path, class: "dropdown-item" %>
         <%= link_to "Entrée", root_path, class: "dropdown-item" %>
       </div>
@@ -29,10 +29,8 @@
   </div>
 
   <div class="nav-center">
-      <% item = "here" %>
-      <%= simple_form_for item do |f| %>
+    <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
       <i class="fa-solid fa-magnifying-glass"></i>
-      <%= form_with url: items_path, method: :get, html: { class: 'mb-5', data: { search_items_target: 'form' } } do |f| %>
       <%= f.text_field :query,
                         class: "navi-search",
                         placeholder: 'Que cherchez-vous ?',
