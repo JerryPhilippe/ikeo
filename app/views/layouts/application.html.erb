@@ -10,12 +10,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-controller="search-items">
-    <%= render "shared/navbar" %>
-    <div class="backcolor">
-    <%= yield %>
-    <%= render "shared/flashes" %>
+  <body>
+    <div data-controller="search-items level-<%= current_user.current_game.level %>">
+      <%= render "shared/navbar" %>
+      <div class="backcolor">
+      <%= yield %>
+      <%= render "shared/flashes" %>
+      </div>
+      <%= render 'shared/footer' %>
     </div>
-    <%= render 'shared/footer' %>
   </body>
 </html>
