@@ -2,8 +2,7 @@
   display: flex;
  /*  background-color: white; */
   img {
-    width: 50%;
-    height: auto;
+    height: 30rem;
     margin-left: 25px;
     margin-top: 25px;
     border-radius: 5px;
@@ -13,11 +12,6 @@
   .item-infos {
     margin-left: 20px;
     margin-top: 25px;
-  }
-
-  .sticky {
-    position: sticky;
-    top: 15px;
   }
 }
 
