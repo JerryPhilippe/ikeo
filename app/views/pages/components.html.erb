@@ -1,10 +1,3 @@
-
-<body class="doodle">
-  <div class="card-index">
-    <h1>Hello components</h1>
-  </div>
-
-  <div class="doodle-border-red doodle-button">
-   <%= link_to "test bouton rouge", class: "doodle-red", color:"red"%>
-  </div>
-</body>
+<div data-controller="cursor" data-cursor-target="background" data-action="mousemove->cursor#move" class="background-black">
+  <div data-cursor-target="mouse" class="cursor"></div>
+</div>
