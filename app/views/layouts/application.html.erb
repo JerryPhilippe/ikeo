@@ -12,12 +12,23 @@
 
   <body>
     <div data-controller="search-items level-<%= current_user.current_game.level %>">
-      <%= render "shared/navbar" %>
-      <div class="backcolor">
-      <%= yield %>
-      <%= render "shared/flashes" %>
+      <div class="relative-bubble">
+        <%= render "shared/navbar" %>
+        <div class="backcolor">
+
+          <div class="bubble">
+            <div class="tri-right talk-bubble round border-bubble borderb left-in">
+              <div class="talktext doodle">
+                <p>Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! J’ai peur du noir !!! Je sais qu’il y a une lampe dans les articles de salon, qui que tu sois peux-tu aller l’allumer ?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <%= yield %>
+          <%= render "shared/flashes" %>
+        <%= render 'shared/footer' %>
       </div>
-      <%= render 'shared/footer' %>
     </div>
   </body>
 </html>
