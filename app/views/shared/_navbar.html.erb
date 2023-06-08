@@ -2,8 +2,7 @@
   <div class="nav-left">
     <div class="dropdown">
       <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fa-solid fa-bars navi-menu-bars"></i>
-        Menu
+        <%= image_tag "menu.svg", id: "menu" %>
       </a>
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
         <%= link_to "Accueil", root_path, class: "dropdown-item" %>
@@ -16,35 +15,45 @@
         <%= link_to " Bureau", root_path, class: "dropdown-item" %>
         <%= link_to "Entrée", root_path, class: "dropdown-item" %>
       </div>
+      <p>Menu</p>
+    </div>
+    <div class="blue">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png"%>
+      <% end %>
+    </div>
+    <div>
+      <div id="logo-koko">
+        <%= image_tag("Koko neutre.png")%>
+      </div>
+
     </div>
 
-    <%= link_to root_path do %>
-      <%= image_tag "logo.png"%>
-    <% end %>
 
 
-    <div id="logo-koko">
-      <%= image_tag("Koko neutre.png")%>
-    </div>
+
+
   </div>
 
   <div class="nav-center">
-    <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <%= f.text_field :query,
-                        class: "navi-search",
-                        placeholder: 'Que cherchez-vous ?',
-                        value: params[:query],
-                        data: {
-                        search_items_target: 'searchInput',
-                        action: "keyup->search-items#update"
-                        } %>
-      <%= submit_tag "" , class: "d-none" %>
-    <% end %>
+    <%= image_tag "loupe.svg", id: "loupe" %>
+    <div class="doodle-border search-bar">
+      <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
+        <%= f.text_field :query,
+                          id: "navi-search",
+                          placeholder: 'Que cherchez-vous ?',
+                          value: params[:query],
+                          data: {
+                          search_items_target: 'searchInput',
+                          action: "keyup->search-items#update"
+                          } %>
+        <%= submit_tag "" , class: "d-none" %>
+      <% end %>
+    </div>
   </div>
 
   <div class="nav-right">
-    <i class="fa-regular fa-user px-3"></i>
+      <%= image_tag "profile.png", id: "profile" %>
     <% if user_signed_in? %>
       <div class="dropdown">
         <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,9 +68,9 @@
     <% else %>
       <%= link_to "Hej ! Connectez-vous", new_user_session_path, class: "nav-link" %>
     <% end %>
-    <i class="fa-regular fa-heart px-3"></i>
+    <%= image_tag "heart.svg", id: "heart" %>
     <%= link_to cart_path do %>
-      <i class="fa-solid fa-cart-shopping px-3" style="color: black"></i>
+      <%= image_tag "panier.png", id: "panier" %>
     <% end %>
   </div>
 </div>
