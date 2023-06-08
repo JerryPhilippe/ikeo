@@ -1,0 +1,66 @@
+.bubble {
+  position: absolute;
+  top: 15px;
+  left: 350px;
+
+}
+
+.talk-bubble {
+	margin: 40px;
+  display: inline-block;
+  position: relative;
+	width: 300px;
+	height: auto;
+	background-color: white;
+}
+
+.border-bubble{
+  border: 3px solid $gray;
+}
+
+.round{
+  border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+.relative-bubble {
+  position: relative;
+}
+
+.talktext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.borderb.left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: $gray $gray transparent transparent;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -35px;
+	right: auto;
+  top: 32px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: white white transparent transparent;
+}
+
+.button-bubble {
+  margin: 15px;
+  float: right;
+}
