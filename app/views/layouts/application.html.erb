@@ -15,7 +15,7 @@
 
   <body>
     <div data-controller="search-items level-<%= current_user.current_game.level if user_signed_in? %>">
-      <div class="relative-bubble">
+      <div class="relative-bubble cursor" data-action="mousemove->level-0#move" data-level-0-target="mouse">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
         <div class="backcolor">
