@@ -138,10 +138,10 @@ end
 
 coffee_tables = {
   "coffee_table_1" => {
-    name: "LACK",
+    name: "LAMPKÜS",
     room_type: "Salon",
     category: "Table basse",
-    description: "La table basse LACK incarne la simplicité scandinave. Idéale pour un salon, elle offre un espace fonctionnel pour les collations, les livres et les décorations.",
+    description: "La lampe Lampküs incarne la simplicité scandinave. Idéale pour un salon, elle offre un éclairage fonctionnel pour toute la pièce.",
     price: 45
   },
   "coffee_table_2" => {
