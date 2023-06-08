@@ -8,10 +8,14 @@ export default class extends Controller {
   static targets = ["bubble"]
 
   connect() {
-    setTimeout(() => {
-      this.bubbleTarget.classList.remove("d-none");
+    if (window.location.pathname == "/"){
+      setTimeout(() => {
+        this.bubbleTarget.classList.remove("d-none");
     }, 5000);
+  }
+  }
 
-
+  switchLight(){
+    console.log("Light is on")
   }
 }

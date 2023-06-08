@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <div data-controller="search-items level-<%= current_user.current_game.level %>">
+    <div data-controller="search-items level-<%= current_user.current_game.level if user_signed_in? %>">
       <div class="relative-bubble">
         <%= render "shared/navbar" %>
         <div class="backcolor">
