@@ -12,8 +12,10 @@
 
   <body data-controller="search-items">
     <%= render "shared/navbar" %>
+    <div class="backcolor">
     <%= yield %>
     <%= render "shared/flashes" %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>

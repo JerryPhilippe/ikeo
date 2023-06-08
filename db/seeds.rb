@@ -212,10 +212,10 @@ sofas = {
     price: 300
   },
   "sofa_5" => {
-    name: "LANDSKRONA",
+    name: "LANDSKRO",
     room_type: "Salon",
     category: "Canapé",
-    description: "Le canapé LANDSKRONA est un choix élégant pour tout salon. Il offre un confort exceptionnel avec une allure qui séduira tous les amateurs de design.",
+    description: "Le canapé LANDSKRO est un choix élégant pour tout salon. Il offre un confort exceptionnel avec une allure qui séduira tous les amateurs de design.",
     price: 600
   }
 }
@@ -258,10 +258,10 @@ armchairs = {
     price: 240
   },
   "armchair_5" => {
-    name: "LANDSKRONA",
+    name: "LANDSKRO",
     room_type: "Salon",
     category: "Fauteuil",
-    description: "Le fauteuil LANDSKRONA apporte une élégance intemporelle à votre espace de vie. Confortable et sophistiqué, il est parfait pour les moments de détente.",
+    description: "Le fauteuil LANDSKRO apporte une élégance intemporelle à votre espace de vie. Confortable et sophistiqué, il est parfait pour les moments de détente.",
     price: 300
   }
 }
@@ -681,14 +681,14 @@ end
 
 vanities = {
   "vanity_1" => {
-    name: "HEMNES / ODENSVIK",
+    name: "HEMNES",
     room_type: "Salle de bain",
     category: "Meuble-vasque",
     description: "Le meuble-vasque HEMNES / ODENSVIK allie style classique et fonctionnalité. Avec son grand tiroir pour le rangement et sa vasque durable, il transforme votre salle de bain en un espace élégant et organisé.",
     price: 250
   },
   "vanity_2" => {
-    name: "GODMORGON / BRÅVIKEN",
+    name: "GODMORGON",
     room_type: "Salle de bain",
     category: "Meuble-vasque",
     description: "Le meuble-vasque GODMORGON / BRÅVIKEN offre une solution de rangement moderne pour votre salle de bain. Sa conception à double vasque et ses tiroirs spacieux permettent une organisation optimale, tout en apportant une touche de modernité.",
@@ -908,7 +908,7 @@ end
 
 childrens_wardrobes = {
   "childrens_wardrobe_1" => {
-    name: "STUVA / FRITIDS",
+    name: "STUVA",
     room_type: "Chambre enfants",
     category: "Armoire enfant",
     description: "L'armoire STUVA / FRITIDS offre une solution de rangement flexible et colorée. Sa conception modulaire et ses étagères ajustables s'adaptent aux besoins changeants de votre enfant tout au long de sa croissance.",
