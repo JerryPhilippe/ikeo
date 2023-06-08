@@ -15,7 +15,7 @@
 }
 
 .border-bubble{
-  border: 2px solid $gray;
+  border: 3px solid $gray;
 }
 
 .round{
@@ -52,10 +52,15 @@
 	position: absolute;
 	width: 0;
 	height: 0;
-  left: -36px;
+  left: -35px;
 	right: auto;
-  top: 31px;
+  top: 32px;
 	bottom: auto;
 	border: 20px solid;
 	border-color: white white transparent transparent;
+}
+
+.button-bubble {
+  margin: 15px;
+  float: right;
 }
