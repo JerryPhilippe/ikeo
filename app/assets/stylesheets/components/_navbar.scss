@@ -28,8 +28,8 @@
 #navi-search {
   background-color: lightgray;
   border: 0;
-  width: 500px;
-  height: 37px;
+  width: 505px;
+  height: 40px;
   margin: -6px;
   font-family: 'Schoolbell', cursive;
   font-size: 20px;
@@ -53,8 +53,8 @@
 }
 
 #panier {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: 5px;
   margin-right: 25px;
 }
@@ -92,6 +92,29 @@
 }
 
 .dropdown {
+  margin-top: 5px;
+}
+
+.dropdown-menu-left {
+  margin-top: 16px;
   margin-left: 20px;
-  padding-top: 16px;
+}
+
+.div-panier {
+  position: relative;
+  #notif {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 22px;
+    top: -3px;
+  }
+  #number-notif {
+    position: absolute;
+    right: 23px;
+    top: -2px;
+    color: white;
+    font-family: 'Schoolbell', cursive;
+    font-size: 14px;
+  }
 }
