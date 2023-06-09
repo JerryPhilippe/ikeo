@@ -1,8 +1,13 @@
-<div class="container">
-  <div class="cart">
+<div class="container-cart">
+
+
+  <div class="cart doodle">
+
+
+
     <% if @cart.exists? %>
       <% @cart.each do |article| %>
-        <div class="articles">
+        <div class="articles doodle-border">
           <%= cl_image_tag article.photo.key, class:"cart-img"%>
           <div class="article-infos">
             <p><%= article.name %></p>
@@ -14,4 +19,12 @@
       <h1 style="text-align: center">Les articles que ajouterez à votre panier s'afficheront ici</h1>
     <% end %>
   </div>
+
+<div class="form-cart doodle doodle-border">
+  <%= simple_form_for :payment do |f|  %>
+      <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number }, placeholder: current_user.current_game.card_number %>
+  <% end %>
+</div>
+
+
 </div>
