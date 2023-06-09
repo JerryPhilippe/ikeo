@@ -9,10 +9,23 @@
       <% @cart.each do |article| %>
         <div class="articles doodle-border">
           <%= cl_image_tag article.photo.key, class:"cart-img"%>
+
           <div class="article-infos">
-            <p><%= article.name %></p>
-            <p><%= article.price %></p>
+            <h3><%= article.name %></h3>
+            <p><%= article.description %></p>
           </div>
+
+          <div class="price-qte">
+            <div class="cross">
+                    <svg class="cross" viewBox="0 0 76 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.0267 12.5325C24.7144 28.2487 41.0129 42.0246 63.2182 50.3385" stroke="currentColor" stroke-width="1.38456" stroke-linecap="round"></path>
+                      <path d="M75.0549 1C47.4266 28.2411 25.2228 59.8195 1 90.0087" stroke="currentColor" stroke-width="1.38456" stroke-linecap="round"></path>
+                    </svg>
+            </div>
+            <p>Qté : 1</p>
+            <h4><%= article.price %>0€</h4>
+          </div>
+
         </div>
       <% end %>
     <% else %>
@@ -20,11 +33,34 @@
     <% end %>
   </div>
 
-<div class="form-cart doodle doodle-border">
-  <%= simple_form_for :payment do |f|  %>
-      <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number }, placeholder: current_user.current_game.card_number %>
-  <% end %>
-</div>
 
+    <% if @cart.exists? %>
+<div class="form-cart doodle">
+    <% price = 0 %>
+    <% @cart.each do |article| %>
+    <% price += article.price %>
+    <% end %>
+<%#   <hr class="doodle"> %>
+  <h3 class="doodle-border">Prix total : <%=price %>0€</h2>
+<%#   <hr class="doodle"> %>
+
+  <div class="doodle-border form">
+      <%= simple_form_for :payment do |f|  %>
+        <%= f.input :name, label: "Nom du titulaire de la carte", input_html: { value: current_user.username}%>
+        <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number }, placeholder: current_user.current_game.card_number, label: "Numéro de carte" %>
+        <div class="d-flex">
+        <%= f.input :date, label: "date d'expiration", input_html: {value: "09/25"}, class:"petit-input" %>
+        <%= f.input :code, label: "CVC/CVV", input_html: {value: "666"}, class:"petit-input" %>
+        </div>
+        <div class="submit-flex">
+        <%= f.submit "Payer", class:"submit-cart" %>
+        </div>
+      <% end %>
+  </div>
+
+</div>
+    <% end %>
+   
+  </div>
 
 </div>

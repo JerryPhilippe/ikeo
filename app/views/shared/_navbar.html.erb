@@ -68,10 +68,13 @@
     <%= link_to cart_path do %>
       <div class="div-panier">
         <%= image_tag "panier.png", id: "panier" %>
+        <% if user_signed_in?  %>
         <% if CartItem.where(cart: current_user.cart).count > 0 %>
           <%= image_tag "notification.png", id: "notif" %>
           <p id="number-notif"> <%= CartItem.where(cart:current_user.cart).count %> </p>
         <% end %>
+        <% end %>
+        
       </div>
     <% end %>
   </div>
