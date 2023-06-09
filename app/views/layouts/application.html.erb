@@ -29,9 +29,7 @@
               <button class="button-bubble doodle-button" data-action="click->level-<%= current_user.current_game.level if user_signed_in? %>#okButton">J'ai compris !</button>
             </div>
           </div>
-          <div class="cursor" data-action="mousemove->level-0#move" data-level-0-target="mouse">
           <%= yield %>
-          </div>
           <%= render "shared/flashes" %>
         <%= render 'shared/footer' %>
       </div>
