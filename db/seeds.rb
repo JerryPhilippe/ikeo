@@ -1,11 +1,10 @@
 require "open-uri"
 
-User.destroy_all
-Item.destroy_all
-Game.destroy_all
-Cart.destroy_all
 CartItem.destroy_all
-
+Cart.destroy_all
+Game.destroy_all
+Item.destroy_all
+User.destroy_all
 
 garden_tables = {
   "garden_table_1" => {
