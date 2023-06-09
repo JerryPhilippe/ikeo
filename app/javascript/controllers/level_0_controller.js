@@ -29,7 +29,7 @@ export default class extends Controller {
     let mouseY = e.clientY
     let mouseX = e.clientX
     this.mouseTarget.style.background = "none";
-    this.mouseTarget.style.backgroundImage = "radial-gradient(circle closest-corner at " + mouseX + "px " + mouseY + "px , rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 66%)";
+    this.mouseTarget.style.backgroundImage = "radial-gradient(circle closest-corner at " + mouseX + "px " + mouseY + "px , rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 66%)";
     console.log(mouseX, mouseY)
   }
 
