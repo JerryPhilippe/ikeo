@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  cursor: none;
-  background: rgba(0,0,0,.9);
+  // cursor: none;
+  background: rgba(0,0,0,.8);
+  pointer-events: none;
 }
