@@ -16,7 +16,7 @@
 
   <body>
     <div data-controller="search-items level-<%= current_user.current_game.level if user_signed_in? %>">
-      <div class="relative-bubble">
+      <div class="relative-bubble"  data-action="mousemove->level-0#move">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
         <div class="backcolor">
@@ -30,9 +30,10 @@
               <button class="button-bubble doodle-button" data-action="click->level-<%= current_user.current_game.level if user_signed_in? %>#okButton">J'ai compris !</button>
             </div>
           </div>
-          <%= yield %>
+            <%= yield %>
           <%= render "shared/flashes" %>
         <%= render 'shared/footer' %>
+        <div class="cursor" data-level-0-target="mouse"></div>
       </div>
     </div>
   </body>
