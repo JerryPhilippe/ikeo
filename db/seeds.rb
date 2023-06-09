@@ -1,5 +1,11 @@
 require "open-uri"
 
+CartItem.destroy_all
+Cart.destroy_all
+Game.destroy_all
+Item.destroy_all
+User.destroy_all
+
 garden_tables = {
   "garden_table_1" => {
     name: "GRÄSÖ",
