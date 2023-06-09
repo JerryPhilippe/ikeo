@@ -8,17 +8,38 @@ export default class extends Controller {
   static targets = ["bubble", "progression", "mouse"]
 
   connect() {
+    this.mouseTarget.classList.add("cursor");
     if (window.location.pathname == "/"){
       setTimeout(() => {
         this.bubbleTarget.classList.remove("d-none");
     }, 5000);
   }
-  console.log(this.progressionTarget.style.width)
-   this.updateProgressBar(20, this.progressionTarget); //until which persentage should be set --> A voir si possible d'utiliser cela pour tous le controleurs
+   this.updateProgressBar(20, this.progressionTarget); //--> A voir si possible d'utiliser cela pour tous le controleurs
   }
 
   switchLight(){
-    console.log("Light is on")
+    this.mouseTarget.classList.remove("cursor");
+    fetch('/games/update', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      },
+      body: JSON.stringify({
+        level: 1
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+      setTimeout(function() {
+        window.location.href = "/cart";
+    }, 2000);
   }
 
   okButton(){
@@ -35,7 +56,7 @@ export default class extends Controller {
 
   updateProgressBar(desiredWidth, progressTarget) {
     let width = 0;
-    const id = setInterval(frame, 20); // update every 10ms
+    const id = setInterval(frame, 20);
 
     function frame() {
       if (width >= desiredWidth) {
