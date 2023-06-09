@@ -15,10 +15,10 @@
 
   <body>
     <div data-controller="search-items level-<%= current_user.current_game.level if user_signed_in? %>">
-      <div class="relative-bubble">
+      <div class="relative-bubble"  data-action="mousemove->level-0#move">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
-        <div class="backcolor" data-action="mousemove->level-0#move">
+        <div class="backcolor">
           <div class="bubble d-none" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="bubble">
             <div class="tri-right talk-bubble round border-bubble borderb left-in">
               <div class="talktext doodle">
