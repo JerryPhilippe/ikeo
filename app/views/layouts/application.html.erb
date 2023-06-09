@@ -18,7 +18,7 @@
       <div class="relative-bubble">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
-        <div class="backcolor">
+        <div class="backcolor" data-action="mousemove->level-0#move">
           <div class="bubble d-none" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="bubble">
             <div class="tri-right talk-bubble round border-bubble borderb left-in">
               <div class="talktext doodle">
@@ -32,7 +32,7 @@
             <%= yield %>
           <%= render "shared/flashes" %>
         <%= render 'shared/footer' %>
-        <div class="cursor" data-action="mousemove->level-0#move" data-level-0-target="mouse"></div>
+        <div class="cursor" data-level-0-target="mouse"></div>
       </div>
     </div>
   </body>
