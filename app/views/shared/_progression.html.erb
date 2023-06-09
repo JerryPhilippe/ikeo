@@ -1,7 +1,7 @@
 <div class="progression-bar">
   <div class="container">
     <div class="progress-container doodle-border">
-      <div class="progress-bar" style="width: <%= rand(0..100)%>%">
+      <div class="progress-bar" style="width: 0%" data-level-<%=current_user.current_game.level%>-target="progression">
       </div>
     </div>
   </div>

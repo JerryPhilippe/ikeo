@@ -8,8 +8,9 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log("teste typed.js")
-    const options = {strings: this.sentencesValue, typeSpeed: 100};
-    new Typed(this.element, options)
+    const options = {strings: this.sentencesValue, typeSpeed: 50};
+    setTimeout(() => {
+      new Typed(this.element, options);
+  }, 5500);
   }
 }

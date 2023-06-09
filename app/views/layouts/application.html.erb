@@ -13,26 +13,26 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-controller="search-items">
-    <div class="relative-bubble">
-      <%= render "shared/navbar" %>
-      <%= render "shared/progression" %>
-      <div class="backcolor">
-
-        <div class="bubble">
-          <div class="tri-right talk-bubble round border-bubble borderb left-in">
-            <div class="talktext doodle">
-              <span data-controller="typed"
-                data-typed-sentences-value="<%= ["psst psst","hey!", "psst","Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! J’ai peur du noir !!! Je sais qu’il y a une lampe dans les articles de salon, qui que tu sois peux-tu aller l’allumer ?"] %>">
-              </span>
+  <body>
+    <div data-controller="search-items level-<%= current_user.current_game.level if user_signed_in? %>">
+      <div class="relative-bubble">
+        <%= render "shared/navbar" %>
+        <%= render "shared/progression" if user_signed_in? %>
+        <div class="backcolor">
+          <div class="bubble d-none" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="bubble">
+            <div class="tri-right talk-bubble round border-bubble borderb left-in">
+              <div class="talktext doodle">
+                <span data-controller="typed"
+                  data-typed-sentences-value="<%= ["psst psst","hey!", "psst","Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! J’ai peur du noir !!! Je sais qu’il y a une lampe dans les articles de salon, qui que tu sois peux-tu aller l’allumer ?"] %>">
+                </span>
+              </div>
+              <button class="button-bubble doodle-button" data-action="click->level-<%= current_user.current_game.level if user_signed_in? %>#okButton">J'ai compris !</button>
             </div>
-            <button class="button-bubble doodle-button ">J'ai compris !</button>
           </div>
-        </div>
-
-        <%= yield %>
-        <%= render "shared/flashes" %>
-      <%= render 'shared/footer' %>
+          <%= yield %>
+          <%= render "shared/flashes" %>
+        <%= render 'shared/footer' %>
+      </div>
     </div>
   </body>
 </html>

@@ -22,4 +22,8 @@ class User < ApplicationRecord
     game.user = self
     game.save
   end
+
+  def current_game
+    self.games.last
+  end
 end
