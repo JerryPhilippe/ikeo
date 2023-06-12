@@ -8,13 +8,22 @@ export default class extends Controller {
   static targets = ["bubble", "progression", "mouse"]
 
   connect() {
-    this.mouseTarget.classList.add("cursor");
+   this.mouseTarget.classList.add("cursor");
+   this.bubble();
+
+
+   setTimeout(() => {
+     const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 20 } })
+     window.dispatchEvent(event)
+   }, 200);
+  }
+
+  bubble(){
     if (window.location.pathname == "/"){
       setTimeout(() => {
         this.bubbleTarget.classList.remove("d-none");
     }, 5000);
   }
-   this.updateProgressBar(20, this.progressionTarget); //--> A voir si possible d'utiliser cela pour tous le controleurs
   }
 
   switchLight(){
@@ -51,20 +60,5 @@ export default class extends Controller {
     let mouseX = e.clientX
     this.mouseTarget.style.background = "none";
     this.mouseTarget.style.backgroundImage = "radial-gradient(circle closest-corner at " + mouseX + "px " + mouseY + "px , rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 66%)";
-    console.log(mouseX, mouseY)
-  }
-
-  updateProgressBar(desiredWidth, progressTarget) {
-    let width = 0;
-    const id = setInterval(frame, 20);
-
-    function frame() {
-      if (width >= desiredWidth) {
-        clearInterval(id);
-      } else {
-        width++;
-        progressTarget.style.width = width + "%";
-      }
-    }
   }
 }
