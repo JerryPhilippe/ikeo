@@ -4,20 +4,9 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["bubble", "progression", "mouse"]
   connect() {
-    this.updateProgressBar(40, this.progressionTarget);
-  }
-
-  updateProgressBar(desiredWidth, progressTarget) {
-    let width = 0;
-    const id = setInterval(frame, 20);
-
-    function frame() {
-      if (width >= desiredWidth) {
-        clearInterval(id);
-      } else {
-        width++;
-        progressTarget.style.width = width + "%";
-      }
-    }
+    setTimeout(() => {
+      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 40 } })
+      window.dispatchEvent(event)
+    }, 200);
   }
 }
