@@ -1,9 +1,5 @@
 .cart {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background-color: white;
-  padding: 25px;
-  width: 50%;
+  width: 70%;
 }
 .cart-img {
   height: 10rem;
@@ -13,8 +9,8 @@
 .articles {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  background-color: white;
+  width: 90%;
 }
 
 .container-cart {
@@ -28,6 +24,51 @@ input {
 }
 
 .form-cart {
+ width: 30%;
+ h3 {
   background-color: white;
-  
+  margin-bottom: 10px;
+}
+}
+
+.article-infos {
+  width: 65%;
+}
+
+.price-qte {
+  margin-left: 78px;
+  margin-right: 5px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.cross {
+  height: 20px;
+}
+
+hr {
+  opacity: 0.7!important;
+  /* width: 30%; */
+  margin: auto;
+
+}
+
+.form {
+  background-color: white;
+}
+
+.petit-input input {
+  width: 20px;
+}
+
+.submit-cart {
+  background-color: $red;
+}
+
+.submit-flex{
+  display: flex;
+  justify-content: end;
 }

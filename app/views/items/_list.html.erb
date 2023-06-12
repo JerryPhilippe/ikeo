@@ -6,7 +6,8 @@
       <% item.each do |product| %>
         <div class="card-index doodle-border ">
           <div class="item-img">
-            <%= cl_image_tag(product.photo.key, { data: { action: card_item_action((current_user.current_game if user_signed_in?), product), level_0_target: product.name.downcase  } }) %>
+            <%= cl_image_tag product.photo.key %>
+            <%# <%= cl_image_tag(product.photo.key, { data: { action: card_item_action((current_user.current_game if user_signed_in?), product), level_0_target: product.name.downcase  } }) %>
           </div>
           <div class="card-index-text ">
             <h1 class=""><%= product.name %></h1>
