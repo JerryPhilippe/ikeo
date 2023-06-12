@@ -17,7 +17,7 @@
   <body>
     <div data-controller="search-items progess level-<%= current_user.current_game.level if user_signed_in? %>">
 
-      <div class="relative-bubble"  data-action="mousemove->level-<%= current_user.current_game.level if user_signed_in? %>#move">
+      <div class="relative-bubble"  data-action="mousemove->level-<%= current_user.current_game.level if user_signed_in? %>#move" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="cursorkey">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
         <div class="backcolor">

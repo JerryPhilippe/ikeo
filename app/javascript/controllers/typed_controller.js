@@ -10,10 +10,14 @@ export default class extends Controller {
   }
 
   connect() {
-    const options = {strings: level0Home, typeSpeed: 50};
+    switch(this.levelValue){
+      case 0 :
+        const options = {strings: level0Home, typeSpeed: 50};
+        setTimeout(() => {
+          new Typed(this.element, options);
+      }, 5500);
+        break;
+    }
 
-    setTimeout(() => {
-      new Typed(this.element, options);
-  }, 5500);
   }
 }

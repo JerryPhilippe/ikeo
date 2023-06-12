@@ -1172,7 +1172,7 @@ consoles = {
     price: 120
   },
   "console_5" => {
-    name: "BRUSALI",
+    name: "BRUSALII",
     room_type: "Entrée",
     category: "Console",
     description: "La console BRUSALI est une addition pratique et attrayante à votre entrée. Son design épuré et sa finition neutre en font une pièce versatile pour tous les styles d'intérieur.",
