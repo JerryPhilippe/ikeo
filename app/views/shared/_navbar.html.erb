@@ -1,80 +1,82 @@
-<div class="navi-container">
-  <div class="nav-left">
-    <div class="dropdown-menu-left">
-      <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= image_tag "menu.svg", id: "menu" %>
-      </a>
-      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-        <%= link_to "Accueil", root_path, class: "dropdown-item" %>
-        <%= link_to "Jardin", root_path, class: "dropdown-item" %>
-        <%= link_to "Salle à manger", root_path, class: "dropdown-item" %>
-        <%= link_to "Cuisine", root_path, class: "dropdown-item" %>
-        <%= link_to "Chambre", root_path, class: "dropdown-item" %>
-        <%= link_to "Salle de bain", root_path, class: "dropdown-item" %>
-        <%= link_to "Chambre enfant", root_path, class: "dropdown-item" %>
-        <%= link_to " Bureau", root_path, class: "dropdown-item" %>
-        <%= link_to "Entrée", root_path, class: "dropdown-item" %>
-      </div>
-      <p>Menu</p>
-    </div>
-    <div class="blue">
-      <%= link_to root_path do %>
-        <%= image_tag "logo.png"%>
-      <% end %>
-    </div>
-    <div>
-      <div id="logo-koko">
-        <%= image_tag("Koko neutre.png")%>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="nav-center">
-    <%= image_tag "loupe.svg", id: "loupe" %>
-    <div class="doodle-border search-bar">
-      <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
-        <%= f.text_field :query,
-                          id: "navi-search",
-                          placeholder: 'Que cherchez-vous ?',
-                          value: params[:query],
-                          data: {
-                          search_items_target: 'searchInput',
-                          action: "keyup->search-items#update"
-                          } %>
-        <%= submit_tag "" , class: "d-none" %>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="nav-right">
-      <%= image_tag "profile.png", id: "profile" %>
-    <% if user_signed_in? %>
-      <div class="dropdown">
+<div class="sticky-navbar">
+  <div class="navi-container">
+    <div class="nav-left">
+      <div class="dropdown-menu-left">
         <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Votre compte
+          <%= image_tag "menu.svg", id: "menu" %>
         </a>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          <%= link_to "Accueil", root_path, class: "dropdown-item" %>
+          <%= link_to "Jardin", root_path, class: "dropdown-item" %>
+          <%= link_to "Salle à manger", root_path, class: "dropdown-item" %>
+          <%= link_to "Cuisine", root_path, class: "dropdown-item" %>
+          <%= link_to "Chambre", root_path, class: "dropdown-item" %>
+          <%= link_to "Salle de bain", root_path, class: "dropdown-item" %>
+          <%= link_to "Chambre enfant", root_path, class: "dropdown-item" %>
+          <%= link_to " Bureau", root_path, class: "dropdown-item" %>
+          <%= link_to "Entrée", root_path, class: "dropdown-item" %>
         </div>
+        <p>Menu</p>
       </div>
-    <% else %>
-      <%= link_to "Hej ! Connectez-vous", new_user_session_path, class: "nav-link" %>
-    <% end %>
-    <%= image_tag "heart.svg", id: "heart" %>
-    <%= link_to cart_path do %>
-      <div class="div-panier">
-        <%= image_tag "panier.png", id: "panier" %>
-        <% if user_signed_in? %>
-        <% if CartItem.where(cart: current_user.cart).count > 0 %>
-          <%= image_tag "notification.png", id: "notif" %>
-          <p id="number-notif"> <%= CartItem.where(cart:current_user.cart).count %> </p>
-        <% end %>
+      <div class="blue">
+        <%= link_to root_path do %>
+          <%= image_tag "logo.png"%>
         <% end %>
       </div>
-    <% end %>
+      <div>
+        <div id="logo-koko">
+          <%= image_tag("Koko neutre.png")%>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="nav-center">
+      <%= image_tag "loupe.svg", id: "loupe", data: { action: "click->level-4#changeCursor", target: "level-4.loupe" } %>
+      <div class="doodle-border search-bar">
+        <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
+          <%= f.text_field :query,
+                            id: "navi-search",
+                            placeholder: 'Que cherchez-vous ?',
+                            value: params[:query],
+                            data: {
+                            search_items_target: 'searchInput',
+                            action: "keyup->search-items#update"
+                            } %>
+          <%= submit_tag "" , class: "d-none" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="nav-right">
+        <%= image_tag "profile.png", id: "profile" %>
+      <% if user_signed_in? %>
+        <div class="dropdown">
+          <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Votre compte
+          </a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= link_to "Action", "#", class: "dropdown-item" %>
+            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "Hej ! Connectez-vous", new_user_session_path, class: "nav-link" %>
+      <% end %>
+      <%= image_tag "heart.svg", id: "heart" %>
+      <%= link_to cart_path do %>
+        <div class="div-panier">
+          <%= image_tag "panier.png", id: "panier" %>
+          <% if user_signed_in? %>
+          <% if CartItem.where(cart: current_user.cart).count > 0 %>
+            <%= image_tag "notification.png", id: "notif" %>
+            <p id="number-notif"> <%= CartItem.where(cart:current_user.cart).count %> </p>
+          <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
