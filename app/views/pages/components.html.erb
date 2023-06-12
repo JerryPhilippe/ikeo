@@ -1,3 +1,13 @@
-<div data-controller="cursor">
-  <div  data-action="mousemove->cursor#move" data-cursor-target="mouse" class="cursor"></div>
+
+<div data-controller="door" >
+
+  <div class="zoom" data-door-target="zoom" class="doorall">
+
+    <div class="underdoor"> </div>
+
+    <div class="doodle-border door perspectiveLeft" data-door-target="door"></div>
+
+    <button onclick="openDoor()" data-action="click->door#open">Open Door</button>
+  </div>
+
 </div>

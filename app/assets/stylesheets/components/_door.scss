@@ -1,0 +1,62 @@
+ .doorall {
+  position: absolute;
+/*   top: -400px;
+  left: 500px; */
+  width: 200px;
+  height: 400px;
+  margin: 20 auto;
+}
+.door {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  left: 500px;
+  top: -400px;
+  background-color: #ccc;
+  transform-origin: left center;
+}
+
+@keyframes openDoor {
+  0% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(800px) rotateY(-60deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(-100deg);
+  }
+}
+
+.door.open {
+animation: openDoor 2s forwards;
+}
+
+.underdoor {
+  position: relative;
+  left: 500px;
+  width: 200px;
+  height: 390px;
+  background-color: black;
+}
+
+@keyframes growZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(10);
+  }
+}
+
+.zoom.grow {
+  animation: growZoom 2s forwards;
+  }
+
+  .zoom {
+    position: absolute;
+    margin: auto;
+  }
