@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-2"
 export default class extends Controller {
-  static targets = ["bubble", "progression", "mouse", "brusali", "cursorkey", "key", "homekey"]
+  static targets = ["bubble", "progression", "mouse", "brusalii", "cursorkey", "key", "homekey"]
   connect() {
     setTimeout(() => {
       const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 60 } })
@@ -25,10 +25,11 @@ export default class extends Controller {
   }
 
 
-  takeKey(){
+  takeKey(evt){
     this.cursorkeyTarget.classList.add("custom-cursor");
-    this.keyTarget.classList.add("d-none");
     this.homekeyTarget.classList.remove("d-none");
+    evt.currentTarget.src = "http://res.cloudinary.com/dwwqcadjv/image/upload/v1/development/aaqw22s37ljtnq1fjiexbsc9qx7s";
+    this.brusaliiTarget.removeAttribute('data-action');
   }
 
   cave(){
@@ -54,7 +55,7 @@ export default class extends Controller {
   }
 
   openDrawer(evt){
-    evt.currentTarget.src = "https://res.cloudinary.com/dwwqcadjv/image/upload/v1/development/oc9axzngspdyy6fqmkdiqlfsv8tt";
+    evt.currentTarget.src = "https://res.cloudinary.com/dwwqcadjv/image/upload/v1686641516/Seed/9-2-5-console-entree-ouverte.jpg";
   }
 
   closeDrawer(evt){

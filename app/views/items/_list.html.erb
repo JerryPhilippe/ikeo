@@ -14,6 +14,11 @@
             <div class="flex-price-link">
 
               <p><%= product.price%>0€</p>
+              <%= image_tag("home.png", id: "home-key" , class: "d-none",
+                data: {
+                action: "click->level-2#cave",
+                level_2_target: "homekey"
+              }) if current_user.current_game.level == 2 && product.name.downcase == "brusalii"%>
 
               <div class="flex-card" >
                 <div class="doodle-button button-index">
