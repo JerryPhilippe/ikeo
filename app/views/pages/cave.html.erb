@@ -14,13 +14,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup1">Voir cet item</a>
-                  </div>
-                  <div id="popup1" class="overlay">
-                    <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup1">Voir cet item</a>
+                    </div>
+                    <div id="popup1" class="overlay"  data-popup-target="overlay">
+                     <div class="popup doodle-border">
+                       <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="#">&times;</a>
                       <div class="content-cave">
                         <p> Cette armoire est cassée... </p>
                       </div>
@@ -32,20 +32,20 @@
 
             <div class=" doodle-border card-index-cave balais">
               <div class="item-img-cave doodle-border">
-                <%= image_tag("cave-balais.png")%>
+                <%= image_tag("cave-balais.png", class: "", data: { action: "click->level-3#getBroom", level_3_target: "broom" }) %>
               </div>
               <div class="card-index-text-cave doodle">
                 <h1 class=""> Vieux balais </h1>
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup2">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup2">Voir cet item</a>
                   </div>
-                  <div id="popup2" class="overlay">
+                  <div id="popup2" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Ce balais est usé mais il peut toujours servir... </p>
                       </div>
@@ -64,13 +64,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup3">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup3">Voir cet item</a>
                   </div>
-                  <div id="popup3" class="overlay">
+                  <div id="popup3" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Les livres de cette bibliothèque sont moisies... </p>
                       </div>
@@ -89,65 +89,15 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup4">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup4">Voir cet item</a>
                   </div>
-                  <div id="popup4" class="overlay">
+                  <div id="popup4" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Des traces de café maculent ce vieux bureau </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class=" doodle-border card-index-cave cadre">
-              <div class="item-img-cave doodle-border">
-                <%= image_tag("cave-cadre.png")%>
-              </div>
-              <div class="card-index-text-cave doodle">
-                <h1 class=""> Vieux cadre </h1>
-              </div>
-                <div class="flex-price-link doodle">
-                  <p>0€</p>
-                  <div class="flex-card" >
-                    <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup5">Voir cet item</a>
-                  </div>
-                  <div id="popup5" class="overlay">
-                    <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
-                      <div class="content-cave">
-                        <p> Une vieille photo de famille se trouve dans le cadre... </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class=" doodle-border card-index-cave canape-jaune">
-              <div class="item-img-cave doodle-border">
-                <%= image_tag("cave-canape-jaune.png")%>
-              </div>
-              <div class="card-index-text-cave doodle">
-                <h1 class=""> Vieux canapé jaune </h1>
-              </div>
-                <div class="flex-price-link doodle">
-                  <p>0€</p>
-                  <div class="flex-card" >
-                    <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup6">Voir cet item</a>
-                  </div>
-                  <div id="popup6" class="overlay">
-                    <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
-                      <div class="content-cave">
-                        <p> Ce canapé semble en mauvais état... </p>
                       </div>
                     </div>
                   </div>
@@ -164,15 +114,66 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup7">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup7">Voir cet item</a>
                   </div>
-                  <div id="popup7" class="overlay">
+                  <div id="popup7" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Ce sofa est pleins de poussière... </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class=" doodle-border card-index-cave canape-jaune">
+              <div class="item-img-cave doodle-border">
+                <%= image_tag("cave-canape-jaune.png")%>
+              </div>
+              <div class="card-index-text-cave doodle">
+                <h1 class=""> Vieux canapé jaune </h1>
+              </div>
+                <div class="flex-price-link doodle">
+                  <p>0€</p>
+                  <div class="flex-card" data-controller="popup" >
+                    <div class="doodle-button button-index">
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup6">Voir cet item</a>
+                  </div>
+                  <div id="popup6" class="overlay"  data-popup-target="overlay">
+                    <div class="popup doodle-border">
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
+                      <div class="content-cave">
+                        <p> Ce canapé semble en mauvais état... </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class=" doodle-border card-index-cave cadre" data-action="mouseenter->level-3#clean">
+             <canvas id="scratch" class="dirty-effect"></canvas>
+              <div class="item-img-cave doodle-border">
+                <%= image_tag("cave-cadre.png")%>
+              </div>
+              <div class="card-index-text-cave doodle">
+                <h1 class=""> Vieux cadre </h1>
+              </div>
+                <div class="flex-price-link doodle">
+                  <p>0€</p>
+                  <div class="flex-card" data-controller="popup" >
+                    <div class="doodle-button button-index">
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup5">Voir cet item</a>
+                  </div>
+                  <div id="popup5" class="overlay"  data-popup-target="overlay">
+                    <div class="popup doodle-border">
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
+                      <div class="content-cave">
+                        <p> Une vieille photo de famille se trouve dans le cadre... </p>
                       </div>
                     </div>
                   </div>
@@ -189,13 +190,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup8">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup8">Voir cet item</a>
                   </div>
-                  <div id="popup8" class="overlay">
+                  <div id="popup8" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Des ressorts s'échappent du canapé... </p>
                       </div>
@@ -214,13 +215,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup9">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup9">Voir cet item</a>
                   </div>
-                  <div id="popup9" class="overlay">
+                  <div id="popup9" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Cette chaise semble sur le point de s'effondrer... </p>
                       </div>
@@ -239,13 +240,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup10">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup10">Voir cet item</a>
                   </div>
-                  <div id="popup10" class="overlay">
+                  <div id="popup10" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Cette commode est complètement démodée... </p>
                       </div>
@@ -264,13 +265,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup11">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup11">Voir cet item</a>
                   </div>
-                  <div id="popup11" class="overlay">
+                  <div id="popup11" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Il manque des planches à cette étagère... </p>
                       </div>
@@ -289,13 +290,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup12">Voir cet item</a>
+                      <a data-action="click->popup#show click->level-3#switchLight" data-turbo="false" class="button" href="#popup12">Voir cet item</a>
                   </div>
-                  <div id="popup12" class="overlay">
+                  <div id="popup12" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times; </a>
                       <div class="content-cave">
                         <p> Étonnamment, cette lampe fonctionne toujours... </p>
                       </div>
@@ -314,13 +315,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup13">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup13">Voir cet item</a>
                   </div>
-                  <div id="popup13" class="overlay">
+                  <div id="popup13" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> Des plantes complètement mortes... </p>
                       </div>
@@ -339,13 +340,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup14">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup14">Voir cet item</a>
                   </div>
-                  <div id="popup14" class="overlay">
+                  <div id="popup14" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> La poubelle est vide... </p>
                       </div>
@@ -364,13 +365,13 @@
               </div>
                 <div class="flex-price-link doodle">
                   <p>0€</p>
-                  <div class="flex-card" >
+                  <div class="flex-card" data-controller="popup" >
                     <div class="doodle-button button-index">
-                      <a data-turbo="false" class="button" href="#popup15">Voir cet item</a>
+                      <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup15">Voir cet item</a>
                   </div>
-                  <div id="popup15" class="overlay">
+                  <div id="popup15" class="overlay"  data-popup-target="overlay">
                     <div class="popup doodle-border">
-                      <a class="close" href="">&times;</a>
+                      <a data-action="click->popup#hide" title="fermer" aria-label="fermer" class="close" href="">&times;</a>
                       <div class="content-cave">
                         <p> On peut voir de la neige quand on allume la télé... </p>
                       </div>
@@ -383,3 +384,132 @@
       </div>
   </div>
 </div>
+
+<script>
+  window.addEventListener('click', () => {
+    console.log('scratch ready')
+    let canvas = document.getElementById("scratch");
+    let context = canvas.getContext("2d");
+    window.context = context
+
+    let image = new Image();
+    image.src = "assets/poussiere.png";
+
+    const init = () => {
+      image.onload = () => {
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      };
+    };
+
+    //initially mouse X and mouse Y positions are 0
+    let mouseX = 0;
+    let mouseY = 0;
+    let isDragged = false;
+
+    //Events for touch and mouse
+    let events = {
+      mouse: {
+        down: "mousedown",
+        move: "mousemove",
+        up: "mouseup",
+      },
+      touch: {
+        down: "touchstart",
+        move: "touchmove",
+        up: "touchend",
+      },
+    };
+
+    let deviceType = "";
+
+    //Detech touch device
+    const isTouchDevice = () => {
+      try {
+        //We try to create TouchEvent. It would fail for desktops and throw error.
+        document.createEvent("TouchEvent");
+        deviceType = "touch";
+        return true;
+      } catch (e) {
+        deviceType = "mouse";
+        return false;
+      }
+    };
+
+    let rectLeft = canvas.getBoundingClientRect().left;
+    let rectTop = canvas.getBoundingClientRect().top;
+    //Exact x and y position of mouse/touch
+    const getXY = (e) => {
+      mouseX = (!isTouchDevice() ? e.pageX : e.touches[0].pageX) - rectLeft;
+      mouseY = (!isTouchDevice() ? e.pageY : e.touches[0].pageY) - rectTop;
+    };
+
+    isTouchDevice();
+    //Start Scratch
+    canvas.addEventListener(events[deviceType].down, debounce((event) => {
+      isDragged = true;
+      //Get x and y position
+      getXY(event);
+      scratch(mouseX, mouseY);
+    }, 1000));
+
+    canvas.addEventListener("mouseover", debounce((event) => {
+      isDragged = true;
+      //Get x and y position
+      getXY(event);
+      scratch(mouseX, mouseY);
+    }, 1000));
+
+    //mousemove/touchmove
+    canvas.addEventListener(events[deviceType].move, debounce((event) => {
+      if (!isTouchDevice()) {
+        event.preventDefault();
+      }
+      if (isDragged) {
+        getXY(event);
+        scratch(mouseX, mouseY);
+      }
+    }, 1000));
+
+    //stop drawing
+    canvas.addEventListener(events[deviceType].up, () => {
+      isDragged = false;
+    });
+
+    //If mouse leaves the square
+    canvas.addEventListener("mouseleave", () => {
+      isDragged = false;
+    });
+
+    const scratch = (x, y) => {
+      if (document.querySelector('body').dataset.broom != 'enable') { return; }
+      console.log('scratch')
+      // document.querySelector('body').dataset.broom
+      // destination-out draws new shapes behind the existing canvas content
+      // context.globalCompositeOperation = "destination-out";
+      // context.beginPath();
+      // //arc makes circle - x,y,radius,start angle,end angle
+      // context.arc(x, y, 12, 0, 2 * Math.PI);
+      // context.fill();
+
+      window.context.globalCompositeOperation = "destination-out";
+      window.context.beginPath();
+      // Use a larger radius to cover more area
+      window.context.arc(x, y, 50, 0, 2 * Math.PI);
+      window.context.fill();
+    };
+
+    function debounce(callback, delay){
+    var timer;
+    return function(){
+        var args = arguments;
+        var context = this;
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+            callback.apply(context, args);
+        }, delay)
+    }
+}
+
+    init();
+  })
+</script>
