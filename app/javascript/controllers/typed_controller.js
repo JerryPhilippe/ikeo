@@ -8,21 +8,33 @@ export default class extends Controller {
   static values = {
     level: Number
   }
+  static targets = ["bubble", "span"]
 
   connect() {
     switch(this.levelValue){
       case 0 :
         const options0 = {strings: level0Home, typeSpeed: 50};
+        if (window.location.pathname == "/"){
         setTimeout(() => {
-          new Typed(this.element, options0);
-      }, 5500);
+          this.bubbleTarget.classList.remove("d-none");
+          new Typed(this.spanTarget, options0);
+      }, 5000);
+      }
       break;
       case 2 :
         const options2 = {strings: level2Cart, typeSpeed: 50};
+        if (window.location.pathname == "/cart"){
         setTimeout(() => {
-          new Typed(this.element, options2);
-      }, 5500);
+          this.bubbleTarget.classList.remove("d-none");
+          new Typed(this.spanTarget, options2);
+      }, 5000);
+      }
       break;
+
     }
+  }
+
+  okButton(){
+    this.bubbleTarget.classList.toggle("d-none");
   }
 }

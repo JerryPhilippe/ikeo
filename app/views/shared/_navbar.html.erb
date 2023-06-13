@@ -5,15 +5,16 @@
         <%= image_tag "menu.svg", id: "menu" %>
       </a>
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-        <%= link_to "Accueil", root_path, class: "dropdown-item" %>
-        <%= link_to "Jardin", root_path, class: "dropdown-item" %>
-        <%= link_to "Salle à manger", root_path, class: "dropdown-item" %>
-        <%= link_to "Cuisine", root_path, class: "dropdown-item" %>
-        <%= link_to "Chambre", root_path, class: "dropdown-item" %>
-        <%= link_to "Salle de bain", root_path, class: "dropdown-item" %>
-        <%= link_to "Chambre enfant", root_path, class: "dropdown-item" %>
-        <%= link_to " Bureau", root_path, class: "dropdown-item" %>
-        <%= link_to "Entrée", root_path, class: "dropdown-item" %>
+        <%= link_to "Accueil", root_path , class: "dropdown-item" %>
+        <%= link_to "Jardin", items_path(room: "Jardin"), class: "dropdown-item" %>
+        <%= link_to "Salon", items_path(room: "Salon"), class: "dropdown-item" %>
+        <%= link_to "Salle à manger", items_path(room: "Salle à manger"), class: "dropdown-item" %>
+        <%= link_to "Cuisine", items_path(room: "Cuisine"), class: "dropdown-item" %>
+        <%= link_to "Chambre", items_path(room: "Chambre"), class: "dropdown-item" %>
+        <%= link_to "Salle de bain", items_path(room: "Salle de bain"), class: "dropdown-item" %>
+        <%= link_to "Chambre enfant", items_path(room: "Chambre enfants"), class: "dropdown-item" %>
+        <%= link_to "Bureau", items_path(room: "Bureau"), class: "dropdown-item" %>
+        <%= link_to "Entrée", items_path(room: "Entrée"), class: "dropdown-item" %>
       </div>
       <p>Menu</p>
     </div>
@@ -74,7 +75,7 @@
           <p id="number-notif"> <%= CartItem.where(cart:current_user.cart).count %> </p>
         <% end %>
         <% end %>
-        
+
       </div>
     <% end %>
   </div>

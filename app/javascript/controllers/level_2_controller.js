@@ -8,20 +8,6 @@ export default class extends Controller {
       const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 60 } })
       window.dispatchEvent(event)
     }, 200);
-
-    this.bubble();
-  }
-
-  bubble(){
-    if (window.location.pathname == "/cart"){
-      setTimeout(() => {
-        this.bubbleTarget.classList.remove("d-none");
-    }, 5000);
-  }
-  }
-
-  okButton(){
-    this.bubbleTarget.classList.toggle("d-none");
   }
 
 

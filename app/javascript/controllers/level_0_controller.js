@@ -1,29 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 
-
-
-
 // Connects to data-controller="level-0"
 export default class extends Controller {
   static targets = ["bubble", "progression", "mouse"]
 
   connect() {
    this.mouseTarget.classList.add("cursor");
-   this.bubble();
-
 
    setTimeout(() => {
      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 20 } })
      window.dispatchEvent(event)
    }, 200);
-  }
-
-  bubble(){
-    if (window.location.pathname == "/"){
-      setTimeout(() => {
-        this.bubbleTarget.classList.remove("d-none");
-    }, 5000);
-  }
   }
 
   switchLight(){
@@ -49,10 +36,6 @@ export default class extends Controller {
       setTimeout(function() {
         window.location.href = "/cart";
     }, 2000);
-  }
-
-  okButton(){
-    this.bubbleTarget.classList.toggle("d-none");
   }
 
   move(e) {
