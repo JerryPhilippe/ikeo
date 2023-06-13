@@ -79,6 +79,9 @@
 #loupe {
   width: 40px;
   height: 40px;
+}
+
+.move-loupe {
   animation: jump-shaking 0.83s infinite;
   z-index: 9999;
 }

@@ -33,7 +33,7 @@
   </div>
 
   <div class="nav-center">
-    <%= image_tag "loupe.svg", id: "loupe" %>
+    <%= image_tag "loupe.svg", id: "loupe", class: "", data: { target: "level-4.loupe", action:"click->level-#{current_user.current_game.level if user_signed_in?}#getLoop" } %>
     <div class="doodle-border search-bar">
       <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
         <%= f.text_field :query,
@@ -54,74 +54,28 @@
     <% if user_signed_in? %>
       <div class="dropdown">
         <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= image_tag "menu.svg", id: "menu" %>
+          Votre compte
         </a>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
           <%= link_to "Mon panier", cart_path, class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
         </div>
-        <p>Menu</p>
       </div>
-      <div class="blue">
-        <%= link_to root_path do %>
-          <%= image_tag "logo.png"%>
+    <% else %>
+      <%= link_to "Hej ! Connectez-vous", new_user_session_path, class: "nav-link" %>
+    <% end %>
+    <%= image_tag "heart.svg", id: "heart" %>
+    <%= link_to cart_path do %>
+      <div class="div-panier">
+        <%= image_tag "panier.png", id: "panier" %>
+        <% if user_signed_in?  %>
+        <% if CartItem.where(cart: current_user.cart).count > 0 %>
+          <%= image_tag "notification.png", id: "notif" %>
+          <p id="number-notif"> <%= CartItem.where(cart:current_user.cart).count %> </p>
         <% end %>
         <% end %>
 
       </div>
-      <div>
-        <div id="logo-koko">
-          <%= image_tag("Koko neutre.png")%>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="nav-center">
-      <%= image_tag "loupe.svg", id: "loupe", data: { target: "level-4.loupe", action:"click->level-4#getLoop" } %>
-      <div class="doodle-border search-bar">
-        <%= form_with url: items_path, method: :get, html: { data: { search_items_target: 'form' } } do |f| %>
-          <%= f.text_field :query,
-                            id: "navi-search",
-                            placeholder: 'Que cherchez-vous ?',
-                            value: params[:query],
-                            data: {
-                            search_items_target: 'searchInput',
-                            action: "keyup->search-items#update"
-                            } %>
-          <%= submit_tag "" , class: "d-none" %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="nav-right">
-        <%= image_tag "profile.png", id: "profile" %>
-      <% if user_signed_in? %>
-        <div class="dropdown">
-          <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Votre compte
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-          </div>
-        </div>
-      <% else %>
-        <%= link_to "Hej ! Connectez-vous", new_user_session_path, class: "nav-link" %>
-      <% end %>
-      <%= image_tag "heart.svg", id: "heart" %>
-      <%= link_to cart_path do %>
-        <div class="div-panier">
-          <%= image_tag "panier.png", id: "panier" %>
-          <% if user_signed_in? %>
-          <% if CartItem.where(cart: current_user.cart).count > 0 %>
-            <%= image_tag "notification.png", id: "notif" %>
-            <p id="number-notif"> <%= CartItem.where(cart:current_user.cart).count %> </p>
-          <% end %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
+</div>
