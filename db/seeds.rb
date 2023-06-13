@@ -753,10 +753,10 @@ mirror_cabinets = {
     price: 120
   },
   "mirror_cabinet_4" => {
-    name: "FULLÄN",
+    name: "SPIEGELLA",
     room_type: "Salle de bain",
     category: "Meuble-miroir",
-    description: "Le meuble-miroir FULLÄN est un choix simple et élégant pour votre salle de bain. Son miroir intégré et ses étagères offrent un rangement fonctionnel pour tous vos essentiels de salle de bain.",
+    description: "Le meuble-miroir SPIEGELLA est un choix simple et élégant pour votre salle de bain. Son miroir intégré et ses étagères offrent un rangement fonctionnel pour tous vos essentiels de salle de bain.",
     price: 80
   },
   "mirror_cabinet_5" => {
@@ -1172,7 +1172,7 @@ consoles = {
     price: 120
   },
   "console_5" => {
-    name: "BRUSALI",
+    name: "BRUSALII",
     room_type: "Entrée",
     category: "Console",
     description: "La console BRUSALI est une addition pratique et attrayante à votre entrée. Son design épuré et sa finition neutre en font une pièce versatile pour tous les styles d'intérieur.",
@@ -1230,5 +1230,22 @@ mirrors = {
 mirrors.each_with_index do |(_key, value), index|
   item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
   file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/9-3-#{index+1}-miroir-entree.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
+
+
+secret_item = {
+  "sac_a_dos" => {
+    name: "Sac à dos",
+    room_type: "Secret",
+    category: "Sac",
+    description: "Ce sac à dos très pratique est très utile pour toute sorte d'expédition. Sac à dos d'occasion ayant déjà servi mais toujours en très bon état. A appartenu au fondateur de Ikéo : objet de collection très rare !",
+    price: 15.00
+  }
+}
+
+secret_item.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/10-1-#{index+1}-sac_dos-secret.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
