@@ -13,22 +13,22 @@ export default class extends Controller {
   connect() {
     switch(this.levelValue){
       case 0 :
-        const options0 = {strings: level0Home, typeSpeed: 50};
         if (window.location.pathname == "/"){
-        setTimeout(() => {
-          this.bubbleTarget.classList.remove("d-none");
-          new Typed(this.spanTarget, options0);
-      }, 5000);
-      }
+          const options0 = {strings: level0Home, typeSpeed: 50};
+          setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            new Typed(this.spanTarget, options0);
+          }, 5000);
+        }
       break;
       case 2 :
-        const options2 = {strings: level2Cart, typeSpeed: 50};
         if (window.location.pathname == "/cart"){
-        setTimeout(() => {
-          this.bubbleTarget.classList.remove("d-none");
-          new Typed(this.spanTarget, options2);
-      }, 5000);
-      }
+          const options2 = {strings: level2Cart, typeSpeed: 50};
+          setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            new Typed(this.spanTarget, options2);
+          }, 5000);
+        }
       break;
 
     }
