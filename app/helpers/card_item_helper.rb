@@ -28,6 +28,8 @@ module CardItemHelper
     when 1
       action = "click->level-1#tocart"
       return action
+    when 4
+      return "mouseover->level-4#hot mouseout->level-4#cold" if item.name.downcase == "spiegella"
     end
   end
 end

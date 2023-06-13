@@ -2,7 +2,6 @@
   <div class="flex">
     <%= cl_image_tag @item.photo.key, class:"item-img" %>
     <div class="item-infos">
-      <div class="sticky">
         <h1 style="font-weight: bold"><%= @item.name %></h1>
         <p><%= @item.description %></p>
         <h3 style="font-weight: bold"><%= @item.price %>0€</h3>
@@ -12,4 +11,12 @@
       </div>
     </div>
   </div>
+  <% if @item.name.downcase == "spiegella" %>
+  <div class="flip-card" data-level-4-target="flipCard">
+    <%= image_tag "credit-card.png", class:"back" %>
+    <div class="front"></div>
+  </div>
+
+  <button id="hiden-button" data-action="click->level-4#hidenButton">click here</button>
+  <% end %>
 </div>
