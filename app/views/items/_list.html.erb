@@ -4,15 +4,18 @@
    <%#  <hr class="doodle"> %>
     <div class="wrapper-index ">
       <% item.each do |product| %>
-        <div class="card-index doodle-border <%{ data: { action: card_item_action((current_user.current_game if user_signed_in?), product), level_1_target: product.name.downcase  } } %> ">
+
+      <div class="card-return" data-action="<%=card_item_hover((current_user.current_game if user_signed_in?), product)%>" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="<%= product.name.downcase %>">
+
+        <div class="card-index card-front doodle-border" data-action=<%= card_item_action((current_user.current_game if user_signed_in?), product)%>>
+
           <div class="item-img">
             <%= cl_image_tag(product.photo.key, { data: { action: card_photo_action((current_user.current_game if user_signed_in?), product), level_2_target: product.name.downcase} }) %>
           </div>
+
           <div class="card-index-text ">
             <h1 class=""><%= product.name %></h1>
-
             <div class="flex-price-link">
-
               <p><%= product.price%>0€</p>
               <%= image_tag("home.png", id: "home-key" , class: "d-none",
                 data: {
@@ -22,13 +25,19 @@
 
               <div class="flex-card" >
                 <div class="doodle-button button-index">
-                  <%= link_to "Voir cet item", item_path(product), class:"doodle-link" %>
+                  <%= link_to "En savoir +", item_path(product), class:"doodle-link" %>
                 </div>
               </div>
             </div>
           </div>
+
+
+      </div>
+        <div class="card-back doodle-border">
+        <p data-level-<%= current_user.current_game.level if user_signed_in? %>-target="back<%= product.name.downcase %>"></p>
+        </div>
         </div>
       <% end %>
     </div>
-  <% end %>
 </div>
+  <% end %>

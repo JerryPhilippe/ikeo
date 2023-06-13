@@ -1,5 +1,5 @@
  .doorall {
-  position: absolute;
+ /*  position: absolute; */
 /*   top: -400px;
   left: 500px; */
   width: 200px;
@@ -7,12 +7,19 @@
   margin: 20 auto;
 }
 .door {
-  width: 200px;
-  height: 400px;
-  position: relative;
-  left: 500px;
-  top: -400px;
-  background-color: #ccc;
+  img{
+
+    width: 204px;
+    height: 366px;
+    position: absolute;
+    /* background-color: #ccc; */
+
+   /*  top: 30px;
+    left: 10px; */
+    // left: 500px;
+
+   /*  background-color: #ccc; */
+  }
   transform-origin: left center;
 }
 
@@ -33,30 +40,45 @@ animation: openDoor 2s forwards;
 }
 
 .underdoor {
-  position: relative;
-  left: 500px;
-  width: 200px;
-  height: 390px;
-  background-color: black;
-}
+    position: absolute;
+  /*   left: 500px; */
+  img {
+    width: 283px;
+    height: 402px;
+    margin-left: -34px;
+    margin-top: -24px;
+  }
+
+  }
 
 @keyframes growZoom {
   0% {
     transform: scale(1);
   }
-  50% {
-    transform: scale(5);
-  }
+
   100% {
-    transform: scale(10);
+    transform: scale(30);
   }
 }
 
 .zoom.grow {
-  animation: growZoom 2s forwards;
-  }
+  animation: growZoom 3s linear;
+}
 
-  .zoom {
-    position: absolute;
-    margin: auto;
-  }
+.zoom {
+
+  width: 200px;
+  height: 400px;
+  display: block;
+
+}
+
+.buttondoor {
+  z-index: 100;
+  position: relative;
+}
+
+.flex-door {
+  display: flex;
+  flex-direction: column;
+}

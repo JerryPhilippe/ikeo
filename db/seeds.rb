@@ -1232,3 +1232,20 @@ mirrors.each_with_index do |(_key, value), index|
   file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/9-3-#{index+1}-miroir-entree.jpg")
   item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
 end
+
+
+secret_item = {
+  "sac_a_dos" => {
+    name: "Sac à dos",
+    room_type: "Secret",
+    category: "Sac",
+    description: "Ce sac à dos très pratique est très utile pour toute sorte d'expédition. Sac à dos d'occasion ayant déjà servi mais toujours en très bon état. A appartenu au fondateur de Ikéo : objet de collection très rare !",
+    price: 15.00
+  }
+}
+
+secret_item.each_with_index do |(_key, value), index|
+  item = Item.create(name: value[:name].to_s, description: value[:description].to_s, price: value[:price].to_i, room_type: value[:room_type].to_s, category: value[:category].to_s)
+  file = URI.open("https://res.cloudinary.com/dwwqcadjv/image/upload/v1686045027/Seed/10-1-#{index+1}-sac_dos-secret.jpg")
+  item.photo.attach(io: file, filename: "#{index + 1}.jpg", content_type: "image/jpg")
+end
