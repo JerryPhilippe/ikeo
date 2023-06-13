@@ -21,10 +21,10 @@
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
         <div class="backcolor">
-          <div class="bubble d-none" data-controller="typed" data-typed-level-value="<%= current_user.current_game.level if user_signed_in? %>" data-typed-target="bubble">
+          <div class="bubble d-none" data-controller="<%= "typed" if user_signed_in? %>" data-typed-level-value="<%= current_user.current_game.level if user_signed_in? %>" data-typed-target="bubble">
             <div class="tri-right talk-bubble round border-bubble borderb left-in">
               <div class="talktext doodle">
-                <span data-typed-target="span">
+                <span data-typed-target="<%= "span" if user_signed_in? %>">
                 </span>
               </div>
               <button class="button-bubble doodle-button" data-action="click->typed#okButton">J'ai compris !</button>

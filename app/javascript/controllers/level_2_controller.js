@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["bubble", "progression", "mouse", "brusalii", "cursorkey", "key", "homekey"]
   connect() {
     setTimeout(() => {
-      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 60 } })
+      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 38 } })
       window.dispatchEvent(event)
     }, 200);
   }

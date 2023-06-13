@@ -2,10 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-1"
 export default class extends Controller {
-  static targets = ["kura", "backkura", "micke", "backmicke", "flisat", "backflisat", "huset", "backhuset", "trogen", "backtrogen", "sacados", "button"]
+  static targets = ["kura", "backkura", "micke", "backmicke", "flisat", "backflisat", "huset", "backhuset", "trogen", "backtrogen", "sacados", "button", "bubble", "progression"]
   connect() {
     setTimeout(() => {
-      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 40 } })
+      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 19 } })
       window.dispatchEvent(event)
     }, 200);
   }

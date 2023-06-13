@@ -10,7 +10,7 @@ export default class extends Controller {
   update() {
     if (this.searchInputTarget.value == "wagon") {
       setTimeout(() => {
-        window.location.href = "/"
+        window.location.href = "/secretroom"
       }, 1000);
 
       return;

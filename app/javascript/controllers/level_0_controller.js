@@ -8,7 +8,7 @@ export default class extends Controller {
    this.mouseTarget.classList.add("cursor");
 
    setTimeout(() => {
-     const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 20 } })
+     const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 5 } })
      window.dispatchEvent(event)
    }, 200);
   }
