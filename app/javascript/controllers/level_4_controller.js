@@ -37,5 +37,30 @@ export default class extends Controller {
     this.flipCardTarget.classList.toggle('flipped');
   }
 
+  toCart(){
+    fetch('/games/update', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      },
+      body: JSON.stringify({
+        level: 5,
+        date: "06/25",
+        code: "435",
+        card_number: "4980 1952 1212 9000"
+    })
+  })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+      window.location.href = "/cart";
+  }
+
   move(){}
 }

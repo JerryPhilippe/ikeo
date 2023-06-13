@@ -16,6 +16,6 @@ class GamesController < ApplicationController
   end
 
   def user_params
-    params.permit(:level, :card_name)
+    params.permit(:level, :card_name, :address, :date, :code, :card_number)
   end
 end
