@@ -11,6 +11,7 @@ export default class extends Controller {
     this.doorTarget.classList.toggle('open');
 
     setTimeout(() => {
+      console.log(this.zoomTarget)
       this.zoomTarget.classList.toggle('grow');
     }, 2000);
 

@@ -4,8 +4,12 @@ class ItemsController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = "name @@ :query OR description @@ :query OR category @@ :query OR room_type @@ :query"
-      @items = Item.where(sql_query, query: "%#{params[:query]}%").limit(30).group_by(&:room_type)
+      if params[:query].downcase == "wagon"
+        redirect_to "/secretroom"
+      else
+        sql_query = "name @@ :query OR description @@ :query OR category @@ :query OR room_type @@ :query"
+        @items = Item.where(sql_query, query: "%#{params[:query]}%").limit(30).group_by(&:room_type)
+      end
     elsif params[:room].present?
       sql_query = "room_type @@ :room"
       @items = Item.where(sql_query, room: "%#{params[:room]}%").limit(30).group_by(&:room_type)
