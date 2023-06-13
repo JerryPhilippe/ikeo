@@ -46,11 +46,11 @@
 
   <div class="doodle-border form">
       <%= simple_form_for :payment do |f|  %>
-        <%= f.input :name, label: "Nom du titulaire de la carte", input_html: { value: current_user.username}%>
+        <%= f.input :name, readonly: true, label: "Nom du titulaire de la carte", input_html: { value: current_user.current_game.card_name}, placeholder: current_user.current_game.card_name%>
         <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number }, placeholder: current_user.current_game.card_number, label: "Numéro de carte" %>
         <div class="d-flex">
-        <%= f.input :date, label: "date d'expiration", input_html: {value: "09/25"}, class:"petit-input" %>
-        <%= f.input :code, label: "CVC/CVV", input_html: {value: "666"}, class:"petit-input" %>
+        <%= f.input :date, readonly: true, label: "date d'expiration", input_html: {value: "09/25"}, class:"petit-input" %>
+        <%= f.input :code, readonly: true, label: "CVC/CVV", input_html: {value: "666"}, class:"petit-input" %>
         </div>
         <div class="submit-flex">
         <%= f.submit "Payer", class:"submit-cart" %>
@@ -60,7 +60,7 @@
 
 </div>
     <% end %>
-   
+
   </div>
 
 </div>

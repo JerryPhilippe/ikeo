@@ -2,7 +2,8 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:update]
 
   def update
-    if @game.update(level: params[:level])
+
+    if @game.update(user_params)
       render json: { status: 'success', message: 'Level updated successfully' }
     else
       render json: { status: 'error', message: 'Level update failed' }, status: :unprocessable_entity
@@ -16,6 +17,6 @@ class GamesController < ApplicationController
   end
 
   def user_params
-    params.permit(:level)
+    params.permit(:level, :card_name)
   end
 end

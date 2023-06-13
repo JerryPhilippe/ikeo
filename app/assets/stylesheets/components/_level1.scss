@@ -33,7 +33,6 @@
   }
 }
 
-
 .card-flip{
   transform: rotateY(180deg);
 }
@@ -44,9 +43,9 @@
 }
 
 .card-front {
-  background: lightgreen;
   backface-visibility: hidden;
 }
+
 .card-back {
   background: white;
   backface-visibility: hidden;
@@ -64,5 +63,5 @@
 
 
 .shadow-card {
-  box-shadow: 10px 5px 5px red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

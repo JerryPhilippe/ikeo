@@ -46,10 +46,11 @@
   text-decoration: none;
   float: right;
   right: 10px;
-  width: 150px;
+  /* width: 150px; */
   background-color: $purple;
   margin: -4px;
   line-height: 40px;
+  font-size: 15px;
 }
 
 .card-index-text {
@@ -74,5 +75,4 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
 }
