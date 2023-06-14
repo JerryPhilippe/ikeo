@@ -30,4 +30,12 @@ module CardItemHelper
       return action
     end
   end
+
+  def cart_button_action(game)
+    case game.level
+    when 5
+      action = "click->level-5#tofinish"
+      return action
+    end
+  end
 end

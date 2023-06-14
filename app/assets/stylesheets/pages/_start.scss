@@ -1,0 +1,113 @@
+.doorall {
+  width: 200px;
+  height: 400px;
+  margin: 20 auto;
+  margin-top: 27px;
+}
+.door {
+  img{
+    width: 180px;
+    height: 330px;
+    position: absolute;
+    margin-top: 52px;
+  }
+  transform-origin: left center;
+}
+
+@keyframes openDoor {
+  0% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(800px) rotateY(-60deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(-100deg);
+  }
+}
+
+.door.open {
+animation: openDoor 2s forwards;
+}
+
+.underdoor {
+    position: absolute;
+
+  img {
+    width: 250px;
+    height: 367px;
+    margin-left: -31px;
+    margin-top: 29px;
+  }
+
+  }
+
+@keyframes growZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(30);
+  }
+}
+
+.zoom.grow {
+  animation: growZoom 3s linear;
+}
+
+.zoom {
+  width: 200px;
+  height: 400px;
+  display: block;
+}
+
+.buttondoor {
+  z-index: 100;
+  position: relative;
+  top: 286px;
+  left: 46px;
+  color: $gray;
+  opacity: 0.4;
+}
+
+.flex-door {
+  display: flex;
+  flex-direction: column;
+}
+
+.door-back {
+  background: white;
+  backface-visibility: hidden;
+  width: 250px;
+  height: 367px;
+  position: absolute;
+  top: 0px;
+}
+
+.door-front {
+ /*  backface-visibility: hidden; */
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  5% {
+    transform: scale(1.01); /* Slightly larger size */
+  }
+  10% {
+    transform: scale(1); /* Slightly larger size */
+  }
+  15% {
+    transform: scale(1.01); /* Slightly larger size */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1s infinite;
+  transform-origin: center;
+}

@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def start; end
+
+  def finish; end
+
   def components; end
 
   def secretroom

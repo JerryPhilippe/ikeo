@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
 
   get '/secretroom', to: "pages#secretroom"
+  get '/start', to: "pages#start"
+  get '/finish', to: "pages#finish"
 
   resources :items
   get "/cart", to: "cart_items#index"
