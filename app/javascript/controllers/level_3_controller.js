@@ -149,5 +149,4 @@ export default class extends Controller {
       this.broomTarget.style.left = `${mouseX + 15}px`
     })
   }
-
 }
