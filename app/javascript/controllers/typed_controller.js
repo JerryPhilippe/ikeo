@@ -53,7 +53,7 @@ export default class extends Controller {
         if (evt || window.location.pathname == "/"){
           const options0 = {
             strings: level0Home,
-            typeSpeed: 50
+            typeSpeed: 30
           };
 
 
@@ -67,7 +67,7 @@ export default class extends Controller {
         if (evt || window.location.pathname == "/cart"){
           const options0 = {
             strings: level1Cart,
-            typeSpeed: 50
+            typeSpeed: 30
           };
 
           this.timeout = setTimeout(() => {
@@ -80,7 +80,7 @@ export default class extends Controller {
         if (evt || window.location.pathname == "/cart"){
           const options0 = {
             strings: level2Cart,
-            typeSpeed: 50
+            typeSpeed: 30
           };
 
 
@@ -94,7 +94,7 @@ export default class extends Controller {
         if (evt || window.location.pathname == "/cave"){
           const options0 = {
             strings: level3Cave,
-            typeSpeed: 50
+            typeSpeed: 30
           };
 
 
@@ -108,7 +108,7 @@ export default class extends Controller {
         if (evt || window.location.pathname == "/cart"){
           const options0 = {
             strings: level4Cart,
-            typeSpeed: 50
+            typeSpeed: 30
           };
 
 
@@ -122,7 +122,7 @@ export default class extends Controller {
         if (evt || window.location.pathname == "/cart"){
           const options0 = {
             strings: level5Cart,
-            typeSpeed: 50
+            typeSpeed: 30
           };
 
 
