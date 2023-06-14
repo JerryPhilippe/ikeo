@@ -24,10 +24,6 @@ const level4Cart = [
 const level5Cart = [
   "Génial ! J’ai enfin tout ce dont j’ai besoin !"
 ]
-
-const level6Finish = [
-  "Merci beaucoup de ton aide ! Je vais enfin pouvoir visiter tout internet ! J’ai tellement hâte ! Je ne pourrais jamais assez te remercier, j’espère te revoir un jour !",
-]
 // Connects to data-controller="typed"
 export default class extends Controller {
   static values = {
@@ -126,19 +122,6 @@ export default class extends Controller {
             typeSpeed: 50
           };
 
-
-          this.timeout = setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            this.typed = new Typed(this.spanTarget, options0);
-          }, time || 0);
-        }
-      break;
-      case 6 :
-        if (evt || window.location.pathname == "/finish"){
-          const options0 = {
-            strings: level6Finish,
-            typeSpeed: 50
-          };
 
           this.timeout = setTimeout(() => {
             this.bubbleTarget.classList.remove("d-none");

@@ -17,6 +17,7 @@ module CardItemHelper
     end
   end
 
+
   def card_item_jump(game)
     case game.level
     when 1
@@ -38,6 +39,7 @@ module CardItemHelper
     when 0
       return "addJumpClass" if item.name.downcase == "lampküs"
     end
+
   end
 
   def cart_button_action(game)
