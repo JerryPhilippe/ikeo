@@ -12,8 +12,8 @@ module CardItemHelper
       if ["kura", "micke", "flisat", "huset", "trogen"].include?(item.name.downcase)
         return "mouseover->level-1#shadow#{item.name.downcase} mouseout->level-1#shadowout#{item.name.downcase}"
       end
-      when 4
-        return "mouseover->level-4#hot mouseout->level-4#cold" if item.name.downcase == "spiegella"
+    when 4
+      return "mouseover->level-4#hot mouseout->level-4#cold" if item.name.downcase == "spiegella"
     end
   end
 
@@ -33,11 +33,17 @@ module CardItemHelper
     end
   end
 
+  def card_item_button(game, item)
+    case game.level
+    when 0
+      return "addJumpClass" if item.name.downcase == "lampküs"
+
   def cart_button_action(game)
     case game.level
     when 5
       action = "click->level-5#tofinish"
       return action
+
     end
   end
 end
