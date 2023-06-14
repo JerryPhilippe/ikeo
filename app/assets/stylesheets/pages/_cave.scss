@@ -1,0 +1,173 @@
+
+.cave-title {
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: white;
+}
+
+.wrapper-index-cave {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+ /*  grid-auto-rows: minmax(100px, auto); */
+}
+
+.wrapper-index img {
+ /*  border-style: none!important;
+  border-width: 0!important; */
+ /*  padding: 5px; */
+
+  object-fit: cover;
+ }
+
+.container-index {
+  margin: 100px;
+}
+
+.card-index-cave {
+  /* display: flex;
+  flex-direction: column; */
+  min-width: 0;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  .dirty-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 350px;
+    // background-image: url("poussiere.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+     .cursor-circle {
+      pointer-events: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+
+     }
+  }
+  h1{
+    font-size: 30px;
+  }
+}
+
+.card-index-text-cave {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  height: 65px;
+}
+
+.flex-price-link {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  vertical-align: bottom;
+}
+
+.button-index {
+  a {
+    text-decoration: none;
+    float: right;
+    right: 10px;
+    width: 150px;
+    background-color: $purple;
+    margin: -4px;
+    line-height: 40px;
+    color: black!important;
+  }
+  vertical-align: bottom;
+}
+
+.flex-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.item-img-cave {
+  background-color: lavender;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.balais-img {
+  z-index: 111;
+}
+
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+.overlay.display {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  background: #fff;
+  position: relative;
+}
+
+.popup .close {
+  position: absolute;
+  top: -14px;
+  right: 0px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: grey;
+}
+.popup .content-cave {
+  max-height: 30%;
+  overflow: auto;
+  padding-top: 16px;
+  padding-left: 5px;
+  background-color: lavender;
+  margin: -5px;
+    p{
+      font-family: 'Schoolbell', cursive;
+      font-size: 18px;
+    }
+}
+
+.cave-index-cave,
+  #scratch {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    cursor: grabbing;
+    border-radius: 0.3em;
+  }
+
+  #scratch {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }

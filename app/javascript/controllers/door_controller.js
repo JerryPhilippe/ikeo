@@ -8,6 +8,7 @@ export default class extends Controller {
   }
   open(){
     console.log("open door")
+    this.doorTarget.classList.toggle("heartbeat");
     this.doorTarget.classList.toggle('open');
 
     setTimeout(() => {
