@@ -8,7 +8,7 @@
 
 .wrapper-index {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
   gap: 30px;
   width: 100%;
@@ -46,10 +46,11 @@
   text-decoration: none;
   float: right;
   right: 10px;
-  width: 150px;
+  /* width: 150px; */
   background-color: $purple;
   margin: -4px;
   line-height: 40px;
+  font-size: 15px;
 }
 
 .card-index-text {
@@ -74,5 +75,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
 
+#home-key {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-style: none;
 }

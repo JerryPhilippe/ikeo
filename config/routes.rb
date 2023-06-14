@@ -6,7 +6,12 @@ Rails.application.routes.draw do
     get '/components', to: "pages#components"
   end
 
+
   get '/cave', to: "pages#cave"
+  get '/secretroom', to: "pages#secretroom"
+  get '/start', to: "pages#start"
+  get '/finish', to: "pages#finish"
+
 
   resources :items
   get "/cart", to: "cart_items#index"

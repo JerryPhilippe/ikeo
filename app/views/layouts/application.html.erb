@@ -15,26 +15,27 @@
   </head>
 
   <body>
-    <div data-controller="search-items level-<%= current_user.current_game.level if user_signed_in? %>">
-      <div class="relative-bubble"  data-action="mousemove->level-<%= current_user.current_game.level if user_signed_in? %>#move">
+    <div data-controller="search-items progess level-<%= current_user.current_game.level if user_signed_in? %>">
+
+      <div class="relative-bubble"  data-action="mousemove->level-<%= current_user.current_game.level if user_signed_in? %>#move" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="cursorkey">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
         <div class="backcolor">
-          <div class="bubble d-none" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="bubble">
+          <div class="bubble d-none" data-controller="<%= "typed" if user_signed_in? %>" data-typed-level-value="<%= current_user.current_game.level if user_signed_in? %>" data-typed-target="bubble">
             <div class="tri-right talk-bubble round border-bubble borderb left-in">
               <div class="talktext doodle">
-                <span data-controller="typed"
-                  data-typed-sentences-value="<%= ["psst psst","hey!", "psst","Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! J’ai peur du noir !!! Je sais qu’il y a une lampe dans les articles de salon, qui que tu sois peux-tu aller l’allumer ?"] %>">
+                <span data-typed-target="<%= "span" if user_signed_in? %>">
                 </span>
               </div>
-              <button class="button-bubble doodle-button" data-action="click->level-<%= current_user.current_game.level if user_signed_in? %>#okButton">J'ai compris !</button>
+              <button class="button-bubble doodle-button" data-action="click->typed#okButton">J'ai compris !</button>
             </div>
           </div>
             <%= yield %>
           <%= render "shared/flashes" %>
         <div class="" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="mouse"></div>
       </div>
-        <%= render 'shared/footer' %>
+
+      <%= render 'shared/footer' %>
     </div>
   </body>
 </html>

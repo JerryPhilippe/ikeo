@@ -33,12 +33,15 @@ input {
 
 .article-infos {
   width: 65%;
+  p {
+    font-size: 15px;
+  }
 }
 
 .price-qte {
   margin-left: 78px;
   margin-right: 5px;
-  height: 150px;
+  height: 11em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,8 +63,12 @@ hr {
   background-color: white;
 }
 
-.petit-input input {
-  width: 20px;
+.petit-input {
+  width: 7em;
+}
+
+.date-input {
+  width: 9em;
 }
 
 .submit-cart {
@@ -71,4 +78,25 @@ hr {
 .submit-flex{
   display: flex;
   justify-content: end;
+  a {
+    text-decoration: none;
+  }
+}
+
+.date-cvc {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: end;
+}
+
+.disabled {
+  pointer-events: none;
+  color: gray!important;
+  background-color: $light-gray!important;
+}
+
+.enabled {
+  color: $gray!important;
+  background-color: $red!important;
 }

@@ -1,3 +1,10 @@
-<div data-controller="cursor">
-  <div  data-action="mousemove->cursor#move" data-cursor-target="mouse" class="cursor"></div>
+
+<div data-controller="door" class="flex-door align-items-center justify-content-center" >
+
+  <div class="zoom" data-door-target="zoom" class="doorall">
+    <div class="underdoor"><%= image_tag "porte-arrière.png" %></div>
+    <div class=" door perspectiveLeft" data-door-target="door"><%= image_tag "porte-avant.png" %></div>
+  </div>
+   <button onclick="openDoor()" data-action="click->door#open" class="buttondoor">Open Door</button>
+
 </div>

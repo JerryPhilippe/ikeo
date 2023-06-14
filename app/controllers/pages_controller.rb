@@ -9,4 +9,15 @@ class PagesController < ApplicationController
 
   def cave
   end
+
+  def start; end
+
+  def finish; end
+
+  def components; end
+
+  def secretroom
+    @item = Item.find_by name: 'Sac à dos'
+  end
+
 end
