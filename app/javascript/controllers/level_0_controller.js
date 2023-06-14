@@ -2,13 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-0"
 export default class extends Controller {
-  static targets = ["bubble", "progression", "mouse"]
+  static targets = ["bubble", "progression", "mouse", "addJumpClass"]
 
   connect() {
+
    if (window.location.pathname !== "/start"){
     this.mouseTarget.classList.add("cursor");
    }
-
 
    setTimeout(() => {
      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 5 } })
@@ -16,8 +16,13 @@ export default class extends Controller {
    }, 200);
   }
 
+  addJumpClassTargetConnected() {
+    this.addJumpClassTarget.classList.add("jump-button");
+  }
+
   switchLight(){
     this.mouseTarget.classList.remove("cursor");
+    this.addJumpClassTarget.classList.remove("jump-button");
     fetch('/games/update', {
       method: 'PATCH',
       headers: {

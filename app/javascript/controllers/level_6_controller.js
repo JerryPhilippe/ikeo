@@ -5,13 +5,16 @@ const level6 = ["Je vais enfin pouvoir visiter tout internet !", "J’ai telleme
 
 // Connects to data-controller="level-6"
 export default class extends Controller {
-  static targets = ["door","koko","bubble", "span"]
+
+  static targets = ["door","koko","bubble", "span", "progression"]
 
   static values = {
     texte: Array
   }
   connect() {
-    /* window.location.href = "/finish"; */
+   if (window.location.pathname !== "/finish"){
+      window.location.href = "/finish";
+    }
 
     setTimeout(() => {
       const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 100 } })
