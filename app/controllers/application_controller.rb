@@ -14,13 +14,13 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resources)
     if current_user.current_game.level.zero?
-      start_path(resources)
+      start_path
     else
-      root_path(resources)
+      root_path
     end
   end
 
   def after_sign_up_path_for(resources)
-    start_path(resources)
+    start_path
   end
 end
