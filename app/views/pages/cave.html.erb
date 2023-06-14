@@ -191,7 +191,7 @@
           <p>0€</p>
           <div class="flex-card">
             <div class="doodle-button button-index">
-              <a data-action="click->popup#show" data-turbo="false" class="button" href="#popup5">Voir cet item</a>
+              <a data-action="click->popup#show click->level-<%= current_user.current_game.level if user_signed_in? %>#toCart" data-turbo="false" class="button" href="#popup5">Voir cet item</a>
             </div>
           </div>
           <div id="popup5" class="overlay"  data-popup-target="overlay">
