@@ -36,75 +36,116 @@ export default class extends Controller {
   static targets = ["bubble", "span"]
 
   connect() {
-    switch(this.levelValue){
-      case 0 :
-        if (window.location.pathname == "/"){
-          const options0 = {strings: level0Home, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options0);
-          }, 5000);
-        }
-      break;
-      case 1 :
-        if (window.location.pathname == "/cart"){
-          const options0 = {strings: level1Cart, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options0);
-          }, 5000);
-        }
-      break;
-      case 2 :
-        if (window.location.pathname == "/cart"){
-          const options2 = {strings: level2Cart, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options2);
-          }, 5000);
-        }
-      break;
-      case 3 :
-        if (window.location.pathname == "/cave"){
-          const options2 = {strings: level3Cave, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options2);
-          }, 5000);
-        }
-      break;
-      case 4 :
-        if (window.location.pathname == "/cart"){
-          const options2 = {strings: level4Cart, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options2);
-          }, 5000);
-        }
-      break;
-      case 5 :
-        if (window.location.pathname == "/cart"){
-          const options2 = {strings: level5Cart, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options2);
-          }, 5000);
-        }
-      break;
-      case 6 :
-        if (window.location.pathname == "/finish"){
-          const options2 = {strings: level6Finish, typeSpeed: 50};
-          setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            new Typed(this.spanTarget, options2);
-          }, 5000);
-        }
-      break;
-
-    }
+    // clearTimeout(this.timeout)
+    this.speak(null, 2000);
   }
 
   okButton(){
     this.bubbleTarget.classList.toggle("d-none");
+  }
+
+  speak(evt, time) {
+    console.log(this.levelValue)
+    clearTimeout(this.timeout)
+    if (this.typed) { this.typed.stop() }
+
+    switch(this.levelValue){
+      case 0 :
+        if (evt || window.location.pathname == "/"){
+          const options0 = {
+            strings: level0Home,
+            typeSpeed: 50
+          };
+
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+      case 1 :
+        if (evt || window.location.pathname == "/cart"){
+          const options0 = {
+            strings: level1Cart,
+            typeSpeed: 50
+          };
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+      case 2 :
+        if (evt || window.location.pathname == "/cart"){
+          const options0 = {
+            strings: level2Cart,
+            typeSpeed: 50
+          };
+
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+      case 3 :
+        if (evt || window.location.pathname == "/cave"){
+          const options0 = {
+            strings: level3Cave,
+            typeSpeed: 50
+          };
+
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+      case 4 :
+        if (evt || window.location.pathname == "/cart"){
+          const options0 = {
+            strings: level4Cart,
+            typeSpeed: 50
+          };
+
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+      case 5 :
+        if (evt || window.location.pathname == "/cart"){
+          const options0 = {
+            strings: level5Cart,
+            typeSpeed: 50
+          };
+
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+      case 6 :
+        if (evt || window.location.pathname == "/finish"){
+          const options0 = {
+            strings: level6Finish,
+            typeSpeed: 50
+          };
+
+          this.timeout = setTimeout(() => {
+            this.bubbleTarget.classList.remove("d-none");
+            this.typed = new Typed(this.spanTarget, options0);
+          }, time || 0);
+        }
+      break;
+    }
   }
 }

@@ -14,14 +14,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body data-controller="<%= "typed" if user_signed_in? %>" data-typed-level-value="<%= current_user.current_game.level if user_signed_in? %>">
     <div data-controller="search-items progess level-<%= current_user.current_game.level if user_signed_in? %>">
 
       <div class="relative-bubble"  data-action="mousemove->level-<%= current_user.current_game.level if user_signed_in? %>#move" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="cursorkey">
         <%= render "shared/navbar" %>
         <%= render "shared/progression" if user_signed_in? %>
         <div class="backcolor">
-          <div class="bubble d-none" data-controller="<%= "typed" if user_signed_in? %>" data-typed-level-value="<%= current_user.current_game.level if user_signed_in? %>" data-typed-target="bubble">
+          <div class="bubble d-none" data-typed-target="bubble">
             <div class="tri-right talk-bubble round border-bubble borderb left-in">
               <div class="talktext doodle">
                 <span data-typed-target="<%= "span" if user_signed_in? %>">
