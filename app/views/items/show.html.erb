@@ -1,22 +1,35 @@
 <div class="container-show doodle">
+
   <div class="flex">
-    <%= cl_image_tag @item.photo.key, class:"item-img" %>
+
+    <%= cl_image_tag @item.photo.key, class:"item-img flex-img" %>
     <div class="item-infos">
-        <h1 style="font-weight: bold"><%= @item.name %></h1>
-        <p><%= @item.description %></p>
-        <h3 style="font-weight: bold"><%= @item.price %>0€</h3>
-        <div class="doodle-button button-show">
+
+      <h1 style="font-weight: bold"><%= @item.name %></h1>
+      <p><%= @item.description %></p>
+      <h3 style="font-weight: bold"><%= @item.price %>0€</h3>
+
+      <div class="doodle-button button-show">
         <%= link_to "ajouter au panier", create_cart_item_path(@item), class:"doodle-link", data: { action: (card_view_action((current_user.current_game), @item) if user_signed_in?)} %>
-        </div>
       </div>
+
+      <% if current_user.current_game.level == 4 %>
+        <% if @item.name.downcase == "spiegella" %>
+
+          <div class="level-4-flex">
+
+            <div class="flip-card" data-level-4-target="flipCard">
+              <%= image_tag "credit-card.png", class:"back" %>
+              <div class="front"></div>
+            </div>
+
+            <button id="hiden-button" data-action="click->level-4#revealCard mouseover->level-4#hot mouseout->level-4#cold">click here</button>
+
+          </div>
+
+        <% end %>
+      <% end %>
+
     </div>
   </div>
-  <% if @item.name.downcase == "spiegella" %>
-  <div class="flip-card" data-level-4-target="flipCard">
-    <%= image_tag "credit-card.png", class:"back" %>
-    <div class="front"></div>
-  </div>
-
-  <button id="hiden-button" data-action="click->level-4#hidenButton">click here</button>
-  <% end %>
 </div>
