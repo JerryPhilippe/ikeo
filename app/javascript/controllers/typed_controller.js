@@ -24,10 +24,6 @@ const level4Cart = [
 const level5Cart = [
   "Génial ! J’ai enfin tout ce dont j’ai besoin !"
 ]
-
-const level6Finish = [
-  "Merci beaucoup de ton aide ! Je vais enfin pouvoir visiter tout internet ! J’ai tellement hâte ! Je ne pourrais jamais assez te remercier, j’espère te revoir un jour !",
-]
 // Connects to data-controller="typed"
 export default class extends Controller {
   static values = {
@@ -91,7 +87,7 @@ export default class extends Controller {
           }, 5000);
         }
       break;
-      case 6 :
+  /*     case 6 :
         if (window.location.pathname == "/finish"){
           const options2 = {strings: level6Finish, typeSpeed: 50};
           setTimeout(() => {
@@ -100,7 +96,7 @@ export default class extends Controller {
           }, 5000);
         }
       break;
-
+ */
     }
   }
 

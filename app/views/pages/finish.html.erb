@@ -1,13 +1,21 @@
 <div data-controller="door" class="flex-door align-items-center justify-content-center" >
 
+
   <div class="zoom" data-door-target="zoom" class="doorall">
     <div class="underdoor"><%= image_tag "porte-arrière.png" %></div>
-    <div class=" door perspectiveLeft door-front" data-door-target="door"><%= image_tag "porte-avant.png" %>
-
-   <button onclick="openDoor()" data-action="click->doorfinish#out" class="buttondoor doodle-button">Sortir</button>
+<%= image_tag "Koko neutre.png", class: "kokofinish", data: {level_6_target: "koko"} %>
+    <div class="door perspectiveLeft door-front" data-level-6-target="door"><%= image_tag "porte-avant.png" %>
     </div>
    <%#  <div class="door-back"></div> %>
   </div>
 
-<%= image_tag "Koko neutre.png", class: "kokofinish" %>
+
+<div class="bubble-finish" data-level-6-target="bubble">
+            <div class="talk-bubble tri-right border-bubble borderb round btm-left-in">
+              <div class="talktext doodle">
+                <span data-level-6-target="<%= "span" if user_signed_in? %>">
+                </span>
+              </div>
+            </div>
+          </div>
 </div>

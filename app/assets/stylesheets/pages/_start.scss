@@ -76,19 +76,6 @@ animation: openDoor 2s forwards;
   flex-direction: column;
 }
 
-.door-back {
-  background: white;
-  backface-visibility: hidden;
-  width: 250px;
-  height: 367px;
-  position: absolute;
-  top: 0px;
-}
-
-.door-front {
- /*  backface-visibility: hidden; */
-}
-
 @keyframes heartbeat {
   0% {
     transform: scale(1); /* Normal size */
