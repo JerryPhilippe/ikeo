@@ -4,5 +4,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     window.location.href = "/finish";
+
+    setTimeout(() => {
+      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 100 } })
+      window.dispatchEvent(event)
+    }, 200);
   }
 }

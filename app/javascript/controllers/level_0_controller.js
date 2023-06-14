@@ -5,7 +5,10 @@ export default class extends Controller {
   static targets = ["bubble", "progression", "mouse"]
 
   connect() {
-   this.mouseTarget.classList.add("cursor");
+   if (window.location.pathname !== "/start"){
+    this.mouseTarget.classList.add("cursor");
+   }
+
 
    setTimeout(() => {
      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 5 } })
