@@ -13,7 +13,7 @@
         <%= link_to "ajouter au panier", create_cart_item_path(@item), class:"doodle-link", data: { action: (card_view_action((current_user.current_game), @item) if user_signed_in?)} %>
       </div>
 
-      <% if @game.level == 4 %>
+      <% if current_user.current_game.level == 4 %>
         <% if @item.name.downcase == "spiegella" %>
 
           <div class="level-4-flex">
@@ -23,7 +23,7 @@
               <div class="front"></div>
             </div>
 
-            <button id="hiden-button" data-action="click->level-4#hidenButton mouseover->level-4#hot mouseout->level-4#cold">click here</button>
+            <button id="hiden-button" data-action="click->level-4#revealCard mouseover->level-4#hot mouseout->level-4#cold">click here</button>
 
           </div>
 

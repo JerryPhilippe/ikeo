@@ -33,8 +33,11 @@ export default class extends Controller {
     this.loupeTarget.style.animation = "jump-shaking 0.9s infinite";
   }
 
-  hidenButton() {
+  revealCard() {
     this.flipCardTarget.classList.toggle('flipped');
+    setTimeout(() => {
+      this.toCart();
+    }, 3000);
   }
 
   toCart(){

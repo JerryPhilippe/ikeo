@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @game = Game.first
   end
 
   private
