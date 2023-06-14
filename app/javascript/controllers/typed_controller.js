@@ -1,28 +1,31 @@
 import { Controller } from "@hotwired/stimulus"
 import Typed from "typed.js";
 
-const level0Home = ["psst psst", "hey!", "psst","Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! J’ai peur du noir !!! Je sais qu’il y a une lampe dans les articles de salon, qui que tu sois peux-tu aller l’allumer ?"]
+const level0Home = ["psst psst", "hey!", "psst","Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! Je sais qu’il y a une lampe dans le salon, qui que tu sois peux-tu aller l’allumer ?"]
 const level1Cart = [
-  "Oh merci beaucoup ! J’étais terrifié ! Je peux maintenant me présenter en bon et du forme ! Salut ! Je m’appelle Koko, j’étais la mascotte de Ikeo, le célèbre site de vente de meubles pour la maison ! Malheureusement, Ikeo a fait faillite et me voilà bloqué ici... Je rêve de prendre une retraite bien mérité et de devenir libre d’explorer tout ce que propose internet !! Peux-tu m’aider à sortir d’ici ? Je t’en supplie j’ai vraiment besoin de ton aide....",
-  "Il me faut plusieurs choses pour pouvoir partir, certains articles sont nécessaires pour que je puisse partir. Pour les acheter, j’aurais aussi besoin des informations bancaire de l’ancien directeur du magasin, le seul encore autorisé à acheter sur le site.",
-  "Pour commencer, j’aurais besoin de sa carte d’identité, il me semble que lorsque ces enfants sont venu lui rendre visite, ils se sont amusés avec ses affaires et en ont perdu."
+  "Oh merci beaucoup ! J’étais terrifié ! Je peux maintenant me présenter en bon et du forme !",
+  "Salut ! Je m’appelle Koko, j’étais la mascotte de Ikeo, le célèbre site de vente de meubles pour la maison ! Malheureusement, Ikeo a fait faillite et me voilà bloqué ici...",
+  "J'ai besoin de ton aide, Il me faut un sac à dos pour pouvoir partir d'ici. Je sais que des enfants avaient perdu le leur mais je ne sais pas où..."
 ]
 const level2Cart = [
-  "Super ! On a enfin le nom du directeur et un sac à dos ! Maintenant, je sais qu’il existe une pièce secrète sur ce site. Son accès se trouve caché sur la page d’accueil mais il faut trouver la clé pour rentrer, j’ai entendu dire que la clé était à côté de la porte d’entrée…",
+  "Super ! Le problème c'est que je dois l'acheter pour le récupérer.",
+  "La seule personne capable d'acheter sur le site est l'ancien directeur du magasin, celui dont on a trouvé la carte d'identité : Ingrov Komprod",
+  "On a son nom mais il nous manque des informations...",
+  "Je sais qu’il existe une pièce secrète sur ce site. Il faut trouver la clé pour y accéder. j’ai entendu dire que la clé était à côté de la porte d’entrée..."
 ]
 const level3Cave =[
-  "Trop bien ! Tu as trouvé la clé ! Il nous reste maintenant à trouvé la serrure pour accéder à la pièce secrète ! Tu devrais jeter un coup d’oeil du côté de là où on peut trouver toutes les pièces.",
-  "La pièce secrète est donc la cave ! Super ! Mais olala… il fait tout noir ici…",
-   "Allumons la lumière et essayons de trouver un indice dans cette cave"
+  "Trop bien ! tu as trouvé la pièce secrète ! c'était donc la cave ! Mais olala… il fait tout noir ici…",
+   "Ah y voit mieux ! Mais c’est bizarre, un des objets est couvert de poussière, il doit bien y avoir un moyen de le nettoyer…"
 ]
 
 const level4Cart = [
-  "Il nous reste maintenant à trouver sa carte bancaire et je serais enfin libre ! Oh mais on dirait que la loupe bouge, qu’est-ce-que ça peut bien vouloir dire ?",
-  "Indice : J’ai l’impression qu’à certains endroit, la loupe vibre plus fort…"
+  "Génial ! On a une adresse de livraison ! Il nous reste maintenant à trouver sa carte bancaire",
+  "Oh mais on dirait que la loupe bouge, qu’est-ce-que ça peut bien vouloir dire ?",
+  "J’ai l’impression qu’à certains endroit, la loupe vibre plus fort…"
 ]
 
 const level5Cart = [
-  "Génial ! J’ai enfin tout ce dont j’ai besoin !"
+  "Génial ! J’ai enfin tout ce dont j’ai besoin ! Il ne reste plus qu'à payer et je serais enfin libre !"
 ]
 
 const level6Finish = [
