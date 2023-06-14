@@ -7,18 +7,16 @@ export default class extends Controller {
   }
 
   updateProgressBar(evt) {
-    console.log(evt.detail)
+    let width = 0;
+    const id = setInterval(frame, 20);
 
-    // let width = 0;
-    // const id = setInterval(frame, 20);
-
-    // function frame() {
-    //   if (width >= desiredWidth) {
-    //     clearInterval(id);
-    //   } else {
-    //     width++;
-    //     progressTarget.style.width = width + "%";
-    //   }
-    // }
+    function frame() {
+      if (width >= evt.detail.desiredWidth) {
+        clearInterval(id);
+      } else {
+        width++;
+        evt.detail.target.style.width = width + "%";
+      }
+    }
   }
 }

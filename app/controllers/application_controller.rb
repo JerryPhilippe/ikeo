@@ -9,4 +9,18 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
+
+  protected
+
+  def after_sign_in_path_for(resources)
+    if current_user.current_game.level.zero?
+      start_path(resources)
+    else
+      root_path(resources)
+    end
+  end
+
+  def after_sign_up_path_for(resources)
+    start_path(resources)
+  end
 end

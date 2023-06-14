@@ -753,10 +753,10 @@ mirror_cabinets = {
     price: 120
   },
   "mirror_cabinet_4" => {
-    name: "FULLÄN",
+    name: "SPIEGELLA",
     room_type: "Salle de bain",
     category: "Meuble-miroir",
-    description: "Le meuble-miroir FULLÄN est un choix simple et élégant pour votre salle de bain. Son miroir intégré et ses étagères offrent un rangement fonctionnel pour tous vos essentiels de salle de bain.",
+    description: "Le meuble-miroir SPIEGELLA est un choix simple et élégant pour votre salle de bain. Son miroir intégré et ses étagères offrent un rangement fonctionnel pour tous vos essentiels de salle de bain.",
     price: 80
   },
   "mirror_cabinet_5" => {
@@ -1172,7 +1172,7 @@ consoles = {
     price: 120
   },
   "console_5" => {
-    name: "BRUSALI",
+    name: "BRUSALII",
     room_type: "Entrée",
     category: "Console",
     description: "La console BRUSALI est une addition pratique et attrayante à votre entrée. Son design épuré et sa finition neutre en font une pièce versatile pour tous les styles d'intérieur.",

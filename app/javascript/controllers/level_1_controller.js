@@ -2,23 +2,12 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-1"
 export default class extends Controller {
-  static targets = ["kura", "backkura", "micke", "backmicke", "flisat", "backflisat", "huset", "backhuset", "trogen", "backtrogen", "sacados", "button"]
+  static targets = ["kura", "backkura", "micke", "backmicke", "flisat", "backflisat", "huset", "backhuset", "trogen", "backtrogen", "sacados", "button", "bubble", "progression"]
   connect() {
-    this.updateProgressBar(40, this.progressionTarget);
-  }
-
-  updateProgressBar(desiredWidth, progressTarget) {
-    let width = 0;
-    const id = setInterval(frame, 20);
-
-    function frame() {
-      if (width >= desiredWidth) {
-        clearInterval(id);
-      } else {
-        width++;
-        progressTarget.style.width = width + "%";
-      }
-    }
+    setTimeout(() => {
+      const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 24 } })
+      window.dispatchEvent(event)
+    }, 200);
   }
 
    returnkura() {
