@@ -16,6 +16,11 @@ export default class extends Controller {
       return;
     }
 
+    if (this.searchInputTarget.value == "sac à dos" || this.searchInputTarget.value == "sac" ) {
+      window.location.href = "/items?room=Chambre+enfants"
+      return;
+    }
+
     const url = `${this.formTarget.action}?query=${this.searchInputTarget.value}`
 
     fetch(url, { headers: { 'Accept': 'text/plain' } })
