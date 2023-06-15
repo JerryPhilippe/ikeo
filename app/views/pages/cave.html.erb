@@ -177,7 +177,7 @@
 
 
       <div class=" doodle-border card-index-cave cadre position-relative" data-action="">
-        <canvas class="canvas position-absolute" id="js-canvas" data-image="<%= asset_path('poussiere.png') %>"></canvas>
+        <canvas class="canvas position-absolute" width="300px" height="300px" id="js-canvas" data-image="<%= asset_path('poussiere.png') %>"></canvas>
 
         <div class="item-img-cave doodle-border">
           <%= image_tag("cave-cadre.png")%>
@@ -521,7 +521,7 @@
   function handlePercentage(filledInPixels) {
     filledInPixels = filledInPixels || 0;
     console.log(filledInPixels + '%');
-    if (filledInPixels > 95) {
+    if (filledInPixels > 80) {
       canvas.parentNode.removeChild(canvas);
     }
   }
