@@ -49,7 +49,7 @@ export default class extends Controller {
     this.trogenTarget.classList.remove('shadow-card')
     this.backtrogenTarget.innerText = "o"
     this.backtrogenTarget.style.fontSize = "100px"
-    this.trogenTargetTarget.removeAttribute('data-action');
+    this.trogenTarget.removeAttribute('data-action');
    }
 
    shadowkura() {
