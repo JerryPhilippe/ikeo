@@ -4,7 +4,7 @@
       <a href="#" class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <%= image_tag "menu.svg", id: "menu" %>
       </a>
-      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <div class="dropdown-menu dropdown-menu-end doodle" aria-labelledby="navbarDropdown">
         <%= link_to "Accueil", root_path , class: "dropdown-item" %>
         <%= link_to "Jardin", items_path(room: "Jardin"), class: "dropdown-item" %>
         <%= link_to "Salon", items_path(room: "Salon"), class: "dropdown-item" %>
@@ -28,7 +28,7 @@
     </div>
     <div>
       <div id="logo-koko">
-        <%= image_tag("Koko neutre.png", data: { action: 'click->typed#speak' }) %>
+        <%= image_tag("Koko neutre.png", data: { action: 'click->typed#speak' }) if action_name != "finish"%>
       </div>
 
     </div>

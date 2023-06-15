@@ -1,8 +1,8 @@
 .bubble {
   position: absolute;
-  top: 15px;
-  left: 350px;
-
+  top: 7vh;
+  left: 29vw;
+  z-index: 9999;
 }
 
 .talk-bubble {
@@ -42,7 +42,7 @@
 	height: 0;
   left: -40px;
 	right: auto;
-  top: 30px;
+  top: 13px;
 	bottom: auto;
 	border: 20px solid;
 	border-color: $gray $gray transparent transparent;
@@ -54,7 +54,7 @@
 	height: 0;
   left: -35px;
 	right: auto;
-  top: 32px;
+  top: 15px;
 	bottom: auto;
 	border: 20px solid;
 	border-color: white white transparent transparent;

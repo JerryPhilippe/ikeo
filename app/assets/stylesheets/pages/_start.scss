@@ -18,9 +18,9 @@
   0% {
     transform: perspective(800px) rotateY(0deg);
   }
-  50% {
+/*   50% {
     transform: perspective(800px) rotateY(-60deg);
-  }
+  } */
   100% {
     transform: perspective(800px) rotateY(-100deg);
   }
@@ -60,6 +60,7 @@ animation: openDoor 2s forwards;
   width: 200px;
   height: 400px;
   display: block;
+  margin-bottom: 60px;
 }
 
 .buttondoor {
@@ -74,19 +75,6 @@ animation: openDoor 2s forwards;
 .flex-door {
   display: flex;
   flex-direction: column;
-}
-
-.door-back {
-  background: white;
-  backface-visibility: hidden;
-  width: 250px;
-  height: 367px;
-  position: absolute;
-  top: 0px;
-}
-
-.door-front {
- /*  backface-visibility: hidden; */
 }
 
 @keyframes heartbeat {
@@ -110,4 +98,8 @@ animation: openDoor 2s forwards;
 .heartbeat {
   animation: heartbeat 1s infinite;
   transform-origin: center;
+}
+
+.backstart {
+  height: 100vh;
 }

@@ -15,6 +15,7 @@ module CardItemHelper
     end
   end
 
+
   def card_item_jump(game)
     case game.level
     when 1
