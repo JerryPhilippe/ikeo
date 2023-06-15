@@ -1,51 +1,41 @@
 <div data-search-items-target="list">
   <% @items.each do |key, item| %>
     <h1 class="room-title doodle-border"><%= key %></h1>
-   <%#  <hr class="doodle"> %>
     <div class="wrapper-index ">
       <% item.each do |product| %>
         <% if product.name != "Sac à dos" %>
           <div class="card-return" data-action="<%=card_item_hover((current_user.current_game), product) if user_signed_in?%>" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="<%= product.name.downcase %>">
-
-        <div class="card-index card-front doodle-border" >
+            <div class="card-index card-front doodle-border" >
               <div class="item-img">
                 <%= cl_image_tag(product.photo.key, { data: { action: (card_photo_action((current_user.current_game), product) if user_signed_in?), level_2_target: "#{product.name.downcase}-open"} }) %>
               </div>
 
-
-              <div class="card-index-text ">
+              <div class="card-index-text">
                 <h1 class=""><%= product.name %></h1>
                 <div class="flex-price-link">
                   <p><%= product.price%>0€</p>
                   <% if user_signed_in? %>
-                  <%= image_tag("home.png", id: "home-key" , class: "d-none",
-                    data: {
-                    action: "click->level-2#cave",
-                    level_2_target: "homekey"
-                  }) if current_user.current_game.level == 2 && product.name.downcase == "brusalii"%>
+                    <%= image_tag("home.png", id: "home-key" , class: "d-none",
+                      data: {
+                      action: "click->level-2#cave",
+                      level_2_target: "homekey"
+                      }) if current_user.current_game.level == 2 && product.name.downcase == "brusalii"%>
                   <% end %>
-
-
                   <div class="flex-card">
-                    <div class="doodle-button button-index" >
-
-                  <div class="flex-card" >
                     <div class="doodle-button button-index" data-level-0-target="<%= card_item_action((current_user.current_game), product) if user_signed_in? %>" data-level-2-target="<%=product.name.downcase%>cave">
-
                       <%= link_to "En savoir +", item_path(product), class:"doodle-link" %>
                     </div>
                   </div>
                 </div>
               </div>
-
-
+</div>
+              <div class="card-back doodle-border">
+                <p data-level-<%= current_user.current_game.level if user_signed_in? %>-target="back<%= product.name.downcase %>"></p>
+              </div>
             </div>
-            <div class="card-back doodle-border">
-              <p data-level-<%= current_user.current_game.level if user_signed_in? %>-target="back<%= product.name.downcase %>"></p>
-            </div>
-          </div>
+
         <% end %>
       <% end %>
     </div>
-</div>
   <% end %>
+</div>
