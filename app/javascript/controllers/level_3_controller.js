@@ -24,10 +24,6 @@ export default class extends Controller {
   }
 
   toCart(){
-    jump(){
-
-    
-    }
     setTimeout(() => {
       fetch('/games/update', {
         method: 'PATCH',
