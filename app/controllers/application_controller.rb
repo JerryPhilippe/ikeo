@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
 
+
   protected
 
   def after_sign_in_path_for(resources)

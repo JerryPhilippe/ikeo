@@ -122,6 +122,6 @@ export default class extends Controller {
 
       setTimeout(function() {
         window.location.href = "/cart";
-    }, 1000);
+    }, 100);
   }
    }
