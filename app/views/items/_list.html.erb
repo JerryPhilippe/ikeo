@@ -7,7 +7,7 @@
 
       <div class="card-return" data-action="<%=card_item_hover((current_user.current_game), product) if user_signed_in?%>" data-level-<%= current_user.current_game.level if user_signed_in? %>-target="<%= product.name.downcase %>">
 
-        <div class="card-index card-front doodle-border" data-action=<%= card_item_action((current_user.current_game), product) if user_signed_in?%>>
+        <div class="card-index card-front doodle-border" data-action=<%#= card_item_action((current_user.current_game), product) if user_signed_in?%>>
 
           <div class="item-img">
             <%= cl_image_tag(product.photo.key, { data: { action: (card_photo_action((current_user.current_game), product) if user_signed_in?), level_2_target: product.name.downcase} }) %>
@@ -32,12 +32,12 @@
               </div>
             </div>
           </div>
-
-
       </div>
+
         <div class="card-back doodle-border">
         <p data-level-<%= current_user.current_game.level if user_signed_in? %>-target="back<%= product.name.downcase %>"></p>
         </div>
+
         </div>
       <% end %>
     </div>
