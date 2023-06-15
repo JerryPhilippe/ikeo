@@ -1,0 +1,5 @@
+meta_product_name: "Sauvetage à Ikeo"
+meta_title: "Sauvetage à Ikeo, aide Koko à sortir"
+meta_description: "Il faut aider Koko à quitter le site d'Ikeo"
+meta_image: "koko_flex.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
