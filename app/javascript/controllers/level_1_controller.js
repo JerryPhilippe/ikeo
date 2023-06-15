@@ -15,9 +15,7 @@ export default class extends Controller {
     this.kuraTarget.classList.remove('shadow-card')
     this.backkuraTarget.innerText = "A"
     this.backkuraTarget.style.fontSize = "200px"
-    this.kuraTarget.classList.removeAttribute('data-action');
-    evt.currentTarget.removeAttribute('data-action');
-    evt.currentTarget.removeAttribute('data-level-1-target');
+    this.kuraTarget.removeAttribute('data-action');
    }
 
    returnmicke() {
@@ -25,6 +23,7 @@ export default class extends Controller {
     this.mickeTarget.classList.remove('shadow-card')
     this.backmickeTarget.innerText = "G"
     this.backmickeTarget.style.fontSize = "150px"
+    this.mickeTarget.removeAttribute('data-action');
    }
 
    returnflisat() {
@@ -32,6 +31,7 @@ export default class extends Controller {
     this.flisatTarget.classList.remove('shadow-card')
     this.backflisatTarget.innerText = "W"
     this.backflisatTarget.style.fontSize = "250px"
+    this.flisatTarget.removeAttribute('data-action');
    }
 
    returnhuset() {
@@ -39,6 +39,7 @@ export default class extends Controller {
     this.husetTarget.classList.remove('shadow-card')
     this.backhusetTarget.innerText = "N"
     this.backhusetTarget.style.fontSize = "50px"
+    this.husetTarget.removeAttribute('data-action');
    }
 
    returntrogen() {
@@ -46,6 +47,7 @@ export default class extends Controller {
     this.trogenTarget.classList.remove('shadow-card')
     this.backtrogenTarget.innerText = "o"
     this.backtrogenTarget.style.fontSize = "100px"
+    this.trogenTargetTarget.removeAttribute('data-action');
    }
 
    shadowkura() {
