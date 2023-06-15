@@ -14,14 +14,14 @@ const level2Cart = [
   "Je sais qu’il existe une pièce secrète sur ce site. Il faut trouver la clé pour y accéder. j’ai entendu dire que la clé était à côté de la porte d’entrée..."
 ]
 const level3Cave =[
-  "Trop bien ! tu as trouvé la pièce secrète ! c'était donc la cave ! Mais olala… il fait tout noir ici…",
+  //"Trop bien ! tu as trouvé la pièce secrète ! c'était donc la cave ! Mais olala… il fait tout noir ici…",
    "Ah y voit mieux ! Mais c’est bizarre, un des objets est couvert de poussière, il doit bien y avoir un moyen de le nettoyer…"
 ]
 
 const level4Cart = [
   "Génial ! On a une adresse de livraison ! Il nous reste maintenant à trouver sa carte bancaire",
   "Oh mais on dirait que la loupe bouge, qu’est-ce-que ça peut bien vouloir dire ?",
-  "J’ai l’impression qu’à certains endroit, la loupe vibre plus fort…"
+  //"J’ai l’impression qu’à certains endroit, la loupe vibre plus fort…"
 ]
 
 const level5Cart = [

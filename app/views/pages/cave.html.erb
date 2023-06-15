@@ -449,8 +449,8 @@
 (function() {
 
   'use strict';
-
-  var isDrawing, lastPoint;
+  var isDrawing = true;
+  var lastPoint;
   var canvas       = document.getElementById('js-canvas'),
       canvasWidth  = canvas.width,
       canvasHeight = canvas.height,
@@ -472,6 +472,7 @@
   canvas.addEventListener('touchmove', handleMouseMove, false);
   canvas.addEventListener('mouseup', handleMouseUp, false);
   canvas.addEventListener('touchend', handleMouseUp, false);
+  canvas.addEventListener('mouseenter', handleMouseDown, false);
 
   function distanceBetween(point1, point2) {
     return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
@@ -546,6 +547,7 @@
       return;
     }
 
+    isDrawing = true
     if (!isDrawing) { return; }
 
     e.preventDefault();
@@ -573,7 +575,7 @@
       return;
     }
 
-    isDrawing = false;
+    isDrawing = true;
   }
 
 })();
