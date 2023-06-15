@@ -1,15 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
 import Typed from "typed.js";
 
-const level0Home = ["psst psst", "hey!", "psst","Hej ! J’ai besoin d’aide ! Que quelqu’un allume la lumière ! Je sais qu’il y a une lampe dans le salon, qui que tu sois peux-tu aller l’allumer ?"]
+const level0Home = ["psst psst","Hej !", "J’ai besoin d’aide ! Que quelqu’un allume la lumière ! Je sais qu’il y a une lampe dans le salon, qui que tu sois peux-tu aller l’allumer ?"]
 const level1Cart = [
-  "Oh merci beaucoup ! J’étais terrifié ! Je peux maintenant me présenter en bon et du forme !",
-  "Salut ! Je m’appelle Koko, j’étais la mascotte de Ikeo, le célèbre site de vente de meubles pour la maison ! Malheureusement, Ikeo a fait faillite et me voilà bloqué ici...",
-  "J'ai besoin de ton aide, Il me faut un sac à dos pour pouvoir partir d'ici. Je sais que des enfants avaient perdu le leur mais je ne sais pas où..."
+  "Oh merci beaucoup ! Je peux enfin me présenter !",
+  "Salut ! Je m’appelle Koko, j’étais la mascotte de Ikeo, le célèbre site de vente de meubles ! Malheureusement, Ikeo a fait faillite et me voilà bloqué ici...",
+  "J'ai besoin de ton aide ! Il me faut un sac à dos pour pouvoir partir d'ici. Je sais que des enfants avaient perdu le leur quelque part..."
 ]
 const level2Cart = [
-  "Super ! Le problème c'est que je dois l'acheter pour le récupérer.",
-  "La seule personne capable d'acheter sur le site est l'ancien directeur du magasin, celui dont on a trouvé la carte d'identité : Ingrov Komprod",
+  "Super ! Maintenant je dois l'acheter mais la seule personne pouvant le faire est l'ancien directeur du magasin dont on a trouvé la carte d'identité : Ingrov Komprod",
   "On a son nom mais il nous manque des informations...",
   "Je sais qu’il existe une pièce secrète sur ce site. Il faut trouver la clé pour y accéder. j’ai entendu dire que la clé était à côté de la porte d’entrée..."
 ]
@@ -25,7 +24,7 @@ const level4Cart = [
 ]
 
 const level5Cart = [
-  "Génial ! J’ai enfin tout ce dont j’ai besoin ! Il ne reste plus qu'à payer et je serais enfin libre !"
+  "Génial ! J’ai enfin tout ce qu'il faut ! Il ne reste plus qu'à payer et je serais enfin libre !"
 ]
 // Connects to data-controller="typed"
 export default class extends Controller {
@@ -99,8 +98,11 @@ export default class extends Controller {
 
 
           this.timeout = setTimeout(() => {
-            this.bubbleTarget.classList.remove("d-none");
-            this.typed = new Typed(this.spanTarget, options0);
+            setTimeout(() => {
+              this.bubbleTarget.classList.remove("d-none");
+              this.typed = new Typed(this.spanTarget, options0);
+
+            }, 10000);
           }, time || 0);
         }
       break;
