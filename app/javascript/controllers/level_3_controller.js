@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-3"
 export default class extends Controller {
-  static targets = ["bubble", "progression", "mouse", "broom"]
+  static targets = ["bubble", "progression", "mouse", "broom", "canva"]
 
   connect() {
     setTimeout(() => {
@@ -24,10 +24,6 @@ export default class extends Controller {
   }
 
   toCart(){
-    jump(){
-
-    
-    }
     setTimeout(() => {
       fetch('/games/update', {
         method: 'PATCH',
@@ -73,5 +69,11 @@ export default class extends Controller {
       this.broomTarget.style.left = `${mouseX + 15}px`
     })
     this.broomTarget.classList.add("move-balais")
+  }
+
+  removePoussiere(evt) {
+    if (evt.keyCode === 82) {
+      this.canvaTarget.classList.add("d-none");
+    }
   }
 }

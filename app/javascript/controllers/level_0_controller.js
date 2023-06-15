@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["bubble", "progression", "mouse", "addJumpClass", "buttonLampkus"]
 
   connect() {
-    this.buttonLampkusTarget.classList.add("jump-button")
     if (window.location.pathname !== "/start"){
       this.mouseTarget.classList.add("cursor");
     }
@@ -20,10 +19,12 @@ export default class extends Controller {
     this.addJumpClassTarget.classList.add("jump-button");
   }
 
+  buttonLampkusTargetConnected() {
+    this.buttonLampkusTarget.classList.add("jump-button");
+  }
+
   switchLight(){
     this.mouseTarget.classList.remove("cursor");
-    this.addJumpClassTarget.classList.remove("jump-button");
-    this.buttonLampkusTarget.classList.remove("jump-button");
     fetch('/games/update', {
       method: 'PATCH',
       headers: {
