@@ -3,6 +3,8 @@ module CardItemHelper
     case game.level
     when 1
       return "click->level-1#return#{item.name.downcase}" if ["kura", "micke", "flisat", "huset", "trogen"].include?(item.name.downcase)
+    when 0
+      return "buttonLampkus" if item.name.downcase == "lampküs"
     end
   end
 
