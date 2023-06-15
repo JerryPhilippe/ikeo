@@ -19,8 +19,11 @@
       <p>Menu</p>
     </div>
     <div class="blue">
-      <%= link_to root_path do %>
-        <%= image_tag "logo.png"%>
+      <%= link_to root_path, data: { target:"level-4.ikeoLogo" } do %>
+        <div class="credit-card-return" data-level-4-target="logo">
+          <%= image_tag "logo.png", class:"credit-card-front", data: { action:"mouseover->level-4#hot mouseout->level-4#hot click->level-4#flip"}%>
+          <%= image_tag "credit-card.png", class:"credit-card-back", style:"margin-left: 2em" %>
+        </div>
       <% end %>
     </div>
     <div>
