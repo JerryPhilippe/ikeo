@@ -148,6 +148,17 @@
     user-select: none;
   }
 
+
   .jump-cadre-cave {
     transform: scale(2);
+
+  .move-balais {
+    animation: balais-shaking 2s infinite;
+  }
+
+  @keyframes balais-shaking {
+    0% { transform: rotate(32deg); }
+    50% { transform: rotate(-32deg); }
+    100% { transform: rotate(32deg) }
+
   }

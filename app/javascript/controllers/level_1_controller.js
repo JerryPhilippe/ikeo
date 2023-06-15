@@ -10,6 +10,8 @@ export default class extends Controller {
     }, 200);
   }
 
+
+
    returnkura() {
     this.kuraTarget.classList.add('card-flip')
     this.kuraTarget.classList.remove('shadow-card')

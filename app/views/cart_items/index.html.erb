@@ -48,17 +48,17 @@
 
   <div class="doodle-border form">
       <%= simple_form_for :payment do |f|  %>
-        <%= f.input :name, readonly: true, label: "Nom du titulaire de la carte", input_html: { value: current_user.current_game.card_name}, placeholder: current_user.current_game.card_name%>
-        <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number }, placeholder: current_user.current_game.card_number, label: "Numéro de carte" %>
+        <%= f.input :name, readonly: true, label: "Nom du titulaire de la carte", input_html: { value: current_user.current_game.card_name, class: "", data: { "level_#{current_user.current_game.level if user_signed_in?}_target": 'nameCredit' }}, placeholder: current_user.current_game.card_name%>
+        <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number, class: "" , data: { "level_#{current_user.current_game.level if user_signed_in?}_target": 'numberCredit' }}, placeholder: current_user.current_game.card_number, label: "Numéro de carte"%>
         <div class="d-flex date-cvc">
         <div class="date-input">
-        <%= f.input :date, readonly: true, label: "date d'expiration", input_html: {value: current_user.current_game.date} %>
+        <%= f.input :date, readonly: true, label: "date d'expiration", input_html: {value: current_user.current_game.date, class: "", data: { "level_#{current_user.current_game.level if user_signed_in?}_target": 'dateCredit' }}%>
         </div>
         <div class="petit-input">
-        <%= f.input :code, readonly: true, label: "CVC/CVV", input_html: {value: current_user.current_game.code}%>
+        <%= f.input :code, readonly: true, label: "CVC/CVV", input_html: {value: current_user.current_game.code, class: "" , data: { "level_#{current_user.current_game.level if user_signed_in?}_target": 'cvcCredit' }}%>
         </div>
         </div>
-        <%= f.input :address, readonly: true, input_html: { value: current_user.current_game.address}, placeholder: "********" , label: "Adresse" %>
+        <%= f.input :address, readonly: true, input_html: { value: current_user.current_game.address, class: "", data: { "level_#{current_user.current_game.level if user_signed_in?}_target": 'addressCredit' }}, placeholder: "********" , label: "Adresse"%>
       <% end %>
       <div class="doodle submit-flex" >
         <button class="disabled doodle", data-action =<%=cart_button_action((current_user.current_game if user_signed_in?))%> data-level-<%= current_user.current_game.level if user_signed_in? %>-target="button">Payer</button>

@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-5"
 export default class extends Controller {
-  static targets = ["button", "bubble", "progression"];
+  static targets = ["button", "bubble", "progression", "addressCredit", "nameCredit", "cvcCredit", "dateCredit", "numberCredit"];
   connect() {
     this.buttonTarget.classList.remove("disabled");
     this.buttonTarget.classList.add("enabled");
@@ -12,6 +12,27 @@ export default class extends Controller {
       window.dispatchEvent(event)
     }, 200);
   }
+
+    nameCreditTargetConnected() {
+      this.nameCreditTarget.classList.add('green-background')
+    }
+
+    addressCreditTargetConnected() {
+      this.addressCreditTarget.classList.add('green-background')
+    }
+
+    cvcCreditTargetConnected() {
+      this.cvcCreditTarget.classList.add('green-background')
+    }
+
+    dateCreditTargetConnected() {
+      this.dateCreditTarget.classList.add('green-background')
+    }
+
+    numberCreditTargetConnected() {
+      this.numberCreditTarget.classList.add('green-background')
+    }
+
 
   tofinish(){
     fetch('/games/update', {

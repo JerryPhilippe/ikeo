@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-4"
 export default class extends Controller {
-  static targets = ["loupe", "spiegella", "buttonHiden", "flipCard", "bubble", "progression", "ikeoLogo", "logo"]
+  static targets = ["loupe", "spiegella", "buttonHiden", "flipCard", "bubble", "progression", "ikeoLogo", "logo", "nameCredit", "addressCredit"]
 
   connect() {
     setTimeout(() => {
@@ -24,6 +24,14 @@ export default class extends Controller {
         this.loupeTarget.style.left = `${mouseX + 15}px`
         this.loupeTarget.classList.toggle("loupe-index")
       })
+    }
+
+    nameCreditTargetConnected() {
+      this.nameCreditTarget.classList.add('green-background')
+    }
+
+    addressCreditTargetConnected() {
+      this.addressCreditTarget.classList.add('green-background')
     }
 
   hot() {
