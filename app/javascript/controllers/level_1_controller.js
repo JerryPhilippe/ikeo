@@ -12,81 +12,81 @@ export default class extends Controller {
 
    returnkura() {
     this.kuraTarget.classList.add('card-flip')
+    this.kuraTarget.classList.remove('shadow-card')
     this.backkuraTarget.innerText = "A"
     this.backkuraTarget.style.fontSize = "200px"
+    this.kuraTarget.removeAttribute('data-action');
    }
 
    returnmicke() {
     this.mickeTarget.classList.add('card-flip')
+    this.mickeTarget.classList.remove('shadow-card')
     this.backmickeTarget.innerText = "G"
     this.backmickeTarget.style.fontSize = "150px"
+    this.mickeTarget.removeAttribute('data-action');
    }
 
    returnflisat() {
     this.flisatTarget.classList.add('card-flip')
+    this.flisatTarget.classList.remove('shadow-card')
     this.backflisatTarget.innerText = "W"
     this.backflisatTarget.style.fontSize = "250px"
+    this.flisatTarget.removeAttribute('data-action');
    }
 
    returnhuset() {
     this.husetTarget.classList.add('card-flip')
+    this.husetTarget.classList.remove('shadow-card')
     this.backhusetTarget.innerText = "N"
     this.backhusetTarget.style.fontSize = "50px"
+    this.husetTarget.removeAttribute('data-action');
    }
 
    returntrogen() {
     this.trogenTarget.classList.add('card-flip')
+    this.trogenTarget.classList.remove('shadow-card')
     this.backtrogenTarget.innerText = "o"
     this.backtrogenTarget.style.fontSize = "100px"
+    this.trogenTargetTarget.removeAttribute('data-action');
    }
 
    shadowkura() {
-    console.log("hover")
     this.kuraTarget.classList.add('shadow-card')
    }
 
    shadowoutkura() {
-    console.log("out")
     this.kuraTarget.classList.remove('shadow-card')
    }
 
    shadowmicke() {
-    console.log("hover")
     this.mickeTarget.classList.add('shadow-card')
    }
 
    shadowoutmicke() {
-    console.log("out")
     this.mickeTarget.classList.remove('shadow-card')
    }
 
    shadowflisat() {
-    console.log("hover")
     this.flisatTarget.classList.add('shadow-card')
    }
 
    shadowoutflisat() {
-    console.log("out")
     this.flisatTarget.classList.remove('shadow-card')
    }
 
    shadowhuset() {
-    console.log("hover")
     this.husetTarget.classList.add('shadow-card')
    }
 
    shadowouthuset() {
-    console.log("out")
     this.husetTarget.classList.remove('shadow-card')
    }
 
    shadowtrogen() {
-    console.log("hover")
     this.trogenTarget.classList.add('shadow-card')
    }
 
    shadowouttrogen() {
-    console.log("out")
     this.trogenTarget.classList.remove('shadow-card')
    }
 
@@ -124,5 +124,4 @@ export default class extends Controller {
         window.location.href = "/cart";
     }, 100);
   }
-
    }

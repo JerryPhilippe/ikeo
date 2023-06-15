@@ -1,4 +1,4 @@
-.perspectiveRight {
+/* .perspectiveRight {
   -webkit-animation-name: perspectiveRight;
   animation-name: perspectiveRight;
 }
@@ -32,10 +32,11 @@
     transform: perspective(800px) rotateY(180deg);
   }
 }
-
+ */
 .card-flip{
   transform: rotateY(180deg);
 }
+
 
 .card-return {
   transition: all 1s ease;
@@ -64,4 +65,5 @@
 
 .shadow-card {
   box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+  transform: scale(1.1);
 }

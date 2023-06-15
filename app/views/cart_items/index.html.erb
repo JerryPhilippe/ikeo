@@ -8,7 +8,9 @@
     <% if @cart.exists? %>
       <% @cart.each do |article| %>
         <div class="articles doodle-border">
+        <div class="cart-img">
           <%= cl_image_tag article.photo.key, class:"cart-img"%>
+        </div>
 
           <div class="article-infos">
             <h3><%= article.name %></h3>

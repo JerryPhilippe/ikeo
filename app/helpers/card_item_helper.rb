@@ -10,7 +10,7 @@ module CardItemHelper
     case game.level
       when 1
       if ["kura", "micke", "flisat", "huset", "trogen"].include?(item.name.downcase)
-        return "mouseover->level-1#shadow#{item.name.downcase} mouseout->level-1#shadowout#{item.name.downcase}"
+        return "mouseover->level-1#shadow#{item.name.downcase} mouseout->level-1#shadowout#{item.name.downcase} click->level-1#return#{item.name.downcase}"
       end
     end
   end
