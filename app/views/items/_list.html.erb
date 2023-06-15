@@ -25,10 +25,6 @@
                   }) if current_user.current_game.level == 2 && product.name.downcase == "brusalii"%>
                   <% end %>
 
-
-                  <div class="flex-card">
-                    <div class="doodle-button button-index" >
-
                   <div class="flex-card" >
                     <div class="doodle-button button-index" data-level-0-target="<%= card_item_action((current_user.current_game), product) if user_signed_in? %>" data-level-2-target="<%=product.name.downcase%>cave">
 
@@ -47,5 +43,6 @@
         <% end %>
       <% end %>
     </div>
-</div>
+
   <% end %>
+  </div>
