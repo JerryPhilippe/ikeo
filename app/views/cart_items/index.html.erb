@@ -50,13 +50,13 @@
         <%= f.input :number, readonly: true, input_html: { value: current_user.current_game.card_number }, placeholder: current_user.current_game.card_number, label: "Numéro de carte" %>
         <div class="d-flex date-cvc">
         <div class="date-input">
-        <%= f.input :date, readonly: true, label: "date d'expiration", input_html: {value: "09/25"} %>
+        <%= f.input :date, readonly: true, label: "date d'expiration", input_html: {value: current_user.current_game.date} %>
         </div>
         <div class="petit-input">
-        <%= f.input :code, readonly: true, label: "CVC/CVV", input_html: {value: "666"}%>
+        <%= f.input :code, readonly: true, label: "CVC/CVV", input_html: {value: current_user.current_game.code}%>
         </div>
         </div>
-        <%= f.input :address, readonly: true, input_html: { value: ""}, placeholder: "********" , label: "Adresse" %>
+        <%= f.input :address, readonly: true, input_html: { value: current_user.current_game.address}, placeholder: "********" , label: "Adresse" %>
       <% end %>
       <div class="doodle submit-flex" >
         <button class="disabled doodle", data-action =<%=cart_button_action((current_user.current_game if user_signed_in?))%> data-level-<%= current_user.current_game.level if user_signed_in? %>-target="button">Payer</button>

@@ -25,7 +25,7 @@
     </div>
     <div>
       <div id="logo-koko">
-        <%= image_tag("Koko neutre.png") if action_name != "finish"%>
+        <%= image_tag("Koko neutre.png", data: { action: 'click->typed#speak' }) if action_name != "finish"%>
       </div>
 
     </div>
