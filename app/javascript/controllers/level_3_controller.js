@@ -68,5 +68,6 @@ export default class extends Controller {
       this.broomTarget.style.top = `${mouseY}px`
       this.broomTarget.style.left = `${mouseX + 15}px`
     })
+    this.broomTarget.classList.add("move-balais")
   }
 }
