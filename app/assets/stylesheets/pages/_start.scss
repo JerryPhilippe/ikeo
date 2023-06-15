@@ -18,9 +18,9 @@
   0% {
     transform: perspective(800px) rotateY(0deg);
   }
-  50% {
+/*   50% {
     transform: perspective(800px) rotateY(-60deg);
-  }
+  } */
   100% {
     transform: perspective(800px) rotateY(-100deg);
   }
@@ -60,6 +60,7 @@ animation: openDoor 2s forwards;
   width: 200px;
   height: 400px;
   display: block;
+  margin-bottom: 60px;
 }
 
 .buttondoor {
@@ -97,4 +98,8 @@ animation: openDoor 2s forwards;
 .heartbeat {
   animation: heartbeat 1s infinite;
   transform-origin: center;
+}
+
+.backstart {
+  height: 100vh;
 }

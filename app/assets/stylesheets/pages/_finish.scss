@@ -2,13 +2,19 @@
   height: 150px;
   position: absolute;
   bottom: 153px;
-  right: 250px;
+  right: 20vw;
 }
 
 .bubble-finish {
   position: absolute;
   bottom: 295px;
   right: 10px;
+}
+
+.zoom-finish {
+  width: 200px;
+  height: 400px;
+  display: block;
 }
 
 /*Right triangle, placed bottom left side slightly in*/
@@ -57,9 +63,9 @@ animation: openDoor 2s forwards;
   0% {
     transform: perspective(800px) rotateY(-100deg);
   }
-  50% {
+ /*  50% {
     transform: perspective(800px) rotateY(-50deg);
-  }
+  } */
   100% {
     transform: perspective(800px) rotateY(0deg);
   }
@@ -74,7 +80,7 @@ animation: closeDoor 2s forwards;
     transform: translate(0);
   }
   100% {
-    transform: translate(-300px);
+    transform: translate(-24vw);
   }
 }
 
@@ -84,12 +90,10 @@ animation: slideKoko 2s forwards;
 
 @keyframes scaleKoko {
   0% {
-
     transform: scale(1);
   }
 
   100% {
-
     transform: scale(0);
   }
 }
@@ -102,7 +106,7 @@ animation: scaleKoko 5s forwards;
   height: 150px;
   position: absolute;
   bottom: 153px;
-  right: 550px;
+  right: 44vw;
 }
 
 .door {
