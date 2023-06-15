@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-3"
 export default class extends Controller {
-  static targets = ["bubble", "progression", "mouse", "broom"]
+  static targets = ["bubble", "progression", "mouse", "broom", "cadre"]
 
   connect() {
     setTimeout(() => {
@@ -24,7 +24,10 @@ export default class extends Controller {
   }
 
   toCart(){
+    this.cadreTarget.classList.add("jump-cadre-cave")
+
     setTimeout(() => {
+
       fetch('/games/update', {
         method: 'PATCH',
         headers: {
@@ -45,7 +48,7 @@ export default class extends Controller {
         });
 
         window.location.href = "/cart";
-    }, 2000);
+    }, 5000);
 
   }
 

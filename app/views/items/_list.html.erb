@@ -25,8 +25,8 @@
                   }) if current_user.current_game.level == 2 && product.name.downcase == "brusalii"%>
                   <% end %>
 
-                  <div class="flex-card" >
-                    <div class="doodle-button button-index">
+                  <div class="flex-card">
+                    <div class="doodle-button button-index" data-level-2-target="<%=product.name.downcase%>cave">
                       <%= link_to "En savoir +", item_path(product), class:"doodle-link" %>
                     </div>
                   </div>

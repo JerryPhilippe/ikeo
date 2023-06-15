@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="level-2"
 export default class extends Controller {
-  static targets = ["bubble", "progression", "mouse", "brusalii-open", "cursorkey", "key", "homekey"]
+  static targets = ["bubble", "progression", "mouse", "brusalii-open", "cursorkey", "key", "homekey", "brusaliicave"]
   connect() {
     setTimeout(() => {
       const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 43 } })
@@ -14,6 +14,7 @@ export default class extends Controller {
   takeKey(evt){
     this.cursorkeyTarget.classList.add("custom-cursor");
     this.homekeyTarget.classList.remove("d-none");
+    this.brusaliicaveTarget.classList.add("d-none");
     evt.currentTarget.src = "http://res.cloudinary.com/dwwqcadjv/image/upload/v1/development/aaqw22s37ljtnq1fjiexbsc9qx7s";
     evt.currentTarget.removeAttribute('data-action');
   }
