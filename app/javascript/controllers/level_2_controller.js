@@ -43,7 +43,10 @@ export default class extends Controller {
         console.error('Error:', error);
       });
 
-      window.location.href = "/cave";
+      setTimeout(() => {
+        window.location.href = "/cave";
+      }, 200);
+
   }
 
   openDrawer(evt){
