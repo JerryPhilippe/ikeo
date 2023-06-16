@@ -6,16 +6,16 @@ export default class extends Controller {
   static targets = ["bubble", "progression", "mouse", "broom", "cadre", "canva"]
 
   connect() {
+    if (window.location.pathname == "/cave"){
+      this.mouseTarget.classList.add("cursor");
+    };
+
     setTimeout(() => {
       const event = new CustomEvent("progess", { detail: { target: this.progressionTarget, desiredWidth: 62 } })
       window.dispatchEvent(event)
     }, 200);
 
     this.enableBroom = false
-
-    if (window.location.pathname == "/cave"){
-      this.mouseTarget.classList.add("cursor");
-    };
   }
 
   switchLight(){
