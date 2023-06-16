@@ -45,7 +45,7 @@ export default class extends Controller {
 
       setTimeout(function() {
         window.location.href = "/cart";
-    }, 2000);
+    }, 200);
   }
 
   move(e) {

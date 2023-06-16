@@ -31,26 +31,26 @@ export default class extends Controller {
 
     setTimeout(() => {
       this.bubbleTarget.classList.add("d-none");
-    }, 10500);
+    }, 11500);
 
 
     setTimeout(() => {
       this.doorTarget.classList.add('open');
-    }, 11000);
+    }, 12000);
 
     setTimeout(() => {
       this.kokoTarget.classList.add('slide');
-    }, 12500);
+    }, 13500);
 
     setTimeout(() => {
       this.kokoTarget.classList.add('kokoforscale');
       this.kokoTarget.classList.add('scale');
-    }, 14500);
+    }, 15500);
 
     setTimeout(() => {
       this.doorTarget.classList.remove('open');
       this.doorTarget.classList.add('close');
-    }, 15500);
+    }, 16500);
 
 
 

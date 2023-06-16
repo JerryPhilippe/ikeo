@@ -10,7 +10,7 @@ const level1Cart = [
 const level2Cart = [
   "Super ! Maintenant je dois l'acheter mais la seule personne pouvant le faire est l'ancien directeur du magasin dont on a trouvé la carte d'identité : Ingrov Komprod",
   "On a son nom mais il nous manque des informations...",
-  "Je sais qu’il existe une pièce secrète sur ce site. Il faut trouver la clé pour y accéder. j’ai entendu dire que la clé était à côté de la porte d’entrée..."
+  "Je sais qu’il existe une pièce secrète sur ce site. Il faut trouver la clé pour y accéder. J’ai entendu dire que la clé était à côté de la porte d’entrée..."
 ]
 const level3Cave =[
   //"Trop bien ! tu as trouvé la pièce secrète ! c'était donc la cave ! Mais olala… il fait tout noir ici…",
